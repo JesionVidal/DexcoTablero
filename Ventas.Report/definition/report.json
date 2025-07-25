@@ -44,34 +44,12 @@
   ],
   "resourcePackages": [
     {
-      "name": "BulletChart1443347686880",
-      "type": "CustomVisual",
-      "items": [
-        {
-          "name": "BulletChart1443347686880.pbiviz.json",
-          "path": "BulletChart1443347686880.pbiviz.json",
-          "type": "CustomVisualMetadata"
-        }
-      ]
-    },
-    {
       "name": "ChicletSlicer1448559807354",
       "type": "CustomVisual",
       "items": [
         {
           "name": "ChicletSlicer1448559807354.pbiviz.json",
           "path": "ChicletSlicer1448559807354.pbiviz.json",
-          "type": "CustomVisualMetadata"
-        }
-      ]
-    },
-    {
-      "name": "DonutChartGMO1461469098694",
-      "type": "CustomVisual",
-      "items": [
-        {
-          "name": "DonutChartGMO1461469098694.pbiviz.json",
-          "path": "DonutChartGMO1461469098694.pbiviz.json",
           "type": "CustomVisualMetadata"
         }
       ]

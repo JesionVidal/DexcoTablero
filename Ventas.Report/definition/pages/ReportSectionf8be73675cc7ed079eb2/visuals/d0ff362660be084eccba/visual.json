@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_Netas ok"
+                  "Property": "Vlr_Ventas_Netas"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_Netas",
@@ -43,7 +43,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Vlr_Ventas_Netas ok"
+                "Property": "Vlr_Ventas_Netas"
               }
             },
             "direction": "Descending"

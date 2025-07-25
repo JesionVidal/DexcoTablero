@@ -75,7 +75,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_Netas ok"
+			          "ConceptualProperty": "Vlr_Ventas_Netas"
 			        }
 			      },
 			      "State": "Generated",
@@ -86,7 +86,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Ventas": {
+			          "Ventas Netas": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -96,7 +96,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Ventas Netas": {
+			          "Ventas": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -141,7 +141,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Poa ok"
+			          "ConceptualProperty": "Vlr_Poa"
 			        }
 			      },
 			      "State": "Generated",
@@ -167,7 +167,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Ventas_M3 ok"
+			          "ConceptualProperty": "Cant_Ventas_M3"
 			        }
 			      },
 			      "State": "Generated",
@@ -175,16 +175,6 @@ cultureInfo en-US
 			        {
 			          "Cant_Ventas_M3 ok": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Fact": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -199,6 +189,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "Ventas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Fact": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -488,7 +488,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_Netas_Per_Ant ok"
+			          "ConceptualProperty": "Vlr_Ventas_Netas_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -623,7 +623,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Ventas_M3_Acumulado ok"
+			          "ConceptualProperty": "Cant_Ventas_M3_Acumulado"
 			        }
 			      },
 			      "State": "Generated",
@@ -649,7 +649,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Operativo_M3_Acumulado ok"
+			          "ConceptualProperty": "Cant_Operativo_M3_Acumulado"
 			        }
 			      },
 			      "State": "Generated",
@@ -774,7 +774,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Ventas_M3_Per_Ant ok"
+			          "ConceptualProperty": "Cant_Ventas_M3_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -886,7 +886,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Pedido_Neto_Pend ok"
+			          "ConceptualProperty": "Vlr_Pedido_Neto_Pend"
 			        }
 			      },
 			      "State": "Generated",
@@ -897,7 +897,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Valor": {
+			          "Pedidos Pendientes": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -907,7 +907,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Pedidos Pendientes": {
+			          "Valor": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -922,7 +922,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Pedido_M3_Pend ok"
+			          "ConceptualProperty": "Cant_Pedido_M3_Pend"
 			        }
 			      },
 			      "State": "Generated",
@@ -958,7 +958,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Pedido_M3 ok"
+			          "ConceptualProperty": "Cant_Pedido_M3"
 			        }
 			      },
 			      "State": "Generated",
@@ -994,7 +994,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Pedido_Neto ok"
+			          "ConceptualProperty": "Vlr_Pedido_Neto"
 			        }
 			      },
 			      "State": "Generated",
@@ -2076,7 +2076,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Ventas_M3_IFRS ok"
+			          "ConceptualProperty": "Cant_Ventas_M3_IFRS"
 			        }
 			      },
 			      "State": "Generated",
@@ -2652,7 +2652,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Ventas_M3_No_Entrege ok"
+			          "ConceptualProperty": "Cant_Ventas_M3_No_Entrege"
 			        }
 			      },
 			      "State": "Generated",
@@ -2678,7 +2678,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "%Ventas_Netas_Linea ok"
+			          "ConceptualProperty": "%Ventas_Netas_Linea"
 			        }
 			      },
 			      "State": "Generated",
@@ -2724,7 +2724,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Descuento_Pronto_Pago ok"
+			          "ConceptualProperty": "Vlr_Descuento_Pronto_Pago"
 			        }
 			      },
 			      "State": "Generated",
@@ -2750,7 +2750,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Descuento_Condicionados ok"
+			          "ConceptualProperty": "Vlr_Descuento_Condicionados"
 			        }
 			      },
 			      "State": "Generated",
@@ -2776,7 +2776,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_No_Entregue_Ant ok"
+			          "ConceptualProperty": "Vlr_Ventas_No_Entregue_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -2802,7 +2802,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_Netas_IFRS ok"
+			          "ConceptualProperty": "Vlr_Ventas_Netas_IFRS"
 			        }
 			      },
 			      "State": "Generated",
@@ -2828,7 +2828,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Ventas_M3_No_Entrege_Ant ok"
+			          "ConceptualProperty": "Cant_Ventas_M3_No_Entrege_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -2854,7 +2854,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_Netas_IFRS_Per_Ant ok"
+			          "ConceptualProperty": "Vlr_Ventas_Netas_IFRS_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -2880,7 +2880,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Descuento_Condicionados_Per_Ant ok"
+			          "ConceptualProperty": "Vlr_Descuento_Condicionados_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -2939,7 +2939,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_No_Entrege_Per_Ant ok"
+			          "ConceptualProperty": "Vlr_Ventas_No_Entrege_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -3130,7 +3130,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Nota_Credito ok"
+			          "ConceptualProperty": "Vlr_Nota_Credito"
 			        }
 			      },
 			      "State": "Generated",
@@ -3146,7 +3146,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Operativo ok"
+			          "ConceptualProperty": "Vlr_Operativo"
 			        }
 			      },
 			      "State": "Generated",
@@ -3208,7 +3208,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_SubTotal_Ventas ok"
+			          "ConceptualProperty": "Vlr_SubTotal_Ventas"
 			        }
 			      },
 			      "State": "Generated",
@@ -3224,7 +3224,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Nota_Credito_Per_Ant ok"
+			          "ConceptualProperty": "Vlr_Nota_Credito_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -3240,7 +3240,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_Netas_Año ok"
+			          "ConceptualProperty": "Vlr_Ventas_Netas_Año"
 			        }
 			      },
 			      "State": "Generated",
@@ -3256,7 +3256,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_Netas_Año_Ant ok"
+			          "ConceptualProperty": "Vlr_Ventas_Netas_Año_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -3282,7 +3282,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Nota_Credito_Año ok"
+			          "ConceptualProperty": "Vlr_Nota_Credito_Año"
 			        }
 			      },
 			      "State": "Generated",
@@ -3298,7 +3298,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Nota_Credito_Año_Ant ok"
+			          "ConceptualProperty": "Vlr_Nota_Credito_Año_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -3314,7 +3314,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Poa_Año ok"
+			          "ConceptualProperty": "Vlr_Poa_Año"
 			        }
 			      },
 			      "State": "Generated",
@@ -3330,7 +3330,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "%Crescimiento_Ventas_Mes_Ano_Ant ok"
+			          "ConceptualProperty": "%Crescimiento_Ventas_Mes_Ano_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -3366,7 +3366,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "%Crescimiento_Ventas_Ano ok"
+			          "ConceptualProperty": "%Crescimiento_Ventas_Ano"
 			        }
 			      },
 			      "State": "Generated",
@@ -3557,7 +3557,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Notas_Credito_M3 ok"
+			          "ConceptualProperty": "Cant_Notas_Credito_M3"
 			        }
 			      },
 			      "State": "Generated",
@@ -3619,7 +3619,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Notas_Credito_M3_Per_Ant ok"
+			          "ConceptualProperty": "Cant_Notas_Credito_M3_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -3635,7 +3635,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Poa_M3 ok"
+			          "ConceptualProperty": "Cant_Poa_M3"
 			        }
 			      },
 			      "State": "Generated",
@@ -3661,7 +3661,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Operativo_M3 ok"
+			          "ConceptualProperty": "Cant_Operativo_M3"
 			        }
 			      },
 			      "State": "Generated",
@@ -3687,7 +3687,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Operativo_Año ok"
+			          "ConceptualProperty": "Vlr_Operativo_Año"
 			        }
 			      },
 			      "State": "Generated",
@@ -3739,7 +3739,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Pedido_M3_Per_Ant ok"
+			          "ConceptualProperty": "Cant_Pedido_M3_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -3900,7 +3900,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "DiasCorrentes ok"
+			          "ConceptualProperty": "DiasCorrentes"
 			        }
 			      },
 			      "State": "Generated",
@@ -3916,7 +3916,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "DiasHabiles ok"
+			          "ConceptualProperty": "DiasHabiles"
 			        }
 			      },
 			      "State": "Generated",
@@ -4058,29 +4058,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "Indice_Ejecucion_Pedido": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "medida.vlr_poa_vendedor": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Poa_Vendedor"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "vlr poa vendedor": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Vlr_Poa_Vendedor": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -4263,7 +4240,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Nota_Credito_IFRS ok"
+			          "ConceptualProperty": "Vlr_Nota_Credito_IFRS"
 			        }
 			      },
 			      "State": "Generated",
@@ -4302,7 +4279,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Nota_Credito_IFRS_Per_Ant ok"
+			          "ConceptualProperty": "Vlr_Nota_Credito_IFRS_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -4318,7 +4295,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "%Ventas_Netas_Linea_Per_Ant ok"
+			          "ConceptualProperty": "%Ventas_Netas_Linea_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -4354,7 +4331,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Ventas_M3_No_Entrege_Ant_Per_Ant ok"
+			          "ConceptualProperty": "Cant_Ventas_M3_No_Entrege_Ant_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -4370,7 +4347,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Ventas_M3_No_Entrege_Per_Ant ok"
+			          "ConceptualProperty": "Cant_Ventas_M3_No_Entrege_Per_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -5121,7 +5098,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_POA_Captura_Clien ok-"
+			          "ConceptualProperty": "Vlr_POA_Captura_Clien"
 			        }
 			      },
 			      "State": "Generated",
@@ -5410,7 +5387,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_Netas_Mes_Ant ok"
+			          "ConceptualProperty": "Vlr_Ventas_Netas_Mes_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -5426,7 +5403,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Ventas_M3_Mes_Ant ok"
+			          "ConceptualProperty": "Cant_Ventas_M3_Mes_Ant"
 			        }
 			      },
 			      "State": "Generated",
@@ -5488,7 +5465,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_POA_M3_Acumulado ok"
+			          "ConceptualProperty": "Cant_POA_M3_Acumulado"
 			        }
 			      },
 			      "State": "Generated",
@@ -6177,7 +6154,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Nota_Credito_COP ok"
+			          "ConceptualProperty": "Vlr_Nota_Credito_COP"
 			        }
 			      },
 			      "State": "Generated",
@@ -6193,7 +6170,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_Netas_COP ok"
+			          "ConceptualProperty": "Vlr_Ventas_Netas_COP"
 			        }
 			      },
 			      "State": "Generated",
@@ -6219,7 +6196,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Costo_Prod_Vendido ok"
+			          "ConceptualProperty": "Vlr_Costo_Prod_Vendido"
 			        }
 			      },
 			      "State": "Generated",
@@ -6532,7 +6509,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Precio_Medio_COP ok"
+			          "ConceptualProperty": "Vlr_Precio_Medio_COP"
 			        }
 			      },
 			      "State": "Generated",
@@ -6637,7 +6614,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Costo_Nota_Credito ok"
+			          "ConceptualProperty": "Vlr_Costo_Nota_Credito}"
 			        }
 			      },
 			      "State": "Generated",
@@ -6839,7 +6816,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Margen_M3 ok"
+			          "ConceptualProperty": "Vlr_Margen_M3"
 			        }
 			      },
 			      "State": "Generated",
@@ -7454,7 +7431,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Pedi_Pend_Acum_m3_Real_vent ok"
+			          "ConceptualProperty": "Cant_Pedi_Pend_Acum_m3_Real_vent"
 			        }
 			      },
 			      "State": "Generated",
@@ -7490,7 +7467,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cant_Pedi_pend_Acum_M3__Retenido ok"
+			          "ConceptualProperty": "Cant_Pedi_pend_Acum_M3__Retenido"
 			        }
 			      },
 			      "State": "Generated",
@@ -7607,16 +7584,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Ped": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "Ped Lib + Fac": {
 			            "State": "Suggested",
 			            "Source": {
@@ -7628,6 +7595,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "Pedidos Lib": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Ped": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7683,7 +7660,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Facturado x S&OP": {
+			          "Real": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7693,7 +7670,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Real": {
+			          "Facturado x S&OP": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -9742,7 +9719,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Sublinea": {
+			          "DESCRIPCION": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -9752,7 +9729,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "DESCRIPCION": {
+			          "Sublinea": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -12939,7 +12916,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "MERCADO": {
+			          "Mercado": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -29908,7 +29885,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Vlr_Ventas_No_Entrege ok"
+			          "ConceptualProperty": "Vlr_Ventas_No_Entrege"
 			        }
 			      },
 			      "State": "Generated",
@@ -35472,6 +35449,69 @@ cultureInfo en-US
 			      "Terms": [
 			        {
 			          "Sublineas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dimitem.referencia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimitem",
+			          "ConceptualProperty": "Referencia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "REFERENCIA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dimcliente.ccl": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimcliente",
+			          "ConceptualProperty": "CCL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Clase": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dimcliente.zon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimcliente",
+			          "ConceptualProperty": "ZON"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Zonas": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

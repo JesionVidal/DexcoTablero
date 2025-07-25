@@ -43,7 +43,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3_Per_Ant ok"
+                  "Property": "Cant_Ventas_M3_Per_Ant"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3_Per_Ant",
@@ -57,7 +57,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3 ok"
+                  "Property": "Cant_Ventas_M3"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -76,7 +76,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Cant_Ventas_M3_Per_Ant ok"
+                "Property": "Cant_Ventas_M3_Per_Ant"
               }
             },
             "direction": "Descending"

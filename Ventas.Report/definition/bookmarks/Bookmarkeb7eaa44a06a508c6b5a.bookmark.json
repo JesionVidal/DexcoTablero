@@ -588,7 +588,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Margen_M3 ok"
+                      "Property": "Vlr_Margen_M3"
                     }
                   },
                   "howCreated": 0
@@ -939,7 +939,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3 ok"
+                      "Property": "Cant_Ventas_M3"
                     }
                   },
                   "howCreated": 0
@@ -969,7 +969,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Costo_Prod_Vendido ok"
+                      "Property": "Vlr_Costo_Prod_Vendido"
                     }
                   },
                   "howCreated": 0
@@ -984,7 +984,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_COP ok"
+                      "Property": "Vlr_Ventas_Netas_COP"
                     }
                   },
                   "howCreated": 0
@@ -999,7 +999,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Precio_Medio_COP ok"
+                      "Property": "Vlr_Precio_Medio_COP"
                     }
                   },
                   "howCreated": 0
@@ -1059,7 +1059,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Margen_M3 ok"
+                      "Property": "Vlr_Margen_M3"
                     }
                   },
                   "howCreated": 0

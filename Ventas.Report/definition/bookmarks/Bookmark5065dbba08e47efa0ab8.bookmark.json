@@ -476,7 +476,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_Año_Ant ok"
+                      "Property": "Vlr_Ventas_Netas_Año_Ant"
                     }
                   },
                   "howCreated": 0
@@ -584,7 +584,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas ok"
+                      "Property": "Vlr_Ventas_Netas"
                     }
                   },
                   "howCreated": 0
@@ -599,7 +599,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3 ok"
+                      "Property": "Cant_Ventas_M3"
                     }
                   },
                   "howCreated": 0
@@ -818,7 +818,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_Per_Ant ok"
+                      "Property": "Vlr_Ventas_Netas_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -953,7 +953,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas ok"
+                      "Property": "Vlr_Ventas_Netas"
                     }
                   },
                   "howCreated": 0
@@ -968,7 +968,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3 ok"
+                      "Property": "Cant_Ventas_M3"
                     }
                   },
                   "howCreated": 0
@@ -1013,7 +1013,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Poa ok"
+                      "Property": "Vlr_Poa"
                     }
                   },
                   "howCreated": 0
@@ -1078,7 +1078,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas ok"
+                      "Property": "Vlr_Ventas_Netas"
                     }
                   }
                 }
@@ -1158,7 +1158,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas ok"
+                      "Property": "Vlr_Ventas_Netas"
                     }
                   },
                   "howCreated": 0
@@ -1173,7 +1173,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_Per_Ant ok"
+                      "Property": "Vlr_Ventas_Netas_Per_Ant"
                     }
                   },
                   "howCreated": 0

@@ -43,7 +43,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Pedido_Neto ok"
+                  "Property": "Vlr_Pedido_Neto"
                 }
               },
               "queryRef": "Medidas.Vlr_Pedido_Neto",
@@ -57,7 +57,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Pedido_M3 ok"
+                  "Property": "Cant_Pedido_M3"
                 }
               },
               "queryRef": "Medidas.Cant_Pedido_M3",
@@ -73,7 +73,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto ok"
+                      "Property": "Vlr_Pedido_Neto"
                     }
                   },
                   "Right": {
@@ -85,7 +85,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Vlr_Pedido_Neto ok"
+                          "Property": "Vlr_Pedido_Neto"
                         }
                       },
                       "Scope": []
@@ -112,7 +112,7 @@
                         "Entity": "Medidas"
                       }
                     },
-                    "Property": "Vlr_Pedido_Neto ok"
+                    "Property": "Vlr_Pedido_Neto"
                   }
                 },
                 "Right": {
@@ -124,7 +124,7 @@
                             "Entity": "Medidas"
                           }
                         },
-                        "Property": "Vlr_Pedido_Neto ok"
+                        "Property": "Vlr_Pedido_Neto"
                       }
                     },
                     "Scope": []

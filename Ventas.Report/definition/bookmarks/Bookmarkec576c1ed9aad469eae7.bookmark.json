@@ -582,7 +582,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   },
                   "howCreated": 0
@@ -597,7 +597,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Pedido_M3_Pend ok"
+                      "Property": "Cant_Pedido_M3_Pend"
                     }
                   },
                   "howCreated": 0
@@ -617,7 +617,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   }
                 }
@@ -681,7 +681,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   },
                   "howCreated": 0
@@ -701,7 +701,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   }
                 }
@@ -750,7 +750,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   },
                   "howCreated": 0
@@ -765,7 +765,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Pedido_M3_Pend ok"
+                      "Property": "Cant_Pedido_M3_Pend"
                     }
                   },
                   "howCreated": 0
@@ -782,7 +782,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Vlr_Pedido_Neto_Pend ok"
+                          "Property": "Vlr_Pedido_Neto_Pend"
                         }
                       },
                       "Right": {
@@ -794,7 +794,7 @@
                                   "Entity": "Medidas"
                                 }
                               },
-                              "Property": "Vlr_Pedido_Neto_Pend ok"
+                              "Property": "Vlr_Pedido_Neto_Pend"
                             }
                           },
                           "Scope": []
@@ -822,7 +822,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Vlr_Pedido_Neto_Pend ok"
+                          "Property": "Vlr_Pedido_Neto_Pend"
                         }
                       },
                       "Right": {
@@ -834,7 +834,7 @@
                                   "Entity": "Medidas"
                                 }
                               },
-                              "Property": "Vlr_Pedido_Neto_Pend ok"
+                              "Property": "Vlr_Pedido_Neto_Pend"
                             }
                           },
                           "Scope": []
@@ -962,7 +962,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   },
                   "howCreated": 0
@@ -982,7 +982,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   }
                 }
@@ -1031,7 +1031,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   },
                   "howCreated": 0
@@ -1085,7 +1085,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   },
                   "howCreated": 0
@@ -1100,7 +1100,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Pedido_M3_Pend ok"
+                      "Property": "Cant_Pedido_M3_Pend"
                     }
                   },
                   "howCreated": 0
@@ -1132,7 +1132,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Vlr_Pedido_Neto_Pend ok"
+                          "Property": "Vlr_Pedido_Neto_Pend"
                         }
                       },
                       "Right": {
@@ -1144,7 +1144,7 @@
                                   "Entity": "Medidas"
                                 }
                               },
-                              "Property": "Vlr_Pedido_Neto_Pend ok"
+                              "Property": "Vlr_Pedido_Neto_Pend"
                             }
                           },
                           "Scope": []
@@ -1210,7 +1210,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Pedido_M3_Pend ok"
+                      "Property": "Cant_Pedido_M3_Pend"
                     }
                   },
                   "howCreated": 0
@@ -1560,7 +1560,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto_Pend ok"
+                      "Property": "Vlr_Pedido_Neto_Pend"
                     }
                   },
                   "howCreated": 0
@@ -1575,7 +1575,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Pedido_M3_Pend ok"
+                      "Property": "Cant_Pedido_M3_Pend"
                     }
                   },
                   "howCreated": 0
@@ -1622,7 +1622,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Vlr_Pedido_Neto_Pend ok"
+                          "Property": "Vlr_Pedido_Neto_Pend"
                         }
                       },
                       "Right": {
@@ -1634,7 +1634,7 @@
                                   "Entity": "Medidas"
                                 }
                               },
-                              "Property": "Vlr_Pedido_Neto_Pend ok"
+                              "Property": "Vlr_Pedido_Neto_Pend"
                             }
                           },
                           "Scope": []
@@ -1662,7 +1662,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Vlr_Pedido_Neto_Pend ok"
+                          "Property": "Vlr_Pedido_Neto_Pend"
                         }
                       },
                       "Right": {
@@ -1674,7 +1674,7 @@
                                   "Entity": "Medidas"
                                 }
                               },
-                              "Property": "Vlr_Pedido_Neto_Pend ok"
+                              "Property": "Vlr_Pedido_Neto_Pend"
                             }
                           },
                           "Scope": []

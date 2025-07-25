@@ -547,7 +547,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3 ok"
+                      "Property": "Cant_Ventas_M3"
                     }
                   },
                   "howCreated": 0
@@ -577,7 +577,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3_No_Entrege ok"
+                      "Property": "Cant_Ventas_M3_No_Entrege"
                     }
                   },
                   "howCreated": 0
@@ -622,7 +622,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "%Ventas_Netas_Linea ok"
+                      "Property": "%Ventas_Netas_Linea"
                     }
                   },
                   "howCreated": 0
@@ -652,7 +652,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Descuento_Pronto_Pago ok"
+                      "Property": "Vlr_Descuento_Pronto_Pago"
                     }
                   },
                   "howCreated": 0
@@ -667,7 +667,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Descuento_Condicionados ok"
+                      "Property": "Vlr_Descuento_Condicionados"
                     }
                   },
                   "howCreated": 0
@@ -682,7 +682,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_No_Entrege ok"
+                      "Property": "Vlr_Ventas_No_Entrege"
                     }
                   },
                   "howCreated": 0
@@ -697,7 +697,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_No_Entregue_Ant ok"
+                      "Property": "Vlr_Ventas_No_Entregue_Ant"
                     }
                   },
                   "howCreated": 0
@@ -712,7 +712,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_IFRS ok"
+                      "Property": "Vlr_Ventas_Netas_IFRS"
                     }
                   },
                   "howCreated": 0
@@ -742,7 +742,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3_IFRS ok"
+                      "Property": "Cant_Ventas_M3_IFRS"
                     }
                   },
                   "howCreated": 0
@@ -757,7 +757,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3_No_Entrege_Ant ok"
+                      "Property": "Cant_Ventas_M3_No_Entrege_Ant"
                     }
                   },
                   "howCreated": 0
@@ -947,7 +947,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_IFRS_Per_Ant ok"
+                      "Property": "Vlr_Ventas_Netas_IFRS_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -962,7 +962,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3_Per_Ant ok"
+                      "Property": "Cant_Ventas_M3_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -977,7 +977,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Descuento_Condicionados_Per_Ant ok"
+                      "Property": "Vlr_Descuento_Condicionados_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -1007,7 +1007,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_No_Entrege_Per_Ant ok"
+                      "Property": "Vlr_Ventas_No_Entrege_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -1057,7 +1057,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_No_Entrege_Per_Ant ok"
+                      "Property": "Vlr_Ventas_No_Entrege_Per_Ant"
                     }
                   }
                 }

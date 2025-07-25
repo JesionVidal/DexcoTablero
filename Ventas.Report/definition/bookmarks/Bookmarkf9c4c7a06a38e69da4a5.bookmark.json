@@ -404,7 +404,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas ok"
+                      "Property": "Vlr_Ventas_Netas"
                     }
                   },
                   "howCreated": 0
@@ -464,7 +464,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_Per_Ant ok"
+                      "Property": "Vlr_Ventas_Netas_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -675,7 +675,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas ok"
+                      "Property": "Vlr_Ventas_Netas"
                     }
                   },
                   "howCreated": 0
@@ -705,7 +705,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_Per_Ant ok"
+                      "Property": "Vlr_Ventas_Netas_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -820,7 +820,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas ok"
+                      "Property": "Vlr_Ventas_Netas"
                     }
                   },
                   "howCreated": 0
@@ -835,7 +835,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_Per_Ant ok"
+                      "Property": "Vlr_Ventas_Netas_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -870,7 +870,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas_Per_Ant ok"
+                      "Property": "Vlr_Ventas_Netas_Per_Ant"
                     }
                   }
                 }
