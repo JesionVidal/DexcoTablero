@@ -1,0 +1,1040 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "VentasJuntasAcumulado_On",
+  "name": "Bookmark346305672a41496a078b",
+  "options": {
+    "targetVisualNames": [
+      "08126b361c060ab520ee"
+    ],
+    "suppressActiveSection": true,
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection95a6e2e7b44accb52f7e",
+    "filters": {
+      "byName": {
+        "Filter": {
+          "name": "Filter",
+          "type": "Categorical",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "m",
+                "Entity": "MERCADO",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "Not": {
+                    "Expression": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "m"
+                                }
+                              },
+                              "Property": "MERCADO"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "null"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "MERCADO"
+                }
+              },
+              "Property": "MERCADO"
+            }
+          },
+          "howCreated": 1
+        }
+      },
+      "byExpr": [
+        {
+          "name": "Filter1",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Pedidos"
+                }
+              },
+              "Property": "DESC_ESTADO"
+            }
+          },
+          "howCreated": 1
+        }
+      ]
+    },
+    "sections": {
+      "ReportSection95a6e2e7b44accb52f7e": {
+        "visualContainers": {
+          "1f90de906000c51a4032": {
+            "singleVisual": {
+              "visualType": "basicShape",
+              "objects": {}
+            }
+          },
+          "0bd1c64ad7e38b7db3b4": {
+            "singleVisual": {
+              "visualType": "basicShape",
+              "objects": {}
+            }
+          },
+          "b38b557b0dc75ce60cb0": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "2cbe14ab3c96c063a8b8": {
+            "singleVisual": {
+              "visualType": "basicShape",
+              "objects": {}
+            }
+          },
+          "b00ae245c2856de625b6": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "cb7a06d18810a296c51b": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "8e505fe9bb006c2ab0bc": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "c7068511a1509b1922d6": {
+            "singleVisual": {
+              "visualType": "basicShape",
+              "objects": {}
+            }
+          },
+          "79bafbc34edf339fdfa3": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "1c850cc2252d35d1f460": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "967c6e0c3215ffde7f2b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "PeriodoSelecionado"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "839ea5b6c3dac7b1942b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7b6e0e81121f26784148",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MERCADO"
+                        }
+                      },
+                      "Property": "MERCADO"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MERCADO"
+                        }
+                      },
+                      "Property": "MERCADO"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "52f8a1799e577b371052": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f70c85ddf1a9ed898012",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Compañia"
+                        }
+                      },
+                      "Property": "Descripcion"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Compañia"
+                        }
+                      },
+                      "Property": "Descripcion"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "0d3de5798bb50485e390": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "67e62efd3e99ee5c8afe",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Lineas"
+                        }
+                      },
+                      "Property": "Lineas"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Lineas"
+                        }
+                      },
+                      "Property": "Lineas"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "04725171486b5d413a4e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "35b732a9c905cd7f14d7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dimcliente"
+                        }
+                      },
+                      "Property": "ZON"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dimcliente"
+                        }
+                      },
+                      "Property": "ZON"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "8897ec5a439205164b18": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ea0b450c76ef476fc6c9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Sustrato_SubLinea_Unico"
+                        }
+                      },
+                      "Property": "DESCRIPCION"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c72ce4ef3b9a7e25a2f4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Lineas"
+                        }
+                      },
+                      "Property": "LIN"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6f6b8d5f63e8a642d9e5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Vlr_Neto_IFRS_Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cfea0011266003aaa3ca",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Vlr_Poa_IFRS_Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a6e3d76fd3a7d03ed5de",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "%Ejecucion_Ventas_POA_IFRS_Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c332e4e8491c23039d05",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Vlr_Neto_IFRS_Año_Ant"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0d2b6eaa93d623afd7b0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MERCADO"
+                        }
+                      },
+                      "Property": "MERCADO"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4ab02e42067183370e7d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "%Variacion_Ventas_IFRS_Año_Ant"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Lineas"
+                        }
+                      },
+                      "Property": "LIN"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MERCADO"
+                        }
+                      },
+                      "Property": "MERCADO"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "4f9239ba8b479a23c578": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8d7569df13eaf34b24b3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MERCADO"
+                        }
+                      },
+                      "Property": "MERCADO"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f77115d2b2c405fb13da",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Sustrato_SubLinea_Unico"
+                        }
+                      },
+                      "Property": "DESCRIPCION"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0906618cc09033a1d59e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Lineas"
+                        }
+                      },
+                      "Property": "LIN"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "60c93204fa89358236cf",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Cant_Poa_M3_IFRS_Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f213f9101c864e20d398",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Cant_Ventas_M3_IFRS_Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c30051567dfe8e01946a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "%Ejecucion_M3_POA_IFRS_Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "12342da5155db6ece48c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Cant_Ventas_M3_IFRS_Año_Ant"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6fc72d164766506aafbd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "%Variacion_M3_IFRS_Año_Ant"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Lineas"
+                        }
+                      },
+                      "Property": "LIN"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MERCADO"
+                        }
+                      },
+                      "Property": "MERCADO"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "5f51dd2e24a9b46190ea": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "de66f6c3c66189d691f3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Sustrato_SubLinea_Unico"
+                        }
+                      },
+                      "Property": "DESCRIPCION"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Sustrato_SubLinea_Unico"
+                        }
+                      },
+                      "Property": "DESCRIPCION"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "5e00f8b78b5fc3d27a54": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ec94c2fe56f42d226573",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dimcliente"
+                        }
+                      },
+                      "Property": "Razon_Social_Cli"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dimcliente"
+                        }
+                      },
+                      "Property": "Razon_Social_Cli"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "a2b12af7825988ca1466": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d1a8988ada7f27d1fa52",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Lineas"
+                        }
+                      },
+                      "Property": "EQ_LIN"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        },
+                        "isInvertedSelectionMode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "EQ_Lineas"
+                        }
+                      },
+                      "Property": "EQ_LIN"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "08126b361c060ab520ee": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "755255085290747aa0fa",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CALENDARIO"
+                        }
+                      },
+                      "Property": "MesAnt"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "c",
+                                "Entity": "CALENDARIO",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "c"
+                                            }
+                                          },
+                                          "Property": "MesAnt"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Anterior'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CALENDARIO"
+                        }
+                      },
+                      "Property": "MesAnt"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CALENDARIO"
+                        }
+                      },
+                      "Property": "MesAnt"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "visible": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

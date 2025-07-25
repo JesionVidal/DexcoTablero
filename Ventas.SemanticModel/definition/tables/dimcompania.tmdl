@@ -1,0 +1,63 @@
+table dimcompania
+	lineageTag: d6c1904b-470e-4f2d-972f-bb4d13a80266
+
+	column IdCompania
+		dataType: int64
+		formatString: 0
+		lineageTag: 20e74c03-b078-4dad-a0c9-3baef1e5cdf5
+		summarizeBy: none
+		sourceColumn: IdCompania
+
+		annotation SummarizationSetBy = Automatic
+
+	column DescripcionCompania
+		dataType: string
+		lineageTag: b7f993dd-c3d1-40f8-ac8c-bab86f0ca0be
+		summarizeBy: none
+		sourceColumn: DescripcionCompania
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d488edc6-e24a-412d-85fa-fc79dafae557
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 89f75a39-4fb9-4fc9-b4d8-4f3e12af513e
+			defaultHierarchy: LocalDateTable_e6338bb9-19b1-421f-86bc-d21c7d249fae.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7ad0b705-5d54-49b4-95bc-0ba3f66d83ea
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: d3d19067-9f9b-416a-a3a2-e06083946565
+			defaultHierarchy: LocalDateTable_7b55d2cf-f8b1-47f0-838e-671e46021502.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimcompania = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimcompania_Table = siesa_Schema{[Name="dimcompania",Kind="Table"]}[Data]
+				in
+				    dimcompania_Table
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

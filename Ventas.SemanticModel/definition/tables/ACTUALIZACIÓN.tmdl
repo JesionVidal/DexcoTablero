@@ -1,0 +1,25 @@
+table ACTUALIZACIÓN
+	lineageTag: 0051924e-1e57-4889-a516-5dee5b2fa2bb
+
+	column 'Última actualización'
+		dataType: string
+		lineageTag: 35560918-76fe-4a90-8b9c-3b216759b998
+		summarizeBy: none
+		sourceColumn: Última actualización
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ACTUALIZACIÓN = m
+		mode: import
+		source =
+				let
+				    Origen = DateTime.LocalNow(),
+				    #"Convertida en tabla" = #table(1, {{Origen}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Convertida en tabla",{{"Column1", "Última actualización"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

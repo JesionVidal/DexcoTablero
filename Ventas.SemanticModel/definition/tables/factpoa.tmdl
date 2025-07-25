@@ -1,0 +1,118 @@
+table factpoa
+	lineageTag: 62ce40c9-996f-4d71-a859-7a1017fc21ab
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f0fe536b-c869-4e9a-987b-8e74531aa7fb
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IdCompania
+		dataType: int64
+		formatString: 0
+		lineageTag: 1362d5e7-23df-4611-9867-1e6babfd7b02
+		summarizeBy: sum
+		sourceColumn: IdCompania
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdMercado
+		dataType: string
+		lineageTag: 8d4ef907-e942-4ae9-a33d-7c5ceaa41a97
+		summarizeBy: none
+		sourceColumn: IdMercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveLinSub
+		dataType: string
+		lineageTag: 00cdc421-7a28-47d3-82dd-e3d8b235f723
+		summarizeBy: none
+		sourceColumn: LlaveLinSub
+
+		annotation SummarizationSetBy = Automatic
+
+	column PoaCop
+		dataType: double
+		lineageTag: e6352462-048e-4812-8764-14e93102bdaa
+		summarizeBy: sum
+		sourceColumn: PoaCop
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PoaM3
+		dataType: double
+		lineageTag: 63528892-7876-4bfe-ae24-00cd43979c01
+		summarizeBy: sum
+		sourceColumn: PoaM3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 45164f0a-8d1a-464e-9598-a509799208be
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: c6611151-e6a2-4ba3-9c97-4ea05e2f5eee
+			defaultHierarchy: LocalDateTable_8e5f07a3-1558-4426-867b-98a7e05d06cd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c356a07d-5803-4269-8a1a-f0449d423e84
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: d8a05fbc-b357-47c5-a1a6-3750dbda5887
+			defaultHierarchy: LocalDateTable_4456d580-5de9-461b-b668-5d4eb07bf9c0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdLinea
+		dataType: string
+		lineageTag: 6994c80a-9cc1-45cb-b145-c8c233db9ac4
+		summarizeBy: none
+		sourceColumn: IdLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSubLinea
+		dataType: string
+		lineageTag: 275a0a97-dc4f-4c7a-9209-385b22859f3a
+		summarizeBy: none
+		sourceColumn: IdSubLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factpoa = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factpoa_Table = siesa_Schema{[Name="factpoa",Kind="Table"]}[Data]
+				in
+				    factpoa_Table
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

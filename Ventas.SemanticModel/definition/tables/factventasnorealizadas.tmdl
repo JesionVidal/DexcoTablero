@@ -1,0 +1,186 @@
+table factventasnorealizadas
+	lineageTag: 8791c7f9-0339-4ceb-926c-ca5d7ded0982
+
+	column IdCompania
+		dataType: string
+		lineageTag: 341dfaec-6fc3-4dbf-8316-cac301cf47c9
+		summarizeBy: none
+		sourceColumn: IdCompania
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdCentroOperacionFactura
+		dataType: string
+		lineageTag: 83d12703-cff6-4291-afd4-4d08b86a2d2c
+		summarizeBy: none
+		sourceColumn: IdCentroOperacionFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoFactura
+		dataType: string
+		lineageTag: c25d2a39-50c8-4939-b5c0-6829988e0472
+		summarizeBy: none
+		sourceColumn: TipoFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column Naturaleza
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f40831d-1c95-4858-927f-44d3ac798b09
+		summarizeBy: sum
+		sourceColumn: Naturaleza
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumeroFactura
+		dataType: string
+		lineageTag: 947569d3-d3ba-4516-b49f-515ba97d7102
+		summarizeBy: none
+		sourceColumn: NumeroFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ad83c151-895f-4186-b088-456a23b2057d
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Cliente
+		dataType: string
+		lineageTag: c400a3e0-9457-44aa-8385-7f5ffe25540e
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Remision
+		dataType: string
+		lineageTag: d82c1822-b3c7-43ff-b0f8-c1df8b33ebca
+		summarizeBy: none
+		sourceColumn: Remision
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiItemExt
+		dataType: int64
+		formatString: 0
+		lineageTag: 0df39151-6735-4dd6-a682-b053819d562b
+		summarizeBy: none
+		sourceColumn: RiItemExt
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdPuntoEnvio
+		dataType: int64
+		formatString: 0
+		lineageTag: 12db299c-2142-4086-b9fa-c54d20ddcd6a
+		summarizeBy: none
+		sourceColumn: RowIdPuntoEnvio
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdMercado
+		dataType: string
+		lineageTag: e5d72b37-d991-455e-9d3b-e31395731fda
+		summarizeBy: none
+		sourceColumn: IdMercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column CantidadFactura
+		dataType: double
+		lineageTag: 747c6b9e-63da-4055-bf5a-d491d3bb8e6a
+		summarizeBy: sum
+		sourceColumn: CantidadFactura
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VolumenItem
+		dataType: double
+		lineageTag: f7127389-268c-4ba9-9f7a-5a37a2adab67
+		summarizeBy: sum
+		sourceColumn: VolumenItem
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValorSubtotal
+		dataType: double
+		lineageTag: ddae50d5-ffeb-43a8-9fa7-2ffab30fa42e
+		summarizeBy: sum
+		sourceColumn: ValorSubtotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CantFactM3
+		dataType: double
+		lineageTag: 140a38e8-354e-4431-8679-80d8873187c3
+		summarizeBy: sum
+		sourceColumn: CantFactM3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CostoPromedioTotal
+		dataType: double
+		lineageTag: f5b788b9-347d-4ec6-ae77-4de35a8022f0
+		summarizeBy: sum
+		sourceColumn: CostoPromedioTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: aebb960c-8eb9-4e83-977f-b232495fd6b1
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 8c78b955-2755-4bfc-b32e-368426e4f523
+			defaultHierarchy: LocalDateTable_dcdc4749-2a08-4d52-adad-136b4b5c7df2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b95b10d6-cb66-43dd-b93c-67f78dacf969
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: bbdc881f-efb3-4168-85eb-194e1db84ef5
+			defaultHierarchy: LocalDateTable_04672648-4fac-445e-a88f-3a5b8bfd43ed.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factventasnorealizadas = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factventasnorealizadas_Table = siesa_Schema{[Name="factventasnorealizadas",Kind="Table"]}[Data]
+				in
+				    factventasnorealizadas_Table
+

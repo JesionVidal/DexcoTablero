@@ -1,0 +1,92 @@
+table dimbodegas
+	lineageTag: 0aa2361f-080f-4c06-8954-2ad671f5d7a1
+
+	column IdCompania
+		dataType: int64
+		formatString: 0
+		lineageTag: ae118a6e-76d7-433e-b31c-3c52c6ba1197
+		summarizeBy: sum
+		sourceColumn: IdCompania
+
+		annotation SummarizationSetBy = Automatic
+
+	column RIIBodega
+		dataType: int64
+		formatString: 0
+		lineageTag: 24c41cc0-9a93-42c3-8780-d367c10a6559
+		summarizeBy: none
+		sourceColumn: RIIBodega
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdBodega
+		dataType: string
+		lineageTag: eb63f99f-324f-4481-aaf7-93adcbd9aed8
+		summarizeBy: none
+		sourceColumn: IdBodega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: 37bef68f-9730-458d-bd0e-6e1ad8c3b18e
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdCentroOperacion
+		dataType: string
+		lineageTag: ff7fe73b-374e-498e-b91e-efddd8d9288f
+		summarizeBy: none
+		sourceColumn: IdCentroOperacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdInstalacion
+		dataType: string
+		lineageTag: 271619f2-5d91-4455-a085-06c17b23587b
+		summarizeBy: none
+		sourceColumn: IdInstalacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6db987b2-30e0-40df-820e-5b99f7fdc6eb
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 812f5e7d-7996-4dc8-9bee-e35431a9e422
+			defaultHierarchy: LocalDateTable_03ad9ac8-3ddf-4849-a694-50b76b61575e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5a307242-386c-4c16-9640-3ebf6a2d6201
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: ce52b947-74c7-4a56-a8fc-f6a62d663708
+			defaultHierarchy: LocalDateTable_6bf9658e-431b-4cd5-be1a-32fdfeeae3b4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimbodegas = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimbodegas_Table = siesa_Schema{[Name="dimbodegas",Kind="Table"]}[Data]
+				in
+				    dimbodegas_Table
+

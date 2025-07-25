@@ -1,0 +1,399 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "5aa8ca07f0637501ad1e",
+  "position": {
+    "x": 667,
+    "y": 410,
+    "z": 6000,
+    "height": 75,
+    "width": 606,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Ventas_M3_Per_Ant ok"
+                }
+              },
+              "queryRef": "Medidas.Cant_Ventas_M3_Per_Ant",
+              "nativeQueryRef": "Ventas AA",
+              "displayName": "Ventas AA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Poa_M3 ok"
+                }
+              },
+              "queryRef": "Medidas.Cant_Poa_M3",
+              "nativeQueryRef": "POA",
+              "displayName": "POA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Operativo_M3 ok"
+                }
+              },
+              "queryRef": "Medidas.Cant_Operativo_M3",
+              "nativeQueryRef": "S&OP",
+              "displayName": "S&OP"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Pedi_Pend_Acum_m3_Real_vent ok"
+                }
+              },
+              "queryRef": "Medidas.Cant_Pedi_Pend_Acum_m3_Real",
+              "nativeQueryRef": "Ped + Fac",
+              "displayName": "Ped + Fac"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Pedido_Acum_M3_Pend_liberado+Vent"
+                }
+              },
+              "queryRef": "Medidas.Cant_Pedido_Acum_M3_Pend_liberado",
+              "nativeQueryRef": "Ped Lib + Fac",
+              "displayName": "Ped Lib + Fac"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Ventas_M3 ok"
+                }
+              },
+              "queryRef": "Medidas.Cant_Ventas_M3",
+              "nativeQueryRef": "Facturado",
+              "displayName": "Facturado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_X_Fact_lib"
+                }
+              },
+              "queryRef": "Medidas.Cant_X_Fact_lib",
+              "nativeQueryRef": "A Facturar",
+              "displayName": "A Facturar"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Cant_Pedido_Acum_M3_Pend_liberado+Vent"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "73.39517345473632D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Poa_M3"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85.63358409870654D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Operativo_M3"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.33016190809582D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Pedi_Pend_Acum_m3_Real"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "87.60937002144227D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Pedido_Acum_M3_Pend_liberado"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "84.41241437472982D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Ventas_M3"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Poa_M3"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Operativo_M3"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Pedi_Pend_Acum_m3_Real"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Pedido_Acum_M3_Pend_liberado"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cant_Ventas_M3"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Resumen'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

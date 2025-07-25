@@ -1,0 +1,229 @@
+table dimcliente
+	lineageTag: 359d0b46-1d01-4b27-8aa8-9bcd6e34b211
+
+	column IdCompania
+		dataType: int64
+		formatString: 0
+		lineageTag: 109988f4-08af-4bad-884f-2caf574d466f
+		summarizeBy: sum
+		sourceColumn: IdCompania
+
+		annotation SummarizationSetBy = Automatic
+
+	column RazonSocialCliente
+		dataType: string
+		lineageTag: 28c0cffb-0b49-4e06-a7f3-44c607121eec
+		summarizeBy: none
+		sourceColumn: RazonSocialCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdCliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 53364afd-776d-41ba-8a45-38888f440b19
+		summarizeBy: sum
+		sourceColumn: RowIdCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSucursalCliente
+		dataType: string
+		lineageTag: 2c6d1134-347e-46df-b928-167bf055a80e
+		summarizeBy: none
+		sourceColumn: IdSucursalCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column SucursalCliente
+		dataType: string
+		lineageTag: abb18166-e3c2-4af1-ae77-6ae0601b464e
+		summarizeBy: none
+		sourceColumn: SucursalCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column CupoCliente
+		dataType: double
+		lineageTag: d66e0e5c-a101-454f-a652-00f866a5a2c6
+		summarizeBy: sum
+		sourceColumn: CupoCliente
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IdPuntoEnvio
+		dataType: int64
+		formatString: 0
+		lineageTag: aaf437e3-0967-409d-bead-96370944a6ba
+		summarizeBy: none
+		sourceColumn: IdPuntoEnvio
+
+		annotation SummarizationSetBy = Automatic
+
+	column DescripcionPuntoEnvio
+		dataType: string
+		lineageTag: 0d9246f7-fee2-4dfa-9f65-7b2fe1b1b5c8
+		summarizeBy: none
+		sourceColumn: DescripcionPuntoEnvio
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoCliente
+		dataType: string
+		lineageTag: ea4ca12d-3f78-44fb-baa4-cdf8df5a434a
+		summarizeBy: none
+		sourceColumn: TipoCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdVendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 09ef431e-436d-45d4-a1a5-1d18009d6455
+		summarizeBy: sum
+		sourceColumn: RowIdVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodPais
+		dataType: string
+		lineageTag: e729eaac-0138-4e4c-9966-1aeca961fe97
+		summarizeBy: none
+		sourceColumn: CodPais
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodDpto
+		dataType: string
+		lineageTag: 9bc8f4b9-e65d-4bd2-81ca-7a6889ab6b89
+		summarizeBy: none
+		sourceColumn: CodDpto
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodCiudad
+		dataType: string
+		lineageTag: 6001a773-b3ab-42d9-8a32-85dd4488d154
+		summarizeBy: none
+		sourceColumn: CodCiudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveGeografia
+		dataType: string
+		lineageTag: 5ed19771-b766-4136-9482-a57911e6f8c7
+		summarizeBy: none
+		sourceColumn: LlaveGeografia
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveCliente
+		dataType: string
+		lineageTag: c0674265-afb2-4b14-a1d2-d51fa7f53e14
+		summarizeBy: none
+		sourceColumn: LlaveCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveClienteNit
+		dataType: string
+		lineageTag: d3e30b39-526e-433f-8f14-0d0f1539ab1c
+		summarizeBy: none
+		sourceColumn: LlaveClienteNit
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c1472444-303f-4e25-a7d2-c4f5b914d662
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 74ffdbf6-b30a-4d11-a492-e7b5340d2930
+			defaultHierarchy: LocalDateTable_3057d5d0-d202-4a03-99a0-6d422a11e328.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 36363b36-1162-4968-8f56-77b7275a1619
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: 293f0bd5-034b-4d10-a078-f86645cecb46
+			defaultHierarchy: LocalDateTable_5d9d0678-efbe-4c20-8874-0e12e347c843.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdNitCliente
+		dataType: string
+		lineageTag: d549c81e-4f64-4916-b3c4-463bf2022b0c
+		summarizeBy: none
+		sourceColumn: IdNitCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdPunto
+		dataType: string
+		lineageTag: dae7e2e8-03e0-4573-a159-c3704301f7c6
+		summarizeBy: none
+		sourceColumn: IdPunto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cat
+		dataType: string
+		lineageTag: 45f7add7-f5dd-41ca-ae8b-de7c1569930f
+		summarizeBy: none
+		sourceColumn: Cat
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ccl
+		dataType: string
+		lineageTag: e747f873-75d3-4959-8053-16b1c4ad7530
+		summarizeBy: none
+		sourceColumn: Ccl
+
+		annotation SummarizationSetBy = Automatic
+
+	column Zona
+		dataType: string
+		lineageTag: fd6e106d-cce4-435e-928f-1473e6a4c3f9
+		summarizeBy: none
+		sourceColumn: Zona
+
+		annotation SummarizationSetBy = Automatic
+
+	column Asc
+		dataType: string
+		lineageTag: e8ea7b57-8a66-4495-9c98-97f0718ec470
+		summarizeBy: none
+		sourceColumn: Asc
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimcliente = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimcliente_Table = siesa_Schema{[Name="dimcliente",Kind="Table"]}[Data],
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(dimcliente_Table,{{"SucursalCliente", "SucursalCliente"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

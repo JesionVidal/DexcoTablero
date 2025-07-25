@@ -1,0 +1,133 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "0c2ab3c0b1c98f844e1a",
+  "position": {
+    "x": 22.71307369549546,
+    "y": 308.89780225873824,
+    "z": 3000,
+    "height": 180.19038465093067,
+    "width": 679.8780059518308,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Itens_PTO"
+                    }
+                  },
+                  "Property": "Descripcion"
+                }
+              },
+              "queryRef": "Itens_PTO.Descripcion",
+              "nativeQueryRef": "Descripcion"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Pedido_M3_Pendiente_Real"
+                }
+              },
+              "queryRef": "Medidas.Cant_Pedido_M3_Pendiente_Real",
+              "nativeQueryRef": "Cant_Pedido_M3_Pendiente_Real"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Ventas_M3 ok"
+                }
+              },
+              "queryRef": "Medidas.Cant_Ventas_M3",
+              "nativeQueryRef": "Cant_Ventas_M3"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Vlr_POA_Captura"
+                }
+              },
+              "queryRef": "Medidas.Vlr_POA_Captura",
+              "nativeQueryRef": "Vlr_POA_Captura"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e73fa6cca720f620d571",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Vlr_POA_Captura_Clien ok-"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Medidas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "Vlr_POA_Captura_Clien ok-"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

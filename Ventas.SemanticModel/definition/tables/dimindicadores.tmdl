@@ -1,0 +1,106 @@
+table dimindicadores
+	lineageTag: efcf1216-cf88-4b9e-ad53-333be5377b06
+
+	column 'Minimo Verde'
+		dataType: double
+		lineageTag: cbddb631-64c2-4f16-8329-7610630ceaf5
+		summarizeBy: sum
+		sourceColumn: Minimo Verde
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Maximo Verde'
+		dataType: double
+		lineageTag: 043fa774-41c0-4ec7-8442-eefbf4e35a1b
+		summarizeBy: sum
+		sourceColumn: Maximo Verde
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Minimo Amarillo'
+		dataType: double
+		lineageTag: 83dea663-5565-47c1-80ca-96f5c292e124
+		summarizeBy: sum
+		sourceColumn: Minimo Amarillo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Maximo Amarillo'
+		dataType: double
+		lineageTag: 19e3cb96-9f6f-4f2e-a942-a6c7940e8b10
+		summarizeBy: sum
+		sourceColumn: Maximo Amarillo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Minimo Rojo'
+		dataType: double
+		lineageTag: 5743a9ba-ce1e-4f6a-a073-251fb7f63409
+		summarizeBy: sum
+		sourceColumn: Minimo Rojo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Maximo Rojo'
+		dataType: double
+		lineageTag: db2a49e1-3190-4fdf-b7a1-210ce650bbce
+		summarizeBy: sum
+		sourceColumn: Maximo Rojo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Target
+		dataType: double
+		lineageTag: c0d1ee11-ed7c-4346-bd1b-cc909f884bab
+		summarizeBy: sum
+		sourceColumn: Target
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Descripcion
+		dataType: string
+		lineageTag: 725937cd-488c-44b8-9936-6965b88f82a2
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Codigo
+		dataType: int64
+		formatString: 0
+		lineageTag: c9bcf6e6-908e-45ae-a3ea-02a96ed4533c
+		summarizeBy: sum
+		sourceColumn: Codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimindicadores = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimindicadores_Table = siesa_Schema{[Name="dimindicadores",Kind="Table"]}[Data],
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(dimindicadores_Table,{{"MaximoRojo", "Maximo Rojo"}, {"MinimoRojo", "Minimo Rojo"}, {"MaximoAmarillo", "Maximo Amarillo"}, {"MinimoAmarillo", "Minimo Amarillo"}, {"MaximoVerde", "Maximo Verde"}, {"MinimoVerde", "Minimo Verde"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

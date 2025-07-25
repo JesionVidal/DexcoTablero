@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "e3067fbedc90cb043004",
+  "position": {
+    "x": 11,
+    "y": 496,
+    "z": 4000,
+    "height": 180,
+    "width": 680,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimcliente"
+                    }
+                  },
+                  "Property": "Razon_Social_Cli"
+                }
+              },
+              "queryRef": "Clientes.Razon_Social_Cli",
+              "nativeQueryRef": "Razon_Social_Cli"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Vlr_POA_Captura_Clien ok-"
+                }
+              },
+              "queryRef": "Medidas.Vlr_POA_Captura_Clien",
+              "nativeQueryRef": "Vlr_POA_Captura_Clien"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

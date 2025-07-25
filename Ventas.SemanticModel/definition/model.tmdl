@@ -1,0 +1,97 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CO
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBIDesktopVersion = 2.145.1262.0 (25.07)+10bdeda5ab0db954b2cf824e7a117ad7cee97f88
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DiaCerrado","dimcliente","dimitem","dimgeografia","factventas","factpptooperativo","factpedidos","factpoa","factpptocliente","factpoavendedor","dimcompania","CALENDARIO","factdocumentoscontables","dimvendedor","dimbodegas","dimindicadores","factcostos","dimedadvencido","factventasnorealizadas","dimitemcriterio","ACTUALIZACIÓN","factpoaifrs","dimlinsub","dimmercado","dimdetallefactura","dimclientesvendedor"]
+
+annotation __TEdtr = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_ccb20219-f6e6-4499-a224-352c41e914ce
+ref table Medidas
+ref table DiaCerrado
+ref table dimcliente
+ref table LocalDateTable_3057d5d0-d202-4a03-99a0-6d422a11e328
+ref table LocalDateTable_5d9d0678-efbe-4c20-8874-0e12e347c843
+ref table dimitem
+ref table LocalDateTable_7cdb5952-11da-4e56-9514-75ef44c629c3
+ref table LocalDateTable_3b78c4aa-660b-4e05-9723-f3dd2bdb1e1b
+ref table dimgeografia
+ref table LocalDateTable_a519fde2-fd87-4a04-ab40-9e6992667bcf
+ref table LocalDateTable_bfe27fde-3337-412d-81c0-f465cecdb50e
+ref table factventas
+ref table LocalDateTable_abf896da-711d-4d2d-b46b-64e6203cec58
+ref table LocalDateTable_2a55adab-6c49-48c5-a7ca-73b84f41a71b
+ref table factpptooperativo
+ref table factpedidos
+ref table LocalDateTable_ed6dfd8d-487a-427e-af53-b57ac95141fc
+ref table LocalDateTable_b6b183da-5e67-4107-8e78-317c863e9fa9
+ref table LocalDateTable_afc5e814-61c8-4bfc-a12a-d2f536adc03a
+ref table factpoa
+ref table LocalDateTable_8e5f07a3-1558-4426-867b-98a7e05d06cd
+ref table LocalDateTable_4456d580-5de9-461b-b668-5d4eb07bf9c0
+ref table factpptocliente
+ref table LocalDateTable_377e48b9-d1e4-41c0-a24f-c55236bb6f29
+ref table LocalDateTable_e55d719c-7690-450b-80b5-9c3917dd8583
+ref table factpoavendedor
+ref table dimcompania
+ref table LocalDateTable_e6338bb9-19b1-421f-86bc-d21c7d249fae
+ref table LocalDateTable_7b55d2cf-f8b1-47f0-838e-671e46021502
+ref table CALENDARIO
+ref table LocalDateTable_ab1cf3f4-63ea-443b-a529-820112cf9323
+ref table Medidas_iconos_umbrales
+ref table factdocumentoscontables
+ref table LocalDateTable_e262519f-3757-4b0d-a48c-f7ef9ba3f7c4
+ref table LocalDateTable_c1ca5356-6185-4bb7-a1f5-50fd8454d6d1
+ref table LocalDateTable_d144cc7d-47b8-462f-ad92-e492e2aa656c
+ref table dimvendedor
+ref table LocalDateTable_89d2db0d-1032-4a07-bc8a-0d242cc5d4eb
+ref table LocalDateTable_660509e6-25b1-4d46-a718-f9822d9cb37d
+ref table dimbodegas
+ref table LocalDateTable_03ad9ac8-3ddf-4849-a694-50b76b61575e
+ref table LocalDateTable_6bf9658e-431b-4cd5-be1a-32fdfeeae3b4
+ref table dimindicadores
+ref table factcostos
+ref table dimedadvencido
+ref table LocalDateTable_b20f95e2-e927-47bd-985d-e87378a8c849
+ref table LocalDateTable_7b9e447e-7faf-44be-b8eb-bca1edb38605
+ref table factventasnorealizadas
+ref table LocalDateTable_dcdc4749-2a08-4d52-adad-136b4b5c7df2
+ref table LocalDateTable_04672648-4fac-445e-a88f-3a5b8bfd43ed
+ref table dimitemcriterio
+ref table LocalDateTable_9c329747-2c74-4dcc-bde1-ebfd1389a9ba
+ref table LocalDateTable_7f16dfdd-aa48-4ea8-91b5-50f447323f2c
+ref table ACTUALIZACIÓN
+ref table factpoaifrs
+ref table LocalDateTable_f8de83b2-b6b6-4b24-ba54-a7454e3ead0d
+ref table dimlinsub
+ref table LocalDateTable_ff63ec79-4e5c-48d4-8642-1a19d665c51e
+ref table LocalDateTable_ddd50e3b-fe55-4978-93f6-593b9d6eac51
+ref table dimmercado
+ref table LocalDateTable_0f545cba-283d-44db-846b-4c578a4e3150
+ref table LocalDateTable_92ba542b-3098-46dd-9dc9-0524a7afe803
+ref table dimdetallefactura
+ref table LocalDateTable_cfad7c0d-77d2-41f0-b6c0-29a7fc9efa25
+ref table LocalDateTable_9ee5b16b-fd72-4115-8d9c-a068a6df75e0
+ref table LocalDateTable_39dfe0f8-0ffe-472f-9e4b-5a5c19e909ef
+ref table dimclientesvendedor
+ref table LocalDateTable_a425d681-dfeb-4d6e-8d79-564a8eb183f7
+ref table LocalDateTable_8de1e0b7-cd40-4921-8d88-7525c7e1840b
+
+ref role General
+ref role Exportaciones
+ref role Vendedor
+ref role 'Sin Costos'
+
+ref cultureInfo en-US
+

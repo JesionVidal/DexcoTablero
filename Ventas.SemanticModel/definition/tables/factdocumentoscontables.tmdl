@@ -1,0 +1,180 @@
+table factdocumentoscontables
+	lineageTag: c62314e9-01bd-41cf-a7a5-481ebc153fc4
+
+	column LlaveFecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 35db2753-6942-44e2-8b56-d1f5a6e32e65
+		summarizeBy: none
+		sourceColumn: LlaveFecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Periodo
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f102eef-6c8e-43ca-b8e7-5c738be996f9
+		summarizeBy: sum
+		sourceColumn: Periodo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		dataType: string
+		lineageTag: f57f171f-49e6-41c4-bfdc-7ae197843bc3
+		summarizeBy: none
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: d24159e9-b560-400d-9ef5-133aebf21a44
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlavePeriodo
+		dataType: string
+		lineageTag: 302ad7c9-a534-4358-bba2-9f16f424897b
+		summarizeBy: none
+		sourceColumn: LlavePeriodo
+
+		annotation SummarizationSetBy = Automatic
+
+	column UN
+		dataType: string
+		lineageTag: 919abff5-cbc4-4053-8bba-de876a3fbebc
+		summarizeBy: none
+		sourceColumn: UN
+
+		annotation SummarizationSetBy = Automatic
+
+	column CO
+		dataType: string
+		lineageTag: 64d9f234-6cda-4e5e-a6a5-cb55d88c1393
+		summarizeBy: none
+		sourceColumn: CO
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdMercado
+		dataType: string
+		lineageTag: 8fd9af0c-a53c-4846-9fdf-86cc6cc3e417
+		summarizeBy: none
+		sourceColumn: IdMercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cuenta
+		dataType: string
+		lineageTag: 40c3c224-cb0e-4703-a45c-5dfd2aabbde7
+		summarizeBy: none
+		sourceColumn: Cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Abuelo
+		dataType: string
+		lineageTag: fc3f869b-ef41-4dcf-9fb4-44b87ff55223
+		summarizeBy: none
+		sourceColumn: Abuelo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Padre
+		dataType: string
+		lineageTag: 4fbc37f9-b105-4d15-a717-65d2ad57e22f
+		summarizeBy: none
+		sourceColumn: Padre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hijo
+		dataType: string
+		lineageTag: c9dd5b9a-3d89-4fed-bbe7-64f50a4f439a
+		summarizeBy: none
+		sourceColumn: Hijo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdAbuelo
+		dataType: string
+		lineageTag: e600d8a0-d141-40f1-a943-53c96a1f096f
+		summarizeBy: none
+		sourceColumn: IdAbuelo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdPadre
+		dataType: string
+		lineageTag: 44d839ba-c7ea-4f4f-80f8-b1bec85f4aef
+		summarizeBy: none
+		sourceColumn: IdPadre
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdHijo
+		dataType: string
+		lineageTag: cf03e621-cb2a-4649-acfd-be7e625c97fc
+		summarizeBy: none
+		sourceColumn: IdHijo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: double
+		lineageTag: 4db56671-faa0-4651-8064-9c7779cf36c6
+		summarizeBy: sum
+		sourceColumn: Valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b7330ad6-b555-4157-a06e-7a5afb4c217c
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 347e713f-c7c7-491d-94d1-90c82cc691ed
+			defaultHierarchy: LocalDateTable_e262519f-3757-4b0d-a48c-f7ef9ba3f7c4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9569ff2a-7127-4cea-9a7d-08f312822291
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: 0a987507-1c30-4f65-b349-a4cfc43f0f21
+			defaultHierarchy: LocalDateTable_c1ca5356-6185-4bb7-a1f5-50fd8454d6d1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factdocumentoscontables = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factdocumentoscontables_Table = siesa_Schema{[Name="factdocumentoscontables",Kind="Table"]}[Data]
+				in
+				    factdocumentoscontables_Table
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

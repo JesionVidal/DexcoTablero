@@ -1,0 +1,139 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "Bookmarkf086584ee7cd0a4cc0b1"
+    },
+    {
+      "name": "Bookmarkd4bbd293ccbe8a31030d",
+      "displayName": "Navigation bookmarks",
+      "children": [
+        "Bookmark9af6296101247180d00c",
+        "Bookmark0a7bee4f50c3b00ee579",
+        "Bookmarkbf19d5adab39048b044b",
+        "Bookmarkd5ae04f1e1a907552e46",
+        "Bookmark66b53729ec48906308d1"
+      ]
+    },
+    {
+      "name": "Bookmark93dd042c0d416daeba5a"
+    },
+    {
+      "name": "Bookmarkc39b7fe28aa07db96176"
+    },
+    {
+      "name": "Bookmark46d472307815bb4a44f9"
+    },
+    {
+      "name": "Bookmark5065dbba08e47efa0ab8"
+    },
+    {
+      "name": "Bookmarkec576c1ed9aad469eae7"
+    },
+    {
+      "name": "Bookmark745aab1ef2c0a1433bb7"
+    },
+    {
+      "name": "Bookmark94568344b21aa593aa72"
+    },
+    {
+      "name": "Bookmarkb915f17325b11ae99222"
+    },
+    {
+      "name": "Bookmarkb2e5f81c1baf69545673"
+    },
+    {
+      "name": "Bookmarkc36bee93cea457488ac4"
+    },
+    {
+      "name": "Bookmark1836baa1aea951361a9d"
+    },
+    {
+      "name": "Bookmarke660f36b9c38c6ea3db3"
+    },
+    {
+      "name": "Bookmark01bc57ef53a208e63531"
+    },
+    {
+      "name": "Bookmark3cd82dee0b3994087c0c"
+    },
+    {
+      "name": "Bookmarkb396da88b365e9700778"
+    },
+    {
+      "name": "Bookmark8c985d7fa92da867aa5c"
+    },
+    {
+      "name": "Bookmark6137f231a218a83d9417"
+    },
+    {
+      "name": "Bookmark54246ef5f672a6ccbe41"
+    },
+    {
+      "name": "Bookmarkf9c4c7a06a38e69da4a5"
+    },
+    {
+      "name": "Bookmark21a20e072e84d1b0cb4d"
+    },
+    {
+      "name": "Bookmark27fff2096f4b40fa0a6a"
+    },
+    {
+      "name": "Bookmark112a1d4b6fbcf18e72f9"
+    },
+    {
+      "name": "Bookmarkc2312075230fbfd9616a"
+    },
+    {
+      "name": "Bookmark04b64a6ef445ffc57162"
+    },
+    {
+      "name": "Bookmark8fa0c513a71b70ca986f"
+    },
+    {
+      "name": "Bookmarka79cc87a60e4e19e3149"
+    },
+    {
+      "name": "Bookmark8328b890c063b51db2cc"
+    },
+    {
+      "name": "Bookmark346305672a41496a078b"
+    },
+    {
+      "name": "Bookmark5bb1c9c388817ddac038"
+    },
+    {
+      "name": "Bookmark8313857b487da74dd97e"
+    },
+    {
+      "name": "Bookmarka7bef5c5826894e36833"
+    },
+    {
+      "name": "Bookmark154c04e8be5c061a0286"
+    },
+    {
+      "name": "Bookmark48440d0b9b3dbabc7e05"
+    },
+    {
+      "name": "Bookmark9796e10fa6811075a8f2"
+    },
+    {
+      "name": "Bookmarkac7f1a9f556159ba1486"
+    },
+    {
+      "name": "Bookmark037ca61e9cc0b9331709"
+    },
+    {
+      "name": "Bookmarkab95f87e2b8f46076e24"
+    },
+    {
+      "name": "Bookmarkeb7eaa44a06a508c6b5a"
+    },
+    {
+      "name": "Bookmark164e342b8e4860af9cc3"
+    },
+    {
+      "name": "Bookmark41ab1f791a64d2463c15"
+    }
+  ]
+}

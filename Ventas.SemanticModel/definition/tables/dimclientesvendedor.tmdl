@@ -1,0 +1,69 @@
+table dimclientesvendedor
+	lineageTag: fb1038b3-635c-4c4b-a30e-37de8c108513
+
+	column IdPuntoEnvio
+		dataType: int64
+		formatString: 0
+		lineageTag: a389a41e-c980-4968-84dc-ce3669860c14
+		summarizeBy: none
+		sourceColumn: IdPuntoEnvio
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdVendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 5eb1dbfb-946a-4468-ab49-05cadd29f21e
+		summarizeBy: none
+		sourceColumn: IdVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Principal
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0b59550c-562b-4be6-8319-ed6e271209a7
+		summarizeBy: none
+		sourceColumn: Principal
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9a3c3482-ded8-4c0e-bf61-3c45d480a5a0
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: fad598e3-d411-4e11-be7b-c6f59f0e74f1
+			defaultHierarchy: LocalDateTable_a425d681-dfeb-4d6e-8d79-564a8eb183f7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e5c907ba-ffe7-445d-abe5-c74c82ef0263
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: 05a22f5f-4a20-4bac-a435-c06f753b580a
+			defaultHierarchy: LocalDateTable_8de1e0b7-cd40-4921-8d88-7525c7e1840b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimclientesvendedor = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimclientesvendedor_Table = siesa_Schema{[Name="dimclientesvendedor",Kind="Table"]}[Data]
+				in
+				    dimclientesvendedor_Table
+

@@ -1,0 +1,120 @@
+table factcostos
+	lineageTag: 8024bbce-3c3c-4ace-bb1c-05ef6844599d
+
+	column LlaveFacturaItem
+		dataType: string
+		lineageTag: b0467016-a777-4c29-80f8-04fd6869895c
+		summarizeBy: none
+		sourceColumn: LlaveFacturaItem
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdFactura
+		dataType: int64
+		formatString: 0
+		lineageTag: 4780d48e-1418-4ca3-9dcb-8cf597ecc5f4
+		summarizeBy: sum
+		sourceColumn: RowIdFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column RIItemExt
+		dataType: int64
+		formatString: 0
+		lineageTag: dbdc96a1-2a80-4eea-87df-a34da7d7cbcb
+		summarizeBy: none
+		sourceColumn: RIItemExt
+
+		annotation SummarizationSetBy = Automatic
+
+	column CostoUnitarioPromedio
+		dataType: double
+		lineageTag: a2492add-a95d-430b-a8a7-0a00cb6495d1
+		summarizeBy: sum
+		sourceColumn: CostoUnitarioPromedio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CostoTotalPromedio
+		dataType: double
+		lineageTag: 8dc20f8f-61bf-4ddc-bc41-a65821c1d02f
+		summarizeBy: sum
+		sourceColumn: CostoTotalPromedio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UtilidadBruta
+		dataType: double
+		lineageTag: 3dd1e4a6-bb18-4743-aa05-4d6e955a4bbc
+		summarizeBy: sum
+		sourceColumn: UtilidadBruta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MargenBruto
+		dataType: double
+		lineageTag: e47106ee-2ef2-44f5-92a3-2ac98d65361b
+		summarizeBy: sum
+		sourceColumn: MargenBruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CostoPromedioTotal
+		dataType: double
+		lineageTag: 6555c11e-67e7-4aeb-ab0a-1ab9a9c9e773
+		summarizeBy: sum
+		sourceColumn: CostoPromedioTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CostoManoObra
+		dataType: double
+		lineageTag: f51237cc-3237-49c0-9ddd-dd71119b20b6
+		summarizeBy: sum
+		sourceColumn: CostoManoObra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CostoMateriaPrima
+		dataType: double
+		lineageTag: 29c6fe89-2871-41ac-9402-d3e960aa3dd4
+		summarizeBy: sum
+		sourceColumn: CostoMateriaPrima
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CostoCIF
+		dataType: double
+		lineageTag: 954de89c-3c8d-45cc-8e49-ebe048e1827d
+		summarizeBy: sum
+		sourceColumn: CostoCIF
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition factcostos = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factcostos_Table = siesa_Schema{[Name="factcostos",Kind="Table"]}[Data]
+				in
+				    factcostos_Table
+

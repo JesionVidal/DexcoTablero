@@ -1,0 +1,189 @@
+table dimitem
+	lineageTag: eb50b7af-2131-49ca-bb7a-6a22c69bfa54
+
+	column Volumen
+		dataType: double
+		lineageTag: f10926d3-b115-44ec-b673-e545eef4406e
+		summarizeBy: sum
+		sourceColumn: Volumen
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Peso
+		dataType: double
+		lineageTag: ed1cbf03-d79a-41a2-96d6-4c95fc9ae230
+		summarizeBy: sum
+		sourceColumn: Peso
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TRE
+		dataType: string
+		lineageTag: 3961d18e-cbd3-4480-af67-c0171e402f01
+		summarizeBy: none
+		sourceColumn: TRE
+
+		annotation SummarizationSetBy = Automatic
+
+	column EQS
+		dataType: string
+		lineageTag: aee37851-8ce5-4e82-95c7-23c8a96204e9
+		summarizeBy: none
+		sourceColumn: EQS
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveLinSub
+		dataType: string
+		lineageTag: 2581755d-822e-491c-b929-bb7f18df25e3
+		summarizeBy: none
+		sourceColumn: LlaveLinSub
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveSusSublinea
+		dataType: string
+		lineageTag: 02483a72-ddd3-4e03-8dcd-81bc106ab920
+		summarizeBy: none
+		sourceColumn: LlaveSusSublinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2abd63cb-eec9-44e2-992a-c688cd62b69a
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 2387272f-afa9-44f2-a357-84f7de8dd084
+			defaultHierarchy: LocalDateTable_7cdb5952-11da-4e56-9514-75ef44c629c3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 351ca7eb-bf6e-4fef-9eb8-3ec4b72b0499
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: 849da828-7260-4b97-b890-a90651cabbc4
+			defaultHierarchy: LocalDateTable_3b78c4aa-660b-4e05-9723-f3dd2bdb1e1b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORI
+		dataType: string
+		lineageTag: 17b7b140-2c56-4ed1-8d7c-c523808f4457
+		summarizeBy: none
+		sourceColumn: ORI
+
+		annotation SummarizationSetBy = Automatic
+
+	column EQL
+		dataType: string
+		lineageTag: 6854879a-a441-4b39-8f3e-1fcbe1be7949
+		summarizeBy: none
+		sourceColumn: EQL
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: int64
+		formatString: 0
+		lineageTag: 2fba11ed-b3bb-431f-baae-e91dd9d0d9af
+		summarizeBy: sum
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column RI_ITEM
+		dataType: int64
+		formatString: 0
+		lineageTag: 2bacf00d-01e9-4b67-b72c-4db1af6e9f4b
+		summarizeBy: sum
+		sourceColumn: RI_ITEM
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIA
+		dataType: int64
+		formatString: 0
+		lineageTag: bcc9e4e9-ad81-4d87-a735-3d59a5f8ada0
+		summarizeBy: sum
+		sourceColumn: CIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_ITEM
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ed423fd-3690-44c1-a9b9-9e6133644c82
+		summarizeBy: sum
+		sourceColumn: ID_ITEM
+
+		annotation SummarizationSetBy = Automatic
+
+	column REFERENCIA
+		dataType: string
+		lineageTag: 4f97dc77-c545-45a1-865d-31558d9b1fa4
+		summarizeBy: none
+		sourceColumn: REFERENCIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESC_ITEM
+		dataType: string
+		lineageTag: f26caa80-8f72-4111-bbfd-3bfa70eff35f
+		summarizeBy: none
+		sourceColumn: DESC_ITEM
+
+		annotation SummarizationSetBy = Automatic
+
+	column UNIDAD_INV
+		dataType: string
+		lineageTag: ce1bc0be-c88f-479f-80a4-55fa793c2130
+		summarizeBy: none
+		sourceColumn: UNIDAD_INV
+
+		annotation SummarizationSetBy = Automatic
+
+	column RI_ITEM_EXT
+		dataType: int64
+		formatString: 0
+		lineageTag: 752bcc18-687b-4b93-bd96-0e2e73298d29
+		summarizeBy: none
+		sourceColumn: RI_ITEM_EXT
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo_INV
+		dataType: string
+		lineageTag: 1a6cd75a-1c7b-46a8-a8cf-a3effdd72d95
+		summarizeBy: none
+		sourceColumn: Tipo_INV
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimitem = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimitem_Table = siesa_Schema{[Name="dimitem",Kind="Table"]}[Data]
+				in
+				    dimitem_Table
+
+	annotation PBI_ResultType = Table
+

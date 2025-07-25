@@ -1,0 +1,75 @@
+table dimlinsub
+	lineageTag: 3b4017da-10aa-487d-baaf-adb23b294030
+
+	column IdLinSub
+		dataType: int64
+		formatString: 0
+		lineageTag: c8382009-f288-459a-80d0-03d4f7137aff
+		summarizeBy: sum
+		sourceColumn: IdLinSub
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linea
+		dataType: string
+		lineageTag: 2c7bd1ca-5b48-43e8-91ce-c7a1d06c7c77
+		summarizeBy: none
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubLinea
+		dataType: string
+		lineageTag: 3cb6030d-7928-4a81-80d1-26270cf08413
+		summarizeBy: none
+		sourceColumn: SubLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveLinSub
+		dataType: string
+		lineageTag: c97c1b1d-11d9-4097-b025-2f82881ace3d
+		summarizeBy: none
+		sourceColumn: LlaveLinSub
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 774a3678-c0c3-4437-a17f-8de0dcf75f53
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 3c635b06-4cae-49ba-84c2-3892f41d4830
+			defaultHierarchy: LocalDateTable_ff63ec79-4e5c-48d4-8642-1a19d665c51e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bce969ca-7c85-4329-a72a-ac1493c01a5a
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: 72e0804a-499d-41d2-89af-95b08a697959
+			defaultHierarchy: LocalDateTable_ddd50e3b-fe55-4978-93f6-593b9d6eac51.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimlinsub = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimlinsub_Table = siesa_Schema{[Name="dimlinsub",Kind="Table"]}[Data]
+				in
+				    dimlinsub_Table
+

@@ -1,0 +1,135 @@
+table factpoaifrs
+	lineageTag: 73678a06-1e9f-4894-8684-332c5f915dc2
+
+	column Tipo
+		dataType: string
+		lineageTag: 240ca999-5c5a-4521-a0f8-a4cda2ee23bd
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		dataType: string
+		lineageTag: 9af2abfc-b4ae-498f-a325-96c7cb3e6926
+		summarizeBy: none
+		sourceColumn: Medida
+
+		annotation SummarizationSetBy = Automatic
+
+	column Periodo
+		dataType: string
+		lineageTag: 0c5619ef-534a-484b-8976-b90188236145
+		summarizeBy: none
+		sourceColumn: Periodo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		dataType: string
+		lineageTag: 2f4c8947-bec0-41de-96d0-95f2b10a5481
+		summarizeBy: none
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: 4cd83c23-dd54-48c6-986f-8019f7dc04d3
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveFecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b30dac3f-10b6-4477-bcd2-a9e46de47591
+		summarizeBy: none
+		sourceColumn: LlaveFecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Linea
+		dataType: string
+		lineageTag: 1efebe58-1c7e-4b9d-9a80-f8b83846d838
+		summarizeBy: none
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sublinea
+		dataType: string
+		lineageTag: 67999d74-4cf4-4202-9419-2896f277d77c
+		summarizeBy: none
+		sourceColumn: Sublinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveLineaSublinea
+		dataType: string
+		lineageTag: 13510d24-4252-4bcf-99bd-3f971efaedae
+		summarizeBy: none
+		sourceColumn: LlaveLineaSublinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mercado
+		dataType: string
+		lineageTag: 3aaabd92-f91b-40c1-bf36-e9e00ed7c015
+		summarizeBy: none
+		sourceColumn: Mercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: double
+		lineageTag: 6323f45a-a433-4684-ba44-0b9baa03c78c
+		summarizeBy: sum
+		sourceColumn: Valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 272da52b-d027-45e4-ac52-6d6d54eed268
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 37a42a25-abf5-4deb-812a-a7b6bea10c20
+			defaultHierarchy: LocalDateTable_f8de83b2-b6b6-4b24-ba54-a7454e3ead0d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fb3aaf51-d656-45b0-9a74-50b3bb248926
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: bd45f8ee-e740-4a1e-9fec-9e2410771b2f
+			defaultHierarchy: LocalDateTable_39dfe0f8-0ffe-472f-9e4b-5a5c19e909ef.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factpoaifrs = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factpoaifrs_Table = siesa_Schema{[Name="factpoaifrs",Kind="Table"]}[Data]
+				in
+				    factpoaifrs_Table
+

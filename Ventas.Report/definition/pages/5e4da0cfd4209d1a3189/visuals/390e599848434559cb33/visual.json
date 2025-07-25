@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "390e599848434559cb33",
+  "position": {
+    "x": 161.66666666666669,
+    "y": 25.833333333333336,
+    "z": 0,
+    "height": 492.5,
+    "width": 280
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "factpedidos"
+                    }
+                  },
+                  "Property": "FechaPedido"
+                }
+              },
+              "queryRef": "factpedidos.FechaPedido",
+              "nativeQueryRef": "FechaPedido"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "factpedidos"
+                        }
+                      },
+                      "Property": "VlrSubTotalCOP"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(factpedidos.VlrSubTotalCOP)",
+              "nativeQueryRef": "VlrSubTotalCOP"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "factpedidos"
+                  }
+                },
+                "Property": "FechaPedido"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

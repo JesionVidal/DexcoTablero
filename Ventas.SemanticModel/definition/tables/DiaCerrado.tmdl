@@ -1,0 +1,28 @@
+table DiaCerrado
+	lineageTag: 97419977-bd16-46bf-9886-bff172f23433
+
+	column DiaCerrado
+		dataType: string
+		lineageTag: 681fcc10-7c13-4e84-802a-8b63ca218e17
+		summarizeBy: none
+		sourceColumn: DiaCerrado
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DiaCerrado-0eac6e4c-bb08-47fa-8c43-a9fdd2c9d4d3 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCs5UitWJVvLLV4qNBQA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [DiaCerrado = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"DiaCerrado", type text}})
+				in
+				    #"Changed Type"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

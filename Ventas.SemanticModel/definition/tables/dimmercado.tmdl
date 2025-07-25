@@ -1,0 +1,50 @@
+table dimmercado
+	lineageTag: 4180454e-d759-434c-b471-f5db84fda2ae
+
+	column IdMercado
+		dataType: string
+		lineageTag: f38071a5-3462-4d02-b301-65cd1922308b
+		summarizeBy: none
+		sourceColumn: IdMercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a1f9808b-6935-4ae0-8aca-a6bb50b0e9f7
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 122228f3-a706-4388-80c2-270711e8f38e
+			defaultHierarchy: LocalDateTable_0f545cba-283d-44db-846b-4c578a4e3150.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 73be968c-242c-428c-bd94-38f2fb744683
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: ab8e8f57-545e-4998-94da-0a86d63ffb68
+			defaultHierarchy: LocalDateTable_92ba542b-3098-46dd-9dc9-0524a7afe803.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimmercado = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimmercado_Table = siesa_Schema{[Name="dimmercado",Kind="Table"]}[Data]
+				in
+				    dimmercado_Table
+

@@ -1,0 +1,203 @@
+table CALENDARIO
+	lineageTag: eeae3cbd-3325-4f8d-b9af-918124696fe7
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e6e4e815-2e45-48f7-859a-0bd8186265ef
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variación
+			isDefault
+			relationship: 7e7a98e4-5529-4137-b073-23ae7a9b55f5
+			defaultHierarchy: LocalDateTable_ab1cf3f4-63ea-443b-a529-820112cf9323.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DateAsInteger
+		dataType: string
+		lineageTag: 47415beb-762e-4284-b88b-5c96d7a1e5a6
+		summarizeBy: none
+		sourceColumn: DateAsInteger
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: dac963f4-98fa-47ab-9d2b-5bc1021f00e4
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monthnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: bae18227-ceb3-4fc3-bfe3-047c0f5fd1ba
+		summarizeBy: sum
+		sourceColumn: Monthnumber
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: f0e67179-ac36-4a1b-9486-ac95ccc6992f
+		summarizeBy: sum
+		sourceColumn: Day
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonthnumber
+		dataType: string
+		lineageTag: 6d2e4459-cb0b-4ef0-9e8d-804086818256
+		summarizeBy: none
+		sourceColumn: YearMonthnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnhoMes
+		dataType: string
+		lineageTag: b5cfd997-e328-427b-87a9-27327943a1ff
+		summarizeBy: none
+		sourceColumn: AnhoMes
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonthShort
+		dataType: string
+		lineageTag: e4f50540-c1a3-421c-ab81-ff4f103fafe7
+		summarizeBy: none
+		sourceColumn: YearMonthShort
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNameShort
+		dataType: string
+		lineageTag: 3b2a8032-43d5-4118-9b1a-325045bad534
+		summarizeBy: none
+		sourceColumn: MonthNameShort
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNameLong
+		dataType: string
+		lineageTag: 0dfb3aad-2f52-4b1a-b6fe-59dda2a236c5
+		summarizeBy: none
+		sourceColumn: MonthNameLong
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: c0034d4f-4be3-4220-8214-781eda5f1e22
+		summarizeBy: sum
+		sourceColumn: DayOfWeekNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		dataType: string
+		lineageTag: 2681a79b-a14e-40e1-a901-5eb241c8c788
+		summarizeBy: none
+		sourceColumn: DayOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekShort
+		dataType: string
+		lineageTag: 482bc310-1e2b-43e1-947f-2491ee4c8906
+		summarizeBy: none
+		sourceColumn: DayOfWeekShort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: 7b8b16bb-b174-407d-a192-6e18bf967539
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearQuarter
+		dataType: string
+		lineageTag: 9abd5e6c-ad2b-430d-8814-cc4cf19139d5
+		summarizeBy: none
+		sourceColumn: YearQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataPrimerioDia
+		dataType: string
+		lineageTag: afd556f6-676b-4400-abb0-8ef11bd6eb08
+		summarizeBy: none
+		sourceColumn: DataPrimerioDia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: cb051bff-bd14-4fc6-a8b0-d173370a5b38
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hoy
+		dataType: string
+		lineageTag: 77c33d26-c7f2-4533-acd3-ed0314324eee
+		summarizeBy: none
+		sourceColumn: Hoy
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesAnt
+		dataType: string
+		lineageTag: ba8844dc-d1b1-41c6-ae5c-2b323e908383
+		summarizeBy: none
+		sourceColumn: MesAnt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Festivo
+		dataType: string
+		lineageTag: 8937a772-8b7f-41dd-87eb-08dcdcc4a1fd
+		summarizeBy: none
+		sourceColumn: Festivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Habil
+		dataType: string
+		lineageTag: 91866912-59e1-4c5c-956f-dfdc958171d9
+		summarizeBy: none
+		sourceColumn: Habil
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CALENDARIO = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimcalendario_Table = siesa_Schema{[Name="dimcalendario",Kind="Table"]}[Data],
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(dimcalendario_Table,{{"Date", "Date"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

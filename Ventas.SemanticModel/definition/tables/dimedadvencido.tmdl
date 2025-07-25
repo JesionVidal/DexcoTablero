@@ -1,0 +1,68 @@
+table dimedadvencido
+	lineageTag: 668e489f-e9bd-4e02-bdcd-8ee5e00c3b80
+
+	column CodEdadVencido
+		dataType: int64
+		formatString: 0
+		lineageTag: f407d733-4500-418e-8a62-d48075180f83
+		summarizeBy: none
+		sourceColumn: CodEdadVencido
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: 7a42674f-ab25-472d-86e5-73717de99def
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion_Cartera
+		dataType: string
+		lineageTag: 8561d52e-62e9-43ce-a0b6-893ea0f5ca07
+		summarizeBy: none
+		sourceColumn: Descripcion_Cartera
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 80c08aba-1ba9-4a7f-9ac7-20c023d1355e
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 1c473e55-8878-48e7-b4c3-a1bc0df3b42f
+			defaultHierarchy: LocalDateTable_b20f95e2-e927-47bd-985d-e87378a8c849.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d51c7e7e-be58-4288-a5b6-4745ea2aa1c6
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: 9443a9a7-c2c6-4db9-bce7-b915fe337020
+			defaultHierarchy: LocalDateTable_7b9e447e-7faf-44be-b8eb-bca1edb38605.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimedadvencido = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimedadvencido_Table = siesa_Schema{[Name="dimedadvencido",Kind="Table"]}[Data],
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(dimedadvencido_Table,{{"DescripcionCartera", "Descripcion_Cartera"}})
+				in
+				    #"Columnas con nombre cambiado"
+

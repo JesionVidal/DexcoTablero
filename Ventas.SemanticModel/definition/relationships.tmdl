@@ -1,0 +1,364 @@
+relationship 74ffdbf6-b30a-4d11-a492-e7b5340d2930
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimcliente.DateInserted
+	toColumn: LocalDateTable_3057d5d0-d202-4a03-99a0-6d422a11e328.Date
+
+relationship 293f0bd5-034b-4d10-a078-f86645cecb46
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimcliente.DateUpdate
+	toColumn: LocalDateTable_5d9d0678-efbe-4c20-8874-0e12e347c843.Date
+
+relationship 2387272f-afa9-44f2-a357-84f7de8dd084
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimitem.DateInserted
+	toColumn: LocalDateTable_7cdb5952-11da-4e56-9514-75ef44c629c3.Date
+
+relationship 849da828-7260-4b97-b890-a90651cabbc4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimitem.DateUpdate
+	toColumn: LocalDateTable_3b78c4aa-660b-4e05-9723-f3dd2bdb1e1b.Date
+
+relationship 66d499f4-3bad-4420-8b52-92a01caf8d26
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimgeografia.DateInserted
+	toColumn: LocalDateTable_a519fde2-fd87-4a04-ab40-9e6992667bcf.Date
+
+relationship 6f0e11e1-12f5-4baf-8c03-af30c12903f7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimgeografia.DateUpdate
+	toColumn: LocalDateTable_bfe27fde-3337-412d-81c0-f465cecdb50e.Date
+
+relationship be3236f6-84d9-4b06-bb38-c98e5a010183
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factventas.Dateinserted
+	toColumn: LocalDateTable_abf896da-711d-4d2d-b46b-64e6203cec58.Date
+
+relationship edb75eff-3df4-4d67-ac30-4ebfc5479e8f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factventas.Dateupdate
+	toColumn: LocalDateTable_2a55adab-6c49-48c5-a7ca-73b84f41a71b.Date
+
+relationship 431d459b-bb2b-4000-9e44-6b1ae9f1375a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpedidos.FechaEntregaSolicitud
+	toColumn: LocalDateTable_ed6dfd8d-487a-427e-af53-b57ac95141fc.Date
+
+relationship 824e220a-b9da-49a7-8674-5f3cf415496b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpedidos.DateInserted
+	toColumn: LocalDateTable_b6b183da-5e67-4107-8e78-317c863e9fa9.Date
+
+relationship 39a7cacc-9a5a-4cfb-a63a-b7de76553b09
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpedidos.DateUpdate
+	toColumn: LocalDateTable_afc5e814-61c8-4bfc-a12a-d2f536adc03a.Date
+
+relationship c6611151-e6a2-4ba3-9c97-4ea05e2f5eee
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpoa.DateInserted
+	toColumn: LocalDateTable_8e5f07a3-1558-4426-867b-98a7e05d06cd.Date
+
+relationship d8a05fbc-b357-47c5-a1a6-3750dbda5887
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpoa.DateUpdate
+	toColumn: LocalDateTable_4456d580-5de9-461b-b668-5d4eb07bf9c0.Date
+
+relationship efe9f043-a7d7-4c6e-9aba-07c44c8e2f86
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpptocliente.DateInserted
+	toColumn: LocalDateTable_377e48b9-d1e4-41c0-a24f-c55236bb6f29.Date
+
+relationship c4b78862-03ef-419b-bb59-bbcfe3974c0e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpptocliente.DateUpdate
+	toColumn: LocalDateTable_e55d719c-7690-450b-80b5-9c3917dd8583.Date
+
+relationship 89f75a39-4fb9-4fc9-b4d8-4f3e12af513e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimcompania.DateInserted
+	toColumn: LocalDateTable_e6338bb9-19b1-421f-86bc-d21c7d249fae.Date
+
+relationship d3d19067-9f9b-416a-a3a2-e06083946565
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimcompania.DateUpdate
+	toColumn: LocalDateTable_7b55d2cf-f8b1-47f0-838e-671e46021502.Date
+
+relationship 7e7a98e4-5529-4137-b073-23ae7a9b55f5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CALENDARIO.Date
+	toColumn: LocalDateTable_ab1cf3f4-63ea-443b-a529-820112cf9323.Date
+
+relationship f3042aa7-c272-ed9e-a520-b2149084608e
+	fromColumn: factpoa.Fecha
+	toColumn: CALENDARIO.Date
+
+relationship 98d1efa1-66fb-799b-954d-5a61291b68bf
+	fromColumn: factpoavendedor.FechaCompetencia
+	toColumn: CALENDARIO.Date
+
+relationship 03de6fdc-5994-62d0-4651-2d00f78a02eb
+	fromColumn: factpptocliente.Fecha
+	toColumn: CALENDARIO.Date
+
+relationship 6b413219-dd9c-df4f-1b72-1b6736f9e4b5
+	fromColumn: factpptooperativo.LlaveFecha
+	toColumn: CALENDARIO.Date
+
+relationship 029eb851-86c2-495a-9e90-6dd798a2e1d9
+	fromColumn: factventas.FechaFactura
+	toColumn: CALENDARIO.Date
+
+relationship 347e713f-c7c7-491d-94d1-90c82cc691ed
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factdocumentoscontables.DateInserted
+	toColumn: LocalDateTable_e262519f-3757-4b0d-a48c-f7ef9ba3f7c4.Date
+
+relationship 0a987507-1c30-4f65-b349-a4cfc43f0f21
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factdocumentoscontables.DateUpdate
+	toColumn: LocalDateTable_c1ca5356-6185-4bb7-a1f5-50fd8454d6d1.Date
+
+relationship cd89ea80-287b-4dd6-902a-2c989ba5a008
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpedidos.FechaVencimiento
+	toColumn: LocalDateTable_d144cc7d-47b8-462f-ad92-e492e2aa656c.Date
+
+relationship f24d1a1e-c470-4168-8b5d-a1768ccf8504
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimvendedor.DateInserted
+	toColumn: LocalDateTable_89d2db0d-1032-4a07-bc8a-0d242cc5d4eb.Date
+
+relationship a88cf77e-ccb2-488e-9ddd-2fff6fa7d734
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimvendedor.DateUpdate
+	toColumn: LocalDateTable_660509e6-25b1-4d46-a718-f9822d9cb37d.Date
+
+relationship 812f5e7d-7996-4dc8-9bee-e35431a9e422
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimbodegas.DateInserted
+	toColumn: LocalDateTable_03ad9ac8-3ddf-4849-a694-50b76b61575e.Date
+
+relationship ce52b947-74c7-4a56-a8fc-f6a62d663708
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimbodegas.DateUpdate
+	toColumn: LocalDateTable_6bf9658e-431b-4cd5-be1a-32fdfeeae3b4.Date
+
+relationship 1c473e55-8878-48e7-b4c3-a1bc0df3b42f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimedadvencido.DateInserted
+	toColumn: LocalDateTable_b20f95e2-e927-47bd-985d-e87378a8c849.Date
+
+relationship 9443a9a7-c2c6-4db9-bce7-b915fe337020
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimedadvencido.DateUpdate
+	toColumn: LocalDateTable_7b9e447e-7faf-44be-b8eb-bca1edb38605.Date
+
+relationship AutoDetected_10953aeb-1be1-45d2-a3f3-97bad2292a6a
+	fromColumn: factpedidos.CodEdadVencido
+	toColumn: dimedadvencido.CodEdadVencido
+
+relationship 8c78b955-2755-4bfc-b32e-368426e4f523
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factventasnorealizadas.DateInserted
+	toColumn: LocalDateTable_dcdc4749-2a08-4d52-adad-136b4b5c7df2.Date
+
+relationship bbdc881f-efb3-4168-85eb-194e1db84ef5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factventasnorealizadas.DateUpdate
+	toColumn: LocalDateTable_04672648-4fac-445e-a88f-3a5b8bfd43ed.Date
+
+relationship 44e9ae8b-00a9-4fb2-a110-595d29e00b82
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimitemcriterio.DateInserted
+	toColumn: LocalDateTable_9c329747-2c74-4dcc-bde1-ebfd1389a9ba.Date
+
+relationship bef5e6b8-ab9d-4925-b3ca-47483d33fa7f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimitemcriterio.DateUpdate
+	toColumn: LocalDateTable_7f16dfdd-aa48-4ea8-91b5-50f447323f2c.Date
+
+relationship 67d96617-d250-6002-b5fc-ecadc4cfa309
+	fromColumn: factpptocliente.LlaveClienteNit
+	toColumn: dimcliente.LlaveClienteNit
+
+relationship 37a42a25-abf5-4deb-812a-a7b6bea10c20
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpoaifrs.DateInserted
+	toColumn: LocalDateTable_f8de83b2-b6b6-4b24-ba54-a7454e3ead0d.Date
+
+relationship e4b07526-7904-a6ea-a663-404d347ae451
+	fromColumn: factventas.RiBodega
+	toColumn: dimbodegas.RIIBodega
+
+relationship 3c635b06-4cae-49ba-84c2-3892f41d4830
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimlinsub.DateInserted
+	toColumn: LocalDateTable_ff63ec79-4e5c-48d4-8642-1a19d665c51e.Date
+
+relationship 72e0804a-499d-41d2-89af-95b08a697959
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimlinsub.DateUpdate
+	toColumn: LocalDateTable_ddd50e3b-fe55-4978-93f6-593b9d6eac51.Date
+
+relationship 122228f3-a706-4388-80c2-270711e8f38e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimmercado.DateInserted
+	toColumn: LocalDateTable_0f545cba-283d-44db-846b-4c578a4e3150.Date
+
+relationship ab8e8f57-545e-4998-94da-0a86d63ffb68
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimmercado.DateUpdate
+	toColumn: LocalDateTable_92ba542b-3098-46dd-9dc9-0524a7afe803.Date
+
+relationship 846199f0-25f7-4355-ae8b-abe9ad1b6982
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimdetallefactura.DateInserted
+	toColumn: LocalDateTable_cfad7c0d-77d2-41f0-b6c0-29a7fc9efa25.Date
+
+relationship 22d89e3c-1806-41de-a86d-adf17be9058e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimdetallefactura.DateUpdate
+	toColumn: LocalDateTable_9ee5b16b-fd72-4115-8d9c-a068a6df75e0.Date
+
+relationship AutoDetected_2db57e63-f484-44b8-8b1c-6ee667cf3c1e
+	fromColumn: factpptooperativo.LlaveLinSub
+	toColumn: dimlinsub.LlaveLinSub
+
+relationship AutoDetected_cd67ca52-c7ca-4617-b2b8-6e4399819126
+	fromColumn: factpoa.LlaveLinSub
+	toColumn: dimlinsub.LlaveLinSub
+
+relationship AutoDetected_ea1c61e6-fc1d-4407-99b2-87bf51b0dac5
+	crossFilteringBehavior: bothDirections
+	fromColumn: factcostos.LlaveFacturaItem
+	toColumn: dimdetallefactura.LlaveFacturaItem
+
+relationship AutoDetected_02c082ca-b8fc-41e7-b19e-02e429dbbe60
+	fromColumn: factventas.IdMercado
+	toColumn: dimmercado.IdMercado
+
+relationship AutoDetected_fafb0773-f2c1-4611-809e-9d0fd456602e
+	fromColumn: factpedidos.IdMercado
+	toColumn: dimmercado.IdMercado
+
+relationship AutoDetected_ca1eb1c0-dcac-48ab-8188-321b0f55ade6
+	fromColumn: factpoa.IdMercado
+	toColumn: dimmercado.IdMercado
+
+relationship AutoDetected_810a7339-6936-4279-935b-9e6007d05755
+	fromColumn: factdocumentoscontables.IdMercado
+	toColumn: dimmercado.IdMercado
+
+relationship AutoDetected_82b32c2a-9fa3-4ddd-83a8-54044afba47a
+	fromColumn: factventasnorealizadas.IdMercado
+	toColumn: dimmercado.IdMercado
+
+relationship AutoDetected_a0e829eb-4353-4b90-9b53-3a359281a1c8
+	fromColumn: factpoaifrs.Mercado
+	toColumn: dimmercado.IdMercado
+
+relationship 9d77a91b-304b-9437-e2a1-664dce5d1718
+	fromColumn: factventas.RowIdPuntoEnvio
+	toColumn: dimcliente.IdPuntoEnvio
+
+relationship 82da8339-33e7-5743-ed5b-e7a5f6dbe205
+	fromColumn: factventas.IdCompania
+	toColumn: dimcompania.IdCompania
+
+relationship 128e46da-c6ba-f070-e2b1-855fcadbe4ec
+	fromColumn: factdocumentoscontables.LlaveFecha
+	toColumn: CALENDARIO.Date
+
+relationship 237c24bc-b712-3c22-af81-c1c7c7687634
+	fromColumn: factpedidos.FechaPedido
+	toColumn: CALENDARIO.Date
+
+relationship d03ba2c1-b989-a63c-caae-62b4e683ada8
+	fromColumn: factpedidos.IdCompania
+	toColumn: dimcompania.IdCompania
+
+relationship 132fa97d-bfeb-e7a9-9293-ca6e232375c0
+	fromColumn: factpedidos.IdPuntoEnvio
+	toColumn: dimcliente.IdPuntoEnvio
+
+relationship ca1eb6f2-590f-8280-94de-621f27c9828a
+	fromColumn: factpptocliente.IdDescripcionPto
+	toColumn: dimlinsub.LlaveLinSub
+
+relationship 8ada7345-6060-1fab-a823-a88a71cbac8b
+	fromColumn: factpoavendedor.DescPto
+	toColumn: dimlinsub.LlaveLinSub
+
+relationship e457a6d6-aa8e-0b35-c360-4692c5327858
+	fromColumn: factpoavendedor.RiVendedor
+	toColumn: dimvendedor.IdVendedor
+
+relationship c96d7f90-eebf-8d9a-f781-0c32b197d8d2
+	fromColumn: factpptooperativo.IdMercado
+	toColumn: dimmercado.IdMercado
+
+relationship dad853b0-6966-64f4-3014-000717388396
+	fromColumn: factventasnorealizadas.Fecha
+	toColumn: CALENDARIO.Date
+
+relationship 4ea13c6f-7ce1-066c-460a-3760d7dcb8c6
+	fromColumn: factventasnorealizadas.RowIdPuntoEnvio
+	toColumn: dimcliente.IdPuntoEnvio
+
+relationship bd45f8ee-e740-4a1e-9fec-9e2410771b2f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpoaifrs.DateUpdate
+	toColumn: LocalDateTable_39dfe0f8-0ffe-472f-9e4b-5a5c19e909ef.Date
+
+relationship 70f10f49-1c2a-141b-3dcc-302e29efe852
+	fromColumn: factpoaifrs.LlaveFecha
+	toColumn: CALENDARIO.Date
+
+relationship 407b5b44-e90a-64c5-6e96-3372474e837d
+	fromColumn: factpoaifrs.LlaveLineaSublinea
+	toColumn: dimlinsub.LlaveLinSub
+
+relationship 29e879ae-d31b-34d8-a402-9b30da00021b
+	crossFilteringBehavior: bothDirections
+	fromColumn: dimcliente.LlaveGeografia
+	toColumn: dimgeografia.LlaveGeografia
+
+relationship 278d0822-4926-85b2-d0bf-93b0a06528ee
+	fromColumn: factventas.LlaveFacturaItem
+	toColumn: dimdetallefactura.LlaveFacturaItem
+
+relationship fad598e3-d411-4e11-be7b-c6f59f0e74f1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimclientesvendedor.DateInserted
+	toColumn: LocalDateTable_a425d681-dfeb-4d6e-8d79-564a8eb183f7.Date
+
+relationship 05a22f5f-4a20-4bac-a435-c06f753b580a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimclientesvendedor.DateUpdate
+	toColumn: LocalDateTable_8de1e0b7-cd40-4921-8d88-7525c7e1840b.Date
+
+relationship AutoDetected_36dcc4e2-3a23-4e5c-8b4d-ca13d57b81c7
+	fromColumn: dimclientesvendedor.IdVendedor
+	toColumn: dimvendedor.IdVendedor
+
+relationship AutoDetected_8f4ad894-b036-4e51-bccf-37cbd6ea68a5
+	fromColumn: factventas.RiItemExt
+	toColumn: dimitem.RI_ITEM_EXT
+
+relationship AutoDetected_bb6b8d50-cb01-4dc6-821d-2ccad5c6248f
+	fromColumn: factpedidos.RIItemExt
+	toColumn: dimitem.RI_ITEM_EXT
+
+relationship AutoDetected_642448a8-e861-489a-bde4-6c2b4d438807
+	fromColumn: factcostos.RIItemExt
+	toColumn: dimitem.RI_ITEM_EXT
+
+relationship AutoDetected_6b29a7a0-4dd6-4518-939c-140288ab4476
+	fromColumn: factventasnorealizadas.RiItemExt
+	toColumn: dimitem.RI_ITEM_EXT
+
+relationship 50da4a0b-5480-aac6-85db-90bd9e9635ca
+	crossFilteringBehavior: bothDirections
+	fromColumn: dimclientesvendedor.IdPuntoEnvio
+	toColumn: dimcliente.IdPuntoEnvio
+

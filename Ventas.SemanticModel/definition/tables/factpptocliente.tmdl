@@ -1,0 +1,99 @@
+table factpptocliente
+	lineageTag: 2be7aa9d-9928-4a2e-87ca-27f0532fd787
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ab6fe306-a4df-4cc9-b9fa-5995f57364ba
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NitCliente
+		dataType: string
+		lineageTag: 84ff5caa-e4ac-492a-8b2b-655d22485fee
+		summarizeBy: none
+		sourceColumn: NitCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreCliente
+		dataType: string
+		lineageTag: 4a0c03f9-b264-4578-b9bb-26bed4997f06
+		summarizeBy: none
+		sourceColumn: NombreCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column PresupuestoM3
+		dataType: double
+		lineageTag: 01c48fb8-b49b-4521-becd-96e0904c0f93
+		summarizeBy: sum
+		sourceColumn: PresupuestoM3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LlaveClienteNit
+		dataType: string
+		lineageTag: 0bf648c2-9615-4535-b55e-4013fe86b89b
+		summarizeBy: none
+		sourceColumn: LlaveClienteNit
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 681fdde2-db61-40d9-b841-e43b89598eb4
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: efe9f043-a7d7-4c6e-9aba-07c44c8e2f86
+			defaultHierarchy: LocalDateTable_377e48b9-d1e4-41c0-a24f-c55236bb6f29.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 92f91fb1-c2bd-405a-b887-036d3c4a94d5
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: c4b78862-03ef-419b-bb59-bbcfe3974c0e
+			defaultHierarchy: LocalDateTable_e55d719c-7690-450b-80b5-9c3917dd8583.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdDescripcionPto
+		dataType: string
+		lineageTag: 52fc4f58-36c6-49c5-93db-a747d6dc522b
+		summarizeBy: none
+		sourceColumn: IdDescripcionPto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factpptocliente = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factpptocliente_Table = siesa_Schema{[Name="factpptocliente",Kind="Table"]}[Data]
+				in
+				    factpptocliente_Table
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

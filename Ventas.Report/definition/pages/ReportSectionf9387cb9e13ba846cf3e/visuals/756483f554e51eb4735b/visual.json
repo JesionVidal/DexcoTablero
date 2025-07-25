@@ -1,0 +1,145 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "756483f554e51eb4735b",
+  "position": {
+    "x": 10.599434391231215,
+    "y": 51.482967043123047,
+    "z": 0,
+    "height": 240.75858117225189,
+    "width": 882.78146429825688
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Vendedor"
+                    }
+                  },
+                  "Property": "Apellido"
+                }
+              },
+              "queryRef": "Vendedor.Apellido",
+              "nativeQueryRef": "Apellido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Vlr_POA_Captura_Clien ok-"
+                }
+              },
+              "queryRef": "Medidas.Vlr_POA_Captura_Clien",
+              "nativeQueryRef": "Vlr_POA_Captura_Clien"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Pedido_M3_Cumplido"
+                }
+              },
+              "queryRef": "Medidas.Cant_Pedido_M3_Cumplido",
+              "nativeQueryRef": "Cant_Pedido_M3_Cumplido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Pedido_M3_Pend_liberado"
+                }
+              },
+              "queryRef": "Medidas.Cant_Pedido_M3_Pend_liberado",
+              "nativeQueryRef": "Cant_Pedido_M3_Pend_liberado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cant_Pedido_M3_Pend_Retenido"
+                }
+              },
+              "queryRef": "Medidas.Cant_Pedido_M3_Pend_Retenido",
+              "nativeQueryRef": "Cant_Pedido_M3_Pend_Retenido"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7caf2f9b3be08d386c31",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Vlr_POA_Captura_Clien ok-"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Medidas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "Vlr_POA_Captura_Clien ok-"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

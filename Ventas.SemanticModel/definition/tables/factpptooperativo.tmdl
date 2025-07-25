@@ -1,0 +1,81 @@
+table factpptooperativo
+	lineageTag: 14c036c6-6d4c-45b8-8463-28bddd365666
+
+	column LlaveFecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 395682ff-0896-407f-862c-bc8b4313701a
+		summarizeBy: none
+		sourceColumn: LlaveFecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IdMercado
+		dataType: string
+		lineageTag: ba2cb886-c3c4-4694-a966-62ccc2dd484d
+		summarizeBy: none
+		sourceColumn: IdMercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdLinea
+		dataType: string
+		lineageTag: e06ec3bd-456e-4a8a-b731-b1140e37a56b
+		summarizeBy: none
+		sourceColumn: IdLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSubLinea
+		dataType: string
+		lineageTag: b368ff0d-9625-4c46-ab29-7674a3b143b8
+		summarizeBy: none
+		sourceColumn: IdSubLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveLinSub
+		dataType: string
+		lineageTag: b91ae459-e0f8-40fd-9bf0-64c97df613d4
+		summarizeBy: none
+		sourceColumn: LlaveLinSub
+
+		annotation SummarizationSetBy = Automatic
+
+	column OperativoCop
+		dataType: double
+		lineageTag: d4d4208b-6f8f-40e8-9920-a56a63b2f654
+		summarizeBy: sum
+		sourceColumn: OperativoCop
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OperativoM3
+		dataType: double
+		lineageTag: e3c1ef0e-dbb7-4d27-b7e0-b64c45a8c61b
+		summarizeBy: sum
+		sourceColumn: OperativoM3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition factpptooperativo = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factpptooperativo_Table = siesa_Schema{[Name="factpptooperativo",Kind="Table"]}[Data]
+				in
+				    factpptooperativo_Table
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

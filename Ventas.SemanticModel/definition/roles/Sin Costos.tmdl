@@ -1,0 +1,5 @@
+role 'Sin Costos'
+	modelPermission: read
+
+	annotation PBI_Id = b08fc9b9521c4aa485877d53646d7db0
+

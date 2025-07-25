@@ -1,0 +1,318 @@
+table factpedidos
+	lineageTag: 92c0fa69-41f6-4b46-8f7c-63fbff39bca3
+
+	column IdCompania
+		dataType: int64
+		formatString: 0
+		lineageTag: 780084f9-f7c4-4574-bc58-707d628695a4
+		summarizeBy: none
+		sourceColumn: IdCompania
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdCentroOperacionPedido
+		dataType: string
+		lineageTag: 67b33134-392b-4f49-9f56-f25f20d59cb3
+		summarizeBy: none
+		sourceColumn: IdCentroOperacionPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoDocumentoPedido
+		dataType: string
+		lineageTag: 43dcebee-8241-400d-abf0-dd3899b545e4
+		summarizeBy: none
+		sourceColumn: TipoDocumentoPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumeroDocumentoPedido
+		dataType: int64
+		formatString: 0
+		lineageTag: e433ff3c-6548-4e2b-a9c0-edfc7d3f1a66
+		summarizeBy: sum
+		sourceColumn: NumeroDocumentoPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocumentoReferencia
+		dataType: string
+		lineageTag: 16f9ce25-157f-4030-b69d-0d25e4dc71c7
+		summarizeBy: none
+		sourceColumn: DocumentoReferencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaPedido
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 61b8349e-a2d7-4742-8f7e-eae49265217d
+		summarizeBy: none
+		sourceColumn: FechaPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaEntregaSolicitud
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 18cf7c30-08fc-437f-be4f-4ee58769fe5b
+		summarizeBy: none
+		sourceColumn: FechaEntregaSolicitud
+
+		variation Variación
+			isDefault
+			relationship: 431d459b-bb2b-4000-9e44-6b1ae9f1375a
+			defaultHierarchy: LocalDateTable_ed6dfd8d-487a-427e-af53-b57ac95141fc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaEntregaDeseada
+		dataType: string
+		lineageTag: b18a693b-2b93-4ce8-9ae9-034adb635de2
+		summarizeBy: none
+		sourceColumn: FechaEntregaDeseada
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdCliente
+		dataType: int64
+		formatString: 0
+		lineageTag: f073da86-4885-4957-a721-bed90db5eb25
+		summarizeBy: sum
+		sourceColumn: RowIdCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdSucursal
+		dataType: string
+		lineageTag: 066d7f1e-2ab6-4c1d-ba85-10650d0e83d2
+		summarizeBy: none
+		sourceColumn: RowIdSucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column CantidadPedida
+		dataType: double
+		lineageTag: e597225b-fb2a-4dd2-8bb4-8f6e651cda8b
+		summarizeBy: sum
+		sourceColumn: CantidadPedida
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CantidadPendiente
+		dataType: double
+		lineageTag: a3edf803-7454-4879-ae59-be554f90ab76
+		summarizeBy: sum
+		sourceColumn: CantidadPendiente
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValorSubtotal
+		dataType: double
+		lineageTag: a9250ca3-dba5-4c67-9e3d-8d33e003404c
+		summarizeBy: sum
+		sourceColumn: ValorSubtotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EstadoMovimiento
+		dataType: int64
+		formatString: 0
+		lineageTag: b3a878f2-0b0c-4ee9-8f67-cdc2ac907b3a
+		summarizeBy: sum
+		sourceColumn: EstadoMovimiento
+
+		annotation SummarizationSetBy = Automatic
+
+	column DescripcionEstado
+		dataType: string
+		lineageTag: c4d0690b-86e4-4786-87e0-c0a35bded692
+		summarizeBy: none
+		sourceColumn: DescripcionEstado
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdMoneda
+		dataType: string
+		lineageTag: 1f1818f3-2943-42d5-ac3d-039fe8759c69
+		summarizeBy: none
+		sourceColumn: IdMoneda
+
+		annotation SummarizationSetBy = Automatic
+
+	column VolumenItem
+		dataType: double
+		lineageTag: 716e1efb-f3c3-4568-955c-438752e3d94d
+		summarizeBy: sum
+		sourceColumn: VolumenItem
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrecioUnitario
+		dataType: double
+		lineageTag: 10618238-a655-4a3d-a892-c66537d60505
+		summarizeBy: sum
+		sourceColumn: PrecioUnitario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IdMercado
+		dataType: string
+		lineageTag: 636e1112-5b07-4951-8a4d-d81a73ff2551
+		summarizeBy: none
+		sourceColumn: IdMercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f3cdf7a6-2f99-4d67-a615-bb3f8ca07ce8
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 824e220a-b9da-49a7-8674-5f3cf415496b
+			defaultHierarchy: LocalDateTable_b6b183da-5e67-4107-8e78-317c863e9fa9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2bb8c2e3-26f1-4178-8690-23ef746adcf4
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: 39a7cacc-9a5a-4cfb-a63a-b7de76553b09
+			defaultHierarchy: LocalDateTable_afc5e814-61c8-4bfc-a12a-d2f536adc03a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdPuntoEnvio
+		dataType: int64
+		formatString: 0
+		lineageTag: 7731eb5a-827a-4536-9e2b-7abc78a5a331
+		summarizeBy: none
+		sourceColumn: IdPuntoEnvio
+
+		annotation SummarizationSetBy = Automatic
+
+	column RIItemExt
+		dataType: int64
+		formatString: 0
+		lineageTag: c39e7beb-bb18-4942-84ca-6da53d9efa52
+		summarizeBy: none
+		sourceColumn: RIItemExt
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaVencimiento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b1bd7f4e-28b7-4668-9686-51c68b9d1384
+		summarizeBy: none
+		sourceColumn: FechaVencimiento
+
+		variation Variación
+			isDefault
+			relationship: cd89ea80-287b-4dd6-902a-2c989ba5a008
+			defaultHierarchy: LocalDateTable_d144cc7d-47b8-462f-ad92-e492e2aa656c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasVencido
+		dataType: int64
+		formatString: 0
+		lineageTag: 4320e00a-7ed6-4138-a652-cd7f6a0db823
+		summarizeBy: sum
+		sourceColumn: DiasVencido
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEdadVencido
+		dataType: int64
+		formatString: 0
+		lineageTag: 7898ef02-4b2f-4bfb-b4a1-c7caea06adb8
+		summarizeBy: none
+		sourceColumn: CodEdadVencido
+
+		annotation SummarizationSetBy = Automatic
+
+	column CantPedidaM3
+		dataType: double
+		lineageTag: e78552f5-ae88-40e3-87d0-7a14162f1b8b
+		summarizeBy: sum
+		sourceColumn: CantPedidaM3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CantPedidaM3Pend
+		dataType: double
+		lineageTag: cca97abf-7be3-4220-b722-c86a93efd4e8
+		summarizeBy: sum
+		sourceColumn: CantPedidaM3Pend
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VlrSubTotalCOP
+		dataType: double
+		lineageTag: 78da778d-d9e8-4dab-8263-010811bb0442
+		summarizeBy: sum
+		sourceColumn: VlrSubTotalCOP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VlrSubTotalPendiente
+		dataType: double
+		formatString: #,0
+		lineageTag: 09c0a52f-c220-4991-8afa-c4518f25b02e
+		summarizeBy: sum
+		sourceColumn: VlrSubTotalPendiente
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasaMoneda
+		dataType: double
+		lineageTag: 6feb23c5-2d01-4f31-ad82-3dbd79d05a0d
+		summarizeBy: sum
+		sourceColumn: TasaMoneda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition factpedidos = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factpedidos_Table = siesa_Schema{[Name="factpedidos",Kind="Table"]}[Data]
+				in
+				    factpedidos_Table
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,5 @@
+role Vendedor
+	modelPermission: read
+
+	annotation PBI_Id = 77bfd73168824d59b46f545ef95320fc
+

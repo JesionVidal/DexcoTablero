@@ -1,0 +1,73 @@
+table factpoavendedor
+	lineageTag: b4b39181-4bc4-477b-b0f2-f2f55c80fd01
+
+	column FechaCompetencia
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 88d995da-6933-4948-8d02-fc95d0c9fe34
+		summarizeBy: none
+		sourceColumn: FechaCompetencia
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DescPto
+		dataType: string
+		lineageTag: 56a8586c-6bf2-4b14-a61e-8cc5ccfc7bd1
+		summarizeBy: none
+		sourceColumn: DescPto
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiVendedor
+		dataType: string
+		lineageTag: 62df711f-83ff-405b-9cd3-033add54db46
+		summarizeBy: none
+		sourceColumn: RiVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreVendedor
+		dataType: string
+		lineageTag: 1359ded4-a927-4bd8-ae50-5a29794069ac
+		summarizeBy: none
+		sourceColumn: NombreVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column PoaVendedorCop
+		dataType: double
+		lineageTag: ad001c64-5ec5-4fe2-8a19-8657adf852c0
+		summarizeBy: sum
+		sourceColumn: PoaVendedorCop
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PoaVendedorM3
+		dataType: double
+		lineageTag: ab8531e1-f310-4d7f-bdb4-bad11065c9ec
+		summarizeBy: sum
+		sourceColumn: PoaVendedorM3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition factpoavendedor = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factpoavendedor_Table = siesa_Schema{[Name="factpoavendedor",Kind="Table"]}[Data]
+				in
+				    factpoavendedor_Table
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

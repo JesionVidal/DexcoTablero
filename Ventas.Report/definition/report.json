@@ -1,0 +1,213 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/2.1.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU10",
+      "reportVersionAtImport": "5.65",
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Elektra829781338524822.json",
+      "reportVersionAtImport": "5.65",
+      "type": "RegisteredResources"
+    }
+  },
+  "filterConfig": {
+    "filterSortOrder": "Custom"
+  },
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          },
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "BulletChart1443347686880",
+    "DonutChartGMO1461469098694",
+    "StackedBarLineC23CD878BA764C3B84E5261BC83BC537"
+  ],
+  "resourcePackages": [
+    {
+      "name": "BulletChart1443347686880",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "BulletChart1443347686880.pbiviz.json",
+          "path": "BulletChart1443347686880.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "ChicletSlicer1448559807354",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "ChicletSlicer1448559807354.pbiviz.json",
+          "path": "ChicletSlicer1448559807354.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "DonutChartGMO1461469098694",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "DonutChartGMO1461469098694.pbiviz.json",
+          "path": "DonutChartGMO1461469098694.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "FilterByList507A2DBEC31244C8AAABDE9BA541F723",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "FilterByList507A2DBEC31244C8AAABDE9BA541F723.pbiviz.json",
+          "path": "FilterByList507A2DBEC31244C8AAABDE9BA541F723.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "HierarchySlicer1458836712039",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "HierarchySlicer.js",
+          "path": "HierarchySlicer.js",
+          "type": "CustomVisualJavascript"
+        },
+        {
+          "name": "HierarchySlicer.css",
+          "path": "HierarchySlicer.css",
+          "type": "CustomVisualsCss"
+        },
+        {
+          "name": "icon.png",
+          "path": "icon.png",
+          "type": "CustomVisualIcon"
+        }
+      ]
+    },
+    {
+      "name": "PBI_CV_EB3A4088_75C5_4746_9D8B_255A7B7ECD6C",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "PBI_CV_EB3A4088_75C5_4746_9D8B_255A7B7ECD6C.pbiviz.json",
+          "path": "PBI_CV_EB3A4088_75C5_4746_9D8B_255A7B7ECD6C.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "SmartFilterBySQLBI1458262140625",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "SmartFilterBySQLBI1458262140625.pbiviz.json",
+          "path": "SmartFilterBySQLBI1458262140625.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "Tachometer1474636471549",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "Tachometer1474636471549.pbiviz.json",
+          "path": "Tachometer1474636471549.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "textFilter25A4896A83E0487089E2B90C9AE57C8A",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "textFilter25A4896A83E0487089E2B90C9AE57C8A.pbiviz.json",
+          "path": "textFilter25A4896A83E0487089E2B90C9AE57C8A.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Logo_dexco03222216423248603.png",
+          "path": "Logo_dexco03222216423248603.png",
+          "type": "Image"
+        },
+        {
+          "name": "Shadow6961340889754823.png",
+          "path": "Shadow6961340889754823.png",
+          "type": "Image"
+        },
+        {
+          "name": "Dexco-abre-chamada-e-busca-sta3537635453786844.jpg",
+          "path": "Dexco-abre-chamada-e-busca-sta3537635453786844.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "dexco_white9922167785585811.png",
+          "path": "dexco_white9922167785585811.png",
+          "type": "Image"
+        },
+        {
+          "name": "Elektra829781338524822.json",
+          "path": "Elektra829781338524822.json",
+          "type": "CustomTheme"
+        }
+      ]
+    },
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarizedAndUnderlying",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "allowInlineExploration": true,
+    "useEnhancedTooltips": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}

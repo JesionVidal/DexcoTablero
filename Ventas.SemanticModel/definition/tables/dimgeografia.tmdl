@@ -1,0 +1,100 @@
+table dimgeografia
+	lineageTag: 0b23150b-9876-4444-a93c-38f5f09359de
+
+	column CodPais
+		dataType: string
+		lineageTag: 8a85040d-3a49-4d63-98c8-f572218a26f0
+		summarizeBy: none
+		sourceColumn: CodPais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 828c21ff-3f2e-42cf-b94a-c65afed1b10c
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodDepartamento
+		dataType: string
+		lineageTag: 7c0c90e5-0cc3-415d-8c38-15a5d866db01
+		summarizeBy: none
+		sourceColumn: CodDepartamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Departamento
+		dataType: string
+		lineageTag: 3daf1678-8b30-4e65-9ea3-4b8b1900b9ee
+		summarizeBy: none
+		sourceColumn: Departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodCiudad
+		dataType: string
+		lineageTag: 220ca142-5381-4e97-a3e1-76c49b1271d4
+		summarizeBy: none
+		sourceColumn: CodCiudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad
+		dataType: string
+		lineageTag: 71779f09-1be0-43b5-9c4f-e8ed3365519e
+		summarizeBy: none
+		sourceColumn: Ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column LlaveGeografia
+		dataType: string
+		lineageTag: a77ba448-89b8-4cfc-9ca5-ccc88914747a
+		summarizeBy: none
+		sourceColumn: LlaveGeografia
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 86c43163-c607-4093-bf0d-8d0ce3657b90
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 66d499f4-3bad-4420-8b52-92a01caf8d26
+			defaultHierarchy: LocalDateTable_a519fde2-fd87-4a04-ab40-9e6992667bcf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b6832ef6-4c79-4907-a586-d4c993dbdd2b
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: 6f0e11e1-12f5-4baf-8c03-af30c12903f7
+			defaultHierarchy: LocalDateTable_bfe27fde-3337-412d-81c0-f465cecdb50e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimgeografia = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimgeografia_Table = siesa_Schema{[Name="dimgeografia",Kind="Table"]}[Data]
+				in
+				    dimgeografia_Table
+
+	annotation PBI_ResultType = Table
+

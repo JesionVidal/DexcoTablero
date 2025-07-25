@@ -1,0 +1,50 @@
+table Medidas_iconos_umbrales
+	lineageTag: ded8ec07-012a-4f61-9b16-e327f165acd1
+
+	measure ColorFlechas_ventas_netas_anho =
+			
+			
+			VAR diferencia=ROUND([%Crescimiento_Ventas_Ano ok]*100,1)
+			RETURN IF([%Crescimiento_Ventas_Ano ok]<0, "Red","Green")
+		lineageTag: 247413f2-eece-49a3-9389-4e42b5bc9d17
+
+	measure ColorFlechas_ventas_netas_mes =
+			
+			
+			VAR diferencia=ROUND([%Crescimiento_Ventas_Mes_Ano_Ant ok]*100,1)
+			RETURN IF([%Crescimiento_Ventas_Mes_Ano_Ant ok]<0, "Red","Green")
+		lineageTag: ed202d4d-ec51-4d11-a6da-c5d87652fc84
+
+	measure Flechas_ventas_netas_anho =
+			
+			VAR __up_arrow= UNICHAR(129137)
+			VAR __down_arrow=UNICHAR(129139)
+			VAR diferencia=ROUND([%Crescimiento_Ventas_Ano ok]*100,1)
+			RETURN IF([%Crescimiento_Ventas_Ano ok]<0," " & diferencia & "% " & __down_arrow,diferencia & "%" & __up_arrow)
+		lineageTag: 6244ae94-2ddb-4254-b1be-2792b6588928
+
+	measure Flechas_ventas_netas_mes =
+			
+			VAR __up_arrow= UNICHAR(129137)
+			VAR __down_arrow=UNICHAR(129139)
+			VAR diferencia=ROUND([%Crescimiento_Ventas_Mes_Ano_Ant ok]*100,1)
+			RETURN IF([%Crescimiento_Ventas_Mes_Ano_Ant ok]<0," " & diferencia & "% " & __down_arrow,diferencia & "%" & __up_arrow)
+		lineageTag: f9056fa5-4019-40f1-a9e8-d28148032575
+
+	column Column
+		formatString: 0
+		lineageTag: 153cb1d3-2ec4-495b-9a80-a09f8bc682cb
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas_iconos_umbrales = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 2de44825cb6b496cb2bb7dbe391c81db
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

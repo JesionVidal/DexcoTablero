@@ -1,0 +1,5 @@
+role Exportaciones
+	modelPermission: read
+
+	annotation PBI_Id = ac093db08b1e46439a7c7279d7346333
+

@@ -1,0 +1,83 @@
+table dimvendedor
+	lineageTag: a5a0138f-b37b-437e-a3b5-bbbfcbc01b23
+
+	column Codigo
+		dataType: string
+		lineageTag: 51deee7c-129d-4d5d-96c6-028792a6c216
+		summarizeBy: none
+		sourceColumn: Codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cedula
+		dataType: string
+		lineageTag: 490ed835-1094-4b44-820d-8e9f6be05a9f
+		summarizeBy: none
+		sourceColumn: Cedula
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdVendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 700bd436-7929-4e3a-826d-494b5ce8662b
+		summarizeBy: none
+		sourceColumn: IdVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreVendedor
+		dataType: string
+		lineageTag: f14d5048-f084-4b95-9464-6fefa76f5b1b
+		summarizeBy: none
+		sourceColumn: NombreVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: 1bbb85bd-41a9-4745-b2f7-e3f8c1f76200
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d1cf7319-cbca-4180-bdec-808efac1d284
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: f24d1a1e-c470-4168-8b5d-a1768ccf8504
+			defaultHierarchy: LocalDateTable_89d2db0d-1032-4a07-bc8a-0d242cc5d4eb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ae67549f-3445-4c5a-9f75-3a206e16878f
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: a88cf77e-ccb2-488e-9ddd-2fff6fa7d734
+			defaultHierarchy: LocalDateTable_660509e6-25b1-4d46-a718-f9822d9cb37d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimvendedor = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimvendedor_Table = siesa_Schema{[Name="dimvendedor",Kind="Table"]}[Data]
+				in
+				    dimvendedor_Table
+

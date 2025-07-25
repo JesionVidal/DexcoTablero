@@ -1,0 +1,355 @@
+table factventas
+	lineageTag: ac002dc8-e09c-458c-a6ea-c7dc159ba362
+
+	column IdCompania
+		dataType: int64
+		formatString: 0
+		lineageTag: c6884652-517f-445f-8491-246faf44647d
+		summarizeBy: none
+		sourceColumn: IdCompania
+
+		annotation SummarizationSetBy = Automatic
+
+	column Periodo
+		dataType: int64
+		formatString: 0
+		lineageTag: 98e97b33-3c12-4dd2-be6f-a2ef3cbca590
+		summarizeBy: sum
+		sourceColumn: Periodo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaFactura
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d763cb31-dbb0-4990-874a-53947a89f244
+		summarizeBy: none
+		sourceColumn: FechaFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoFactura
+		dataType: string
+		lineageTag: 70da1473-f162-4e8a-a189-f846b0aa8e90
+		summarizeBy: none
+		sourceColumn: TipoFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumeroFactura
+		dataType: int64
+		formatString: 0
+		lineageTag: be6803f1-1211-49d0-86cb-e0b50104140b
+		summarizeBy: sum
+		sourceColumn: NumeroFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdFactura
+		dataType: int64
+		formatString: 0
+		lineageTag: 64fc45f4-bacc-46a6-a7bc-7c03ac9c11d2
+		summarizeBy: sum
+		sourceColumn: RowIdFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstadoFactura
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c1b9eab-9c2d-4d99-8821-2fd8b7c19884
+		summarizeBy: sum
+		sourceColumn: EstadoFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdCliente
+		dataType: int64
+		formatString: 0
+		lineageTag: b2562317-4533-4c2f-9abf-970a52a007cb
+		summarizeBy: sum
+		sourceColumn: RowIdCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column CantidadFactura
+		dataType: double
+		lineageTag: abe7a276-5741-449a-bce8-cf149c39a22b
+		summarizeBy: sum
+		sourceColumn: CantidadFactura
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrecioUnitario
+		dataType: double
+		lineageTag: d2fbd33b-4ad7-484f-98ff-658acb33c86e
+		summarizeBy: sum
+		sourceColumn: PrecioUnitario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValorBruto
+		dataType: double
+		lineageTag: 1cd42916-4e0a-408c-91b3-169be2b79214
+		summarizeBy: sum
+		sourceColumn: ValorBruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValorDescuentoLinea
+		dataType: double
+		lineageTag: d1d7fb57-2782-4dc1-ae60-03940acf5b53
+		summarizeBy: sum
+		sourceColumn: ValorDescuentoLinea
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValorSubtotal
+		dataType: double
+		lineageTag: 3bb95f57-51f7-4229-9127-a24d99a1708d
+		summarizeBy: sum
+		sourceColumn: ValorSubtotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValorImpuesto
+		dataType: double
+		lineageTag: 867a7a45-2c91-4d5c-9170-7bff4822879b
+		summarizeBy: sum
+		sourceColumn: ValorImpuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValorNeto
+		dataType: double
+		lineageTag: 428cd8e5-ce53-4734-96fc-5cc94f734232
+		summarizeBy: sum
+		sourceColumn: ValorNeto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IdUnidadMedida
+		dataType: string
+		lineageTag: 23fddaf8-f371-4bee-8b78-f404edc5c2ad
+		summarizeBy: none
+		sourceColumn: IdUnidadMedida
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnidadFactura
+		dataType: string
+		lineageTag: 8b27f08f-5df6-40ed-b612-40908d04dd64
+		summarizeBy: none
+		sourceColumn: UnidadFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column Naturaleza
+		dataType: int64
+		formatString: 0
+		lineageTag: afebf8ab-611e-4822-ba00-3506d38cfa32
+		summarizeBy: sum
+		sourceColumn: Naturaleza
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdMovimientoPedido
+		dataType: int64
+		formatString: 0
+		lineageTag: 3198c043-b235-4d46-8f9f-d927bf417397
+		summarizeBy: sum
+		sourceColumn: RowIdMovimientoPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdClienteRemitente
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c5bbe89-40ac-4d7f-9913-cf521e61729d
+		summarizeBy: sum
+		sourceColumn: RowIdClienteRemitente
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdSucursal
+		dataType: string
+		lineageTag: 61db73f9-021d-4588-8058-f84a74b087a7
+		summarizeBy: none
+		sourceColumn: RowIdSucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdPuntoEnvio
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c1c4aab-d4b4-4329-8ba6-681699115101
+		summarizeBy: none
+		sourceColumn: RowIdPuntoEnvio
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdVendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 68c6c0d6-d8de-4294-8d12-561cc48bb971
+		summarizeBy: sum
+		sourceColumn: RowIdVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowIdContacto
+		dataType: int64
+		formatString: 0
+		lineageTag: f3e7410c-364f-47d3-9ad3-42cf7229ff42
+		summarizeBy: sum
+		sourceColumn: RowIdContacto
+
+		annotation SummarizationSetBy = Automatic
+
+	column VolumenItem
+		dataType: double
+		lineageTag: 7164ffc4-c350-46b5-a5cc-76fa0b62c047
+		summarizeBy: sum
+		sourceColumn: VolumenItem
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TipoCliente
+		dataType: string
+		lineageTag: 1e859c2b-e97f-4707-b00b-063724d406e1
+		summarizeBy: none
+		sourceColumn: TipoCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column CostoPromedioTotal
+		dataType: double
+		lineageTag: 08b7cdac-4917-4d3d-80c1-ce94c3d6d8eb
+		summarizeBy: sum
+		sourceColumn: CostoPromedioTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LlaveFacturaItem
+		dataType: string
+		lineageTag: 771765e5-d507-4c2e-a0f8-b92918200ebb
+		summarizeBy: none
+		sourceColumn: LlaveFacturaItem
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdMercado
+		dataType: string
+		lineageTag: 42c1ee33-f30d-42a3-81a5-1a7699e6c5d2
+		summarizeBy: none
+		sourceColumn: IdMercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dateinserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: efc8c547-6db5-4ba9-aa17-244affd3011b
+		summarizeBy: none
+		sourceColumn: Dateinserted
+
+		variation Variación
+			isDefault
+			relationship: be3236f6-84d9-4b06-bb38-c98e5a010183
+			defaultHierarchy: LocalDateTable_abf896da-711d-4d2d-b46b-64e6203cec58.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dateupdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3c2ca186-d742-4277-a0a1-ef438ead5634
+		summarizeBy: none
+		sourceColumn: Dateupdate
+
+		variation Variación
+			isDefault
+			relationship: edb75eff-3df4-4d67-ac30-4ebfc5479e8f
+			defaultHierarchy: LocalDateTable_2a55adab-6c49-48c5-a7ca-73b84f41a71b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CANT_FACT_M3
+		dataType: double
+		lineageTag: ba63bc21-da67-48b6-844e-a187c07af9db
+		summarizeBy: sum
+		sourceColumn: CANT_FACT_M3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IdCentroOperacionFactura
+		dataType: string
+		lineageTag: f33e29a1-9db3-45b8-9f3a-5e385e2a31e4
+		summarizeBy: none
+		sourceColumn: IdCentroOperacionFactura
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiBodega
+		dataType: int64
+		formatString: 0
+		lineageTag: dc42b489-ef86-4e8a-9b7b-54c6a81d5b4b
+		summarizeBy: none
+		sourceColumn: RiBodega
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiItemExt
+		dataType: int64
+		formatString: 0
+		lineageTag: a8120073-3c54-445a-bff1-033778686ed9
+		summarizeBy: none
+		sourceColumn: RiItemExt
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiPedido
+		dataType: int64
+		formatString: 0
+		lineageTag: dfd53b99-cce8-440c-bcc9-e4b6f61f6c2b
+		summarizeBy: sum
+		sourceColumn: RiPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factventas = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    factventas_Table = siesa_Schema{[Name="factventas",Kind="Table"]}[Data],
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(factventas_Table,{{"CantFactM3", "CANT_FACT_M3"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

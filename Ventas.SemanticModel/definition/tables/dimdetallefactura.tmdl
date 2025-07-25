@@ -1,0 +1,52 @@
+table dimdetallefactura
+	lineageTag: 13b35b6d-7546-42a6-86a9-71cac4505cd8
+
+	column LlaveFacturaItem
+		dataType: string
+		lineageTag: dde63442-e609-4c48-9409-3c918b7b6f42
+		summarizeBy: none
+		sourceColumn: LlaveFacturaItem
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c6993b24-1a65-4017-aaa2-c946df9eb58c
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 846199f0-25f7-4355-ae8b-abe9ad1b6982
+			defaultHierarchy: LocalDateTable_cfad7c0d-77d2-41f0-b6c0-29a7fc9efa25.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 38a6fbc9-3e8c-444e-9adb-210e09e02c7b
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: 22d89e3c-1806-41de-a86d-adf17be9058e
+			defaultHierarchy: LocalDateTable_9ee5b16b-fd72-4115-8d9c-a068a6df75e0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimdetallefactura = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimdetallefactura_Table = siesa_Schema{[Name="dimdetallefactura",Kind="Table"]}[Data]
+				in
+				    dimdetallefactura_Table
+

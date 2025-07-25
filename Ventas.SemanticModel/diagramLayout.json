@@ -1,0 +1,394 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 3281.0980240315671,
+        "y": 594.61727013712994
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 3476.779401786177,
+            "y": 425.48377306320953
+          },
+          "nodeIndex": "DiaCerrado",
+          "nodeLineageTag": "97419977-bd16-46bf-9886-bff172f23433",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 21,
+          "expandedHeight": 149
+        },
+        {
+          "location": {
+            "x": 3525.5252440534473,
+            "y": 583.42947805744745
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "949c6260-b1ae-4ab9-bb35-bc5bb8207eb4",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 12,
+          "expandedHeight": 337
+        },
+        {
+          "location": {
+            "x": 3120.9458226052184,
+            "y": 1433.7115646405784
+          },
+          "nodeIndex": "dimgeografia",
+          "nodeLineageTag": "0b23150b-9876-4444-a93c-38f5f09359de",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 22
+        },
+        {
+          "location": {
+            "x": 4011.9989228133263,
+            "y": 384.00648208621453
+          },
+          "nodeIndex": "factpedidos",
+          "nodeLineageTag": "92c0fa69-41f6-4b46-8f7c-63fbff39bca3",
+          "size": {
+            "height": 320,
+            "width": 272
+          },
+          "zIndex": 27,
+          "expandedHeight": 145
+        },
+        {
+          "location": {
+            "x": 4005.0508874867628,
+            "y": 727.89393099256438
+          },
+          "nodeIndex": "factpoa",
+          "nodeLineageTag": "62ce40c9-996f-4d71-a859-7a1017fc21ab",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 13,
+          "expandedHeight": 452.04759407350457
+        },
+        {
+          "location": {
+            "x": 4005.6020823786866,
+            "y": 1064.0326143037116
+          },
+          "nodeIndex": "factpoavendedor",
+          "nodeLineageTag": "b4b39181-4bc4-477b-b0f2-f2f55c80fd01",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 4020.1895709020537,
+            "y": 558.19816063119379
+          },
+          "nodeIndex": "factpptocliente",
+          "nodeLineageTag": "2be7aa9d-9928-4a2e-87ca-27f0532fd787",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 24
+        },
+        {
+          "location": {
+            "x": 4015.9972203349653,
+            "y": 1307.138584902887
+          },
+          "nodeIndex": "factpptooperativo",
+          "nodeLineageTag": "14c036c6-6d4c-45b8-8463-28bddd365666",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 4299.035121536931,
+            "y": 78.227295670404814
+          },
+          "nodeIndex": "factventas",
+          "nodeLineageTag": "ac002dc8-e09c-458c-a6ea-c7dc159ba362",
+          "size": {
+            "height": 272,
+            "width": 296
+          },
+          "zIndex": 23,
+          "expandedHeight": 145
+        },
+        {
+          "location": {
+            "x": 4680.3886643135284,
+            "y": 186.73932025009307
+          },
+          "nodeIndex": "dimcompania",
+          "nodeLineageTag": "d6c1904b-470e-4f2d-972f-bb4d13a80266",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 8,
+          "expandedHeight": 176
+        },
+        {
+          "location": {
+            "x": 5201.223284876045,
+            "y": 1565.5718719457832
+          },
+          "nodeIndex": "CALENDARIO",
+          "nodeLineageTag": "eeae3cbd-3325-4f8d-b9af-918124696fe7",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 9,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 6416.757574880724,
+            "y": 0
+          },
+          "nodeIndex": "Medidas_iconos_umbrales",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 10,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 4016.3712498026143,
+            "y": 216.19672106857013
+          },
+          "nodeIndex": "factdocumentoscontables",
+          "nodeLineageTag": "c62314e9-01bd-41cf-a7a5-481ebc153fc4",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 3716.1650600885782,
+            "y": 1523.9671748965604
+          },
+          "nodeIndex": "dimcliente",
+          "nodeLineageTag": "359d0b46-1d01-4b27-8aa8-9bcd6e34b211",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 25
+        },
+        {
+          "location": {
+            "x": 4617.4479246135179,
+            "y": 1536.7068149690249
+          },
+          "nodeIndex": "dimvendedor",
+          "nodeLineageTag": "a5a0138f-b37b-437e-a3b5-bbbfcbc01b23",
+          "size": {
+            "height": 308.99077289557,
+            "width": 234
+          },
+          "zIndex": 28
+        },
+        {
+          "location": {
+            "x": 3511.6364363367866,
+            "y": 0
+          },
+          "nodeIndex": "dimbodegas",
+          "nodeLineageTag": "0aa2361f-080f-4c06-8954-2ad671f5d7a1",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 15,
+          "expandedHeight": 272
+        },
+        {
+          "location": {
+            "x": 3188.7805682404965,
+            "y": 819.66549366992626
+          },
+          "nodeIndex": "dimindicadores",
+          "nodeLineageTag": "efcf1216-cf88-4b9e-ad53-333be5377b06",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 4012.5400656958041,
+            "y": 908.35894306156786
+          },
+          "nodeIndex": "factcostos",
+          "nodeLineageTag": "8024bbce-3c3c-4ace-bb1c-05ef6844599d",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 3226.1048790765622,
+            "y": 1192.8263394077865
+          },
+          "nodeIndex": "dimedadvencido",
+          "nodeLineageTag": "668e489f-e9bd-4e02-bdcd-8ee5e00c3b80",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 4021.7649874566227,
+            "y": 1457.5385475617245
+          },
+          "nodeIndex": "factventasnorealizadas",
+          "nodeLineageTag": "8791c7f9-0339-4ceb-926c-ca5d7ded0982",
+          "size": {
+            "height": 199.23263608558022,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 5603.6675543335814,
+            "y": 466.71200128783892
+          },
+          "nodeIndex": "dimitemcriterio",
+          "nodeLineageTag": "058d4510-5ccc-4e69-a156-763072ad0170",
+          "size": {
+            "height": 344.51733397705931,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 3515.7146388327465,
+            "y": 685.65591887994628
+          },
+          "nodeIndex": "ACTUALIZACIÓN",
+          "nodeLineageTag": "0051924e-1e57-4889-a516-5dee5b2fa2bb",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 4927.45021594157,
+            "y": 616.39856254636948
+          },
+          "nodeIndex": "dimitem",
+          "nodeLineageTag": "eb50b7af-2131-49ca-bb7a-6a22c69bfa54",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 4034.4262212753783,
+            "y": 1725.9696376864595
+          },
+          "nodeIndex": "factpoaifrs",
+          "nodeLineageTag": "73678a06-1e9f-4894-8684-332c5f915dc2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 20
+        },
+        {
+          "location": {
+            "x": 3417.8390745622828,
+            "y": 231.37322163202032
+          },
+          "nodeIndex": "dimdetallefactura",
+          "nodeLineageTag": "13b35b6d-7546-42a6-86a9-71cac4505cd8",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 4634.4469119978157,
+            "y": 1112.9272197030707
+          },
+          "nodeIndex": "dimlinsub",
+          "nodeLineageTag": "3b4017da-10aa-487d-baaf-adb23b294030",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 19
+        },
+        {
+          "location": {
+            "x": 5379.6059639881951,
+            "y": 2040.5391192670002
+          },
+          "nodeIndex": "dimmercado",
+          "nodeLineageTag": "4180454e-d759-434c-b471-f5db84fda2ae",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 3579.8117522755056,
+            "y": 996.26955963350019
+          },
+          "nodeIndex": "dimclientesvendedor",
+          "nodeLineageTag": "fb1038b3-635c-4c4b-a30e-37de8c108513",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 26
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 67.270161848436132,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
