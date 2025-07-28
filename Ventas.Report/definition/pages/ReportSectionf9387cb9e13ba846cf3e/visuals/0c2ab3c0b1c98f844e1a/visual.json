@@ -51,7 +51,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3"
+                  "Property": "Cant_Ventas_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -80,7 +80,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e73fa6cca720f620d571",
+        "name": "0cf63c28857851d55aef",
         "field": {
           "Measure": {
             "Expression": {
@@ -88,7 +88,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "Vlr_POA_Captura_Clien"
+            "Property": "Vlr_POA_Captura_Clien ok-"
           }
         },
         "type": "Advanced",
@@ -113,7 +113,7 @@
                           "Source": "m"
                         }
                       },
-                      "Property": "Vlr_POA_Captura_Clien"
+                      "Property": "Vlr_POA_Captura_Clien ok-"
                     }
                   },
                   "Right": {

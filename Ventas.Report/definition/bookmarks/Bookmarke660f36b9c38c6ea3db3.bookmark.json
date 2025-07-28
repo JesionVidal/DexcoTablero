@@ -141,7 +141,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "1717b46336891e0bfbce",
+                  "name": "53601a0335dab6f9bdaf",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -270,7 +270,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0f1c2507e6c76c3a858d",
+                  "name": "9b08e31939c16806f00f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -313,7 +313,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "72dfe4e6e6bd943b6cb2",
+                  "name": "a5ee108d3f70b3f02631",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -328,7 +328,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "485502984f06903cbdb5",
+                  "name": "04d664ff4e7030b7af5d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -337,13 +337,13 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Pedido_M3"
+                      "Property": "Cant_Pedido_M3 ok"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "7b3013c980d45f3074b0",
+                  "name": "672152b3d7a10c8fbb49",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -352,7 +352,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto"
+                      "Property": "Vlr_Pedido_Neto ok"
                     }
                   },
                   "howCreated": 0
@@ -397,7 +397,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "4413543eee82b5b6ce0a",
+                  "name": "45d7f097f2c533f16fb7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -412,7 +412,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "91fdf64334787d71e0ff",
+                  "name": "37591fb53e882a218d28",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -421,13 +421,13 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Pedido_M3"
+                      "Property": "Cant_Pedido_M3 ok"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "79713252d24e8585ab89",
+                  "name": "49f652b59516c7caede4",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -436,13 +436,13 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto"
+                      "Property": "Vlr_Pedido_Neto ok"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "25433af556ace70ed117",
+                  "name": "802288c86f8ea0296656",
                   "type": "Advanced",
                   "expression": {
                     "Arithmetic": {
@@ -453,7 +453,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Vlr_Pedido_Neto"
+                          "Property": "Vlr_Pedido_Neto ok"
                         }
                       },
                       "Right": {
@@ -465,7 +465,7 @@
                                   "Entity": "Medidas"
                                 }
                               },
-                              "Property": "Vlr_Pedido_Neto"
+                              "Property": "Vlr_Pedido_Neto ok"
                             }
                           },
                           "Scope": []
@@ -493,7 +493,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Vlr_Pedido_Neto"
+                          "Property": "Vlr_Pedido_Neto ok"
                         }
                       },
                       "Right": {
@@ -505,7 +505,7 @@
                                   "Entity": "Medidas"
                                 }
                               },
-                              "Property": "Vlr_Pedido_Neto"
+                              "Property": "Vlr_Pedido_Neto ok"
                             }
                           },
                           "Scope": []
@@ -542,7 +542,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2b3463f0723dc718f845",
+                  "name": "4b760e1ce1183b938a63",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -821,7 +821,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "e426981a7e7572336db5",
+                  "name": "24239e004a1ebf176e18",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -836,7 +836,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5e57357c6f92206de493",
+                  "name": "1c3656c1a04713dee8b4",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -851,7 +851,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0edcfb76d8dbf89684a8",
+                  "name": "339f3213a4ddb5c8f718",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -860,13 +860,13 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Pedido_M3"
+                      "Property": "Cant_Pedido_M3 ok"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "bfbec86148b9d390fe3d",
+                  "name": "3a8b12376a20e9645dd9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {

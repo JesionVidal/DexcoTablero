@@ -51,7 +51,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3"
+                  "Property": "Cant_Ventas_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",

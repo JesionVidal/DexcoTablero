@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Operativo_M3"
+                  "Property": "Cant_Operativo_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Operativo_M3 ok",
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Cant_Operativo_M3"
+                "Property": "Cant_Operativo_M3 ok"
               }
             },
             "direction": "Descending"

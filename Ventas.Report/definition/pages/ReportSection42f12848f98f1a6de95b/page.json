@@ -8,64 +8,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filter",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Ventas"
-              }
-            },
-            "Property": "CO_FACT"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "v",
-              "Entity": "Ventas",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "v"
-                              }
-                            },
-                            "Property": "CO_FACT"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'PPL'"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
         "name": "Filter1",
         "field": {
           "Column": {
@@ -124,30 +66,15 @@
         "howCreated": "User"
       },
       {
-        "name": "Filter2",
+        "name": "c17c819681243aa35809",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dimitem"
+                "Entity": "factventas"
               }
             },
-            "Property": "REFERENCIA"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User"
-      },
-      {
-        "name": "Filter3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MERCADO"
-              }
-            },
-            "Property": "MERCADO"
+            "Property": "IdCentroOperacionFactura"
           }
         },
         "type": "Categorical",
@@ -155,8 +82,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "m",
-              "Entity": "MERCADO",
+              "Name": "f",
+              "Entity": "factventas",
               "Type": 0
             }
           ],
@@ -171,10 +98,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "m"
+                                "Source": "f"
                               }
                             },
-                            "Property": "MERCADO"
+                            "Property": "IdCentroOperacionFactura"
                           }
                         }
                       ],
@@ -182,7 +109,7 @@
                         [
                           {
                             "Literal": {
-                              "Value": "null"
+                              "Value": "'PPL'"
                             }
                           }
                         ]
@@ -194,7 +121,22 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   },

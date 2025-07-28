@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3_Per_Ant"
+                  "Property": "Cant_Ventas_M3_Per_Ant ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3_Per_Ant",
@@ -38,7 +38,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Poa_M3"
+                  "Property": "Cant_Poa_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Poa_M3",
@@ -53,7 +53,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Operativo_M3"
+                  "Property": "Cant_Operativo_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Operativo_M3",
@@ -68,7 +68,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Pedi_Pend_Acum_m3_Real_vent"
+                  "Property": "Cant_Pedi_Pend_Acum_m3_Real_vent ok"
                 }
               },
               "queryRef": "Medidas.Cant_Pedi_Pend_Acum_m3_Real",
@@ -98,7 +98,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3"
+                  "Property": "Cant_Ventas_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",

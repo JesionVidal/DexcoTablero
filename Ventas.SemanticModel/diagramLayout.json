@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 3281.0980240315671,
-        "y": 582.7249247343874
+        "x": 3533.513127789895,
+        "y": 445.96295260284751
       },
       "nodes": [
         {
@@ -19,7 +19,7 @@
             "height": 72,
             "width": 234
           },
-          "zIndex": 21,
+          "zIndex": 24,
           "expandedHeight": 149
         },
         {
@@ -33,7 +33,7 @@
             "height": 72,
             "width": 234
           },
-          "zIndex": 12,
+          "zIndex": 14,
           "expandedHeight": 337
         },
         {
@@ -47,7 +47,7 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 22
+          "zIndex": 25
         },
         {
           "location": {
@@ -57,11 +57,10 @@
           "nodeIndex": "factpedidos",
           "nodeLineageTag": "92c0fa69-41f6-4b46-8f7c-63fbff39bca3",
           "size": {
-            "height": 320,
+            "height": 145,
             "width": 272
           },
-          "zIndex": 27,
-          "expandedHeight": 145
+          "zIndex": 28
         },
         {
           "location": {
@@ -74,7 +73,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 13,
+          "zIndex": 15,
           "expandedHeight": 452.04759407350457
         },
         {
@@ -88,7 +87,7 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 8
         },
         {
           "location": {
@@ -101,7 +100,7 @@
             "height": 145,
             "width": 234
           },
-          "zIndex": 24
+          "zIndex": 27
         },
         {
           "location": {
@@ -114,7 +113,7 @@
             "height": 145,
             "width": 234
           },
-          "zIndex": 14
+          "zIndex": 16
         },
         {
           "location": {
@@ -127,7 +126,7 @@
             "height": 272,
             "width": 296
           },
-          "zIndex": 23,
+          "zIndex": 26,
           "expandedHeight": 145
         },
         {
@@ -141,7 +140,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 8,
+          "zIndex": 9,
           "expandedHeight": 176
         },
         {
@@ -155,7 +154,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 9,
+          "zIndex": 10,
           "expandedHeight": 300
         },
         {
@@ -168,7 +167,7 @@
             "height": 72,
             "width": 234
           },
-          "zIndex": 10,
+          "zIndex": 11,
           "expandedHeight": 200
         },
         {
@@ -182,12 +181,12 @@
             "height": 145,
             "width": 234
           },
-          "zIndex": 16
+          "zIndex": 18
         },
         {
           "location": {
-            "x": 3716.1650600885782,
-            "y": 1523.9671748965604
+            "x": 3458.99309075427,
+            "y": 1503.155570441761
           },
           "nodeIndex": "dimcliente",
           "nodeLineageTag": "359d0b46-1d01-4b27-8aa8-9bcd6e34b211",
@@ -195,12 +194,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 25
+          "zIndex": 20
         },
         {
           "location": {
-            "x": 4617.4479246135179,
-            "y": 1536.7068149690249
+            "x": 5527.2123479233269,
+            "y": 1139.7997871524904
           },
           "nodeIndex": "dimvendedor",
           "nodeLineageTag": "a5a0138f-b37b-437e-a3b5-bbbfcbc01b23",
@@ -208,7 +207,7 @@
             "height": 308.99077289557,
             "width": 234
           },
-          "zIndex": 28
+          "zIndex": 12
         },
         {
           "location": {
@@ -221,7 +220,7 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 15,
+          "zIndex": 17,
           "expandedHeight": 272
         },
         {
@@ -235,7 +234,7 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 11
+          "zIndex": 13
         },
         {
           "location": {
@@ -248,12 +247,12 @@
             "height": 145,
             "width": 234
           },
-          "zIndex": 17
+          "zIndex": 19
         },
         {
           "location": {
-            "x": 3226.1048790765622,
-            "y": 1192.8263394077865
+            "x": 3474.3575893588136,
+            "y": 1136.3376987447591
           },
           "nodeIndex": "dimedadvencido",
           "nodeLineageTag": "668e489f-e9bd-4e02-bdcd-8ee5e00c3b80",
@@ -261,7 +260,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 4
         },
         {
           "location": {
@@ -274,12 +273,12 @@
             "height": 199.23263608558022,
             "width": 234
           },
-          "zIndex": 18
+          "zIndex": 21
         },
         {
           "location": {
-            "x": 5603.6675543335814,
-            "y": 466.71200128783892
+            "x": 5591.7752089308387,
+            "y": 477.11780351523868
           },
           "nodeIndex": "dimitemcriterio",
           "nodeLineageTag": "058d4510-5ccc-4e69-a156-763072ad0170",
@@ -287,7 +286,7 @@
             "height": 344.51733397705931,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 5
         },
         {
           "location": {
@@ -300,7 +299,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 6
         },
         {
           "location": {
@@ -313,12 +312,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 7
         },
         {
           "location": {
-            "x": 4034.4262212753783,
-            "y": 1725.9696376864595
+            "x": 4291.5981906096868,
+            "y": 1672.4540833741178
           },
           "nodeIndex": "factpoaifrs",
           "nodeLineageTag": "73678a06-1e9f-4894-8684-332c5f915dc2",
@@ -326,7 +325,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 20
+          "zIndex": 23
         },
         {
           "location": {
@@ -339,12 +338,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 4634.4469119978157,
-            "y": 1112.9272197030707
+            "x": 4852.9687587732105,
+            "y": 1124.8195651058131
           },
           "nodeIndex": "dimlinsub",
           "nodeLineageTag": "3b4017da-10aa-487d-baaf-adb23b294030",
@@ -352,7 +351,7 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 19
+          "zIndex": 22
         },
         {
           "location": {
@@ -365,20 +364,20 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 3579.8117522755056,
-            "y": 996.26955963350019
+            "x": 3575.3521227494771,
+            "y": 849.1017852745606
           },
           "nodeIndex": "dimclientesvendedor",
-          "nodeLineageTag": "fb1038b3-635c-4c4b-a30e-37de8c108513",
+          "nodeLineageTag": "c409efc5-e506-458f-889f-1c3c9c17d579",
           "size": {
             "height": 200,
             "width": 234
           },
-          "zIndex": 26
+          "zIndex": 1
         }
       ],
       "name": "All tables",

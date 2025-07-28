@@ -1,6 +1,23 @@
 table dimitem
 	lineageTag: eb50b7af-2131-49ca-bb7a-6a22c69bfa54
 
+	column IdCompania
+		dataType: int64
+		formatString: 0
+		lineageTag: 4200690e-c1d1-48c9-9b4d-55b30d5c34c9
+		summarizeBy: sum
+		sourceColumn: IdCompania
+
+		annotation SummarizationSetBy = Automatic
+
+	column Referencia
+		dataType: string
+		lineageTag: cc6e5536-7089-4900-99b1-d1586d77d8f4
+		summarizeBy: none
+		sourceColumn: Referencia
+
+		annotation SummarizationSetBy = Automatic
+
 	column Volumen
 		dataType: double
 		lineageTag: f10926d3-b115-44ec-b673-e545eef4406e
@@ -20,6 +37,14 @@ table dimitem
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TipoInv
+		dataType: string
+		lineageTag: b0e1bf6b-c29f-4d2c-b4b5-79982684855d
+		summarizeBy: none
+		sourceColumn: TipoInv
+
+		annotation SummarizationSetBy = Automatic
 
 	column TRE
 		dataType: string
@@ -97,6 +122,31 @@ table dimitem
 
 		annotation SummarizationSetBy = Automatic
 
+	column IdItem
+		dataType: int64
+		formatString: 0
+		lineageTag: c612b4bf-9d61-42eb-b05b-636a7ba897c8
+		summarizeBy: sum
+		sourceColumn: IdItem
+
+		annotation SummarizationSetBy = Automatic
+
+	column DescItem
+		dataType: string
+		lineageTag: b3787091-13cd-48be-a90e-eeb403de6429
+		summarizeBy: none
+		sourceColumn: DescItem
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnidadInv
+		dataType: string
+		lineageTag: 34b11fab-d6e9-4764-a4bc-c7bfa38b7581
+		summarizeBy: none
+		sourceColumn: UnidadInv
+
+		annotation SummarizationSetBy = Automatic
+
 	column Estado
 		dataType: int64
 		formatString: 0
@@ -106,71 +156,21 @@ table dimitem
 
 		annotation SummarizationSetBy = Automatic
 
-	column RI_ITEM
+	column RiItem
 		dataType: int64
 		formatString: 0
-		lineageTag: 2bacf00d-01e9-4b67-b72c-4db1af6e9f4b
-		summarizeBy: sum
-		sourceColumn: RI_ITEM
+		lineageTag: 0c378a1c-7d5f-4e54-a9ee-6db13445755a
+		summarizeBy: none
+		sourceColumn: RiItem
 
 		annotation SummarizationSetBy = Automatic
 
-	column CIA
+	column RiItemExt
 		dataType: int64
 		formatString: 0
-		lineageTag: bcc9e4e9-ad81-4d87-a735-3d59a5f8ada0
-		summarizeBy: sum
-		sourceColumn: CIA
-
-		annotation SummarizationSetBy = Automatic
-
-	column ID_ITEM
-		dataType: int64
-		formatString: 0
-		lineageTag: 8ed423fd-3690-44c1-a9b9-9e6133644c82
-		summarizeBy: sum
-		sourceColumn: ID_ITEM
-
-		annotation SummarizationSetBy = Automatic
-
-	column REFERENCIA
-		dataType: string
-		lineageTag: 4f97dc77-c545-45a1-865d-31558d9b1fa4
+		lineageTag: 18afd857-df3a-49fb-9ce5-ffb5985651ce
 		summarizeBy: none
-		sourceColumn: REFERENCIA
-
-		annotation SummarizationSetBy = Automatic
-
-	column DESC_ITEM
-		dataType: string
-		lineageTag: f26caa80-8f72-4111-bbfd-3bfa70eff35f
-		summarizeBy: none
-		sourceColumn: DESC_ITEM
-
-		annotation SummarizationSetBy = Automatic
-
-	column UNIDAD_INV
-		dataType: string
-		lineageTag: ce1bc0be-c88f-479f-80a4-55fa793c2130
-		summarizeBy: none
-		sourceColumn: UNIDAD_INV
-
-		annotation SummarizationSetBy = Automatic
-
-	column RI_ITEM_EXT
-		dataType: int64
-		formatString: 0
-		lineageTag: 752bcc18-687b-4b93-bd96-0e2e73298d29
-		summarizeBy: none
-		sourceColumn: RI_ITEM_EXT
-
-		annotation SummarizationSetBy = Automatic
-
-	column Tipo_INV
-		dataType: string
-		lineageTag: 1a6cd75a-1c7b-46a8-a8cf-a3effdd72d95
-		summarizeBy: none
-		sourceColumn: Tipo_INV
+		sourceColumn: RiItemExt
 
 		annotation SummarizationSetBy = Automatic
 

@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Poa_Año"
+                  "Property": "Vlr_Poa_Año ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Poa_Año",
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Vlr_Poa_Año"
+                "Property": "Vlr_Poa_Año ok"
               }
             },
             "direction": "Descending"

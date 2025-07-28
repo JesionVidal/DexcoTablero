@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Pedido_M3_Pend"
+                  "Property": "Cant_Pedido_M3_Pend ok"
                 }
               },
               "queryRef": "Medidas.Cant_Pedido_M3_Pend ok",
@@ -43,7 +43,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Cant_Pedido_M3_Pend"
+                "Property": "Cant_Pedido_M3_Pend ok"
               }
             },
             "direction": "Descending"

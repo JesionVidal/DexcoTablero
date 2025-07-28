@@ -8,15 +8,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filter",
+        "name": "ed6375ceb282c031f2bc",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Ventas"
+                "Entity": "factventas"
               }
             },
-            "Property": "CO_FACT"
+            "Property": "IdCentroOperacionFactura"
           }
         },
         "type": "Categorical",
@@ -24,8 +24,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "v",
-              "Entity": "Ventas",
+              "Name": "f",
+              "Entity": "factventas",
               "Type": 0
             }
           ],
@@ -40,10 +40,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "v"
+                                "Source": "f"
                               }
                             },
-                            "Property": "CO_FACT"
+                            "Property": "IdCentroOperacionFactura"
                           }
                         }
                       ],
@@ -63,18 +63,33 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       },
       {
-        "name": "Filter2",
+        "name": "bdf3e18cc858c7993ffe",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Pedidos"
+                "Entity": "factpedidos"
               }
             },
-            "Property": "DESC_ESTADO"
+            "Property": "DescripcionEstado"
           }
         },
         "type": "Categorical",
@@ -82,56 +97,68 @@
           "Version": 2,
           "From": [
             {
-              "Name": "p",
-              "Entity": "Pedidos",
+              "Name": "f",
+              "Entity": "factpedidos",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "p"
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "f"
+                              }
+                            },
+                            "Property": "DescripcionEstado"
                           }
-                        },
-                        "Property": "DESC_ESTADO"
-                      }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Cumplido'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'En elaboración'"
+                            }
+                          }
+                        ]
+                      ]
                     }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Aprobado'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Retenido'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Comprometido'"
-                        }
-                      }
-                    ]
-                  ]
+                  }
                 }
               }
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   },

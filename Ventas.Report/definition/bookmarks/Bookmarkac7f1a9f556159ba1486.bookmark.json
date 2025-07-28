@@ -291,7 +291,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "63821f7b74c93a5cb367",
+                  "name": "ea195b789488a2cdc113",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -300,7 +300,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Poa"
+                      "Property": "Vlr_Poa ok"
                     }
                   },
                   "howCreated": 0
@@ -336,7 +336,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2f8b957c27457bd6793b",
+                  "name": "8afbb2dd3a9ba23cf462",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -345,7 +345,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Operativo"
+                      "Property": "Vlr_Operativo ok"
                     }
                   },
                   "howCreated": 0
@@ -381,7 +381,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9d1f0ef6915d4456e8cb",
+                  "name": "aac0ab2c0b8ec6df0a6e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -390,7 +390,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas"
+                      "Property": "Vlr_Ventas_Netas ok"
                     }
                   },
                   "howCreated": 0
@@ -510,7 +510,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "92d633d5685fa9d64dcf",
+                  "name": "7833ccee70815d85ca18",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -519,7 +519,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Nota_Credito"
+                      "Property": "Vlr_Nota_Credito ok"
                     }
                   },
                   "howCreated": 0
@@ -615,7 +615,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "0f3e21f4c1be20b933a3",
+                  "name": "23914ab2994967c19725",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -630,7 +630,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8e5691fcd768318d22a0",
+                  "name": "2e0664f3aa2fc6f5306f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -645,7 +645,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "77fbe80bae2c7e34f106",
+                  "name": "e50841109a2c6cf544fd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -660,7 +660,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "17c8619c7ab1d576e7c4",
+                  "name": "def6f251c032703def06",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -720,7 +720,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "077a1f370cb93e235ed0",
+                  "name": "4512fdd14014868f06a0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -745,7 +745,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6a062d2034915c737ef8",
+                  "name": "b050c5a3bf5785cbc867",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -875,7 +875,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "923382bc3ac24d840cee",
+                  "name": "31da9b16cdf8cf893443",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -1004,7 +1004,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "bfe9d56a60b6288f0d1a",
+                  "name": "989c8b1e2e960aca052d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1019,7 +1019,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "19069b02dde587bb5691",
+                  "name": "58a99dbb22f6b1292363",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1028,13 +1028,13 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3_Acumulado"
+                      "Property": "Cant_Ventas_M3_Acumulado ok"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "b9780e2bfd688d6828e4",
+                  "name": "cf2edf76a13413dce2b2",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1043,13 +1043,13 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Operativo_M3_Acumulado"
+                      "Property": "Cant_Operativo_M3_Acumulado ok"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "2414fca0c158c2cb5c54",
+                  "name": "2fc474ff721e62c34f29",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1058,7 +1058,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_POA_M3_Acumulado"
+                      "Property": "Cant_POA_M3_Acumulado ok"
                     }
                   },
                   "howCreated": 0
@@ -1157,7 +1157,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "3898f641dcb8ff5ae867",
+                  "name": "98b50ac059d5b7c38ab7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1172,7 +1172,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9a170a0aebdbeee6d84d",
+                  "name": "45bc52a2ca5598531550",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1187,7 +1187,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d8ba7da326e6a3c736ed",
+                  "name": "5ae5e88178b30f4334c4",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1202,7 +1202,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4f8a2684c46468deb690",
+                  "name": "d20cf7cf7b9dc7a4b4a7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1310,7 +1310,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "74b316e3257366694f42",
+                  "name": "261b887ec1fd590a38d4",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1325,7 +1325,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "87ea360cbeef2e2d8f1b",
+                  "name": "04a8d9f1369021d92cef",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1340,7 +1340,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2826754ff396ce87e217",
+                  "name": "277233c111b94b523b52",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1355,7 +1355,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "110fd7ddbb71fb50aa07",
+                  "name": "1ebf95365cbc2893bbcd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1409,7 +1409,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e3019f79c7b2f3cb4175",
+                  "name": "f9bb99d4ce4307a68d71",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1445,7 +1445,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "bd6c482c989a6b6e95b7",
+                  "name": "e3a0e79e9aa129740c3c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1490,7 +1490,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "4cd8febd2db5db0d3d80",
+                  "name": "aac014337e94d0aa56f8",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1565,7 +1565,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d405a146c6149a44d30f",
+                  "name": "feb3c1b084bae24b3dbb",
                   "type": "Categorical",
                   "expression": {
                     "Column": {

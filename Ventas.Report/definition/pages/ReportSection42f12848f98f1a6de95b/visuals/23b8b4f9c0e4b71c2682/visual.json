@@ -41,7 +41,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_Netas"
+                  "Property": "Vlr_Ventas_Netas ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_Netas",
@@ -55,7 +55,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3"
+                  "Property": "Cant_Ventas_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -708,7 +708,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0472c06c5baed69d15cb",
+        "name": "a4bd5038e9c848c53d14",
         "field": {
           "Column": {
             "Expression": {

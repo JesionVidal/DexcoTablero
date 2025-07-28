@@ -73,7 +73,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_Netas"
+                  "Property": "Vlr_Ventas_Netas ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_Netas",
@@ -87,7 +87,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_Netas_Per_Ant"
+                  "Property": "Vlr_Ventas_Netas_Per_Ant ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_Netas_Per_Ant",

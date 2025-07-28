@@ -112,7 +112,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_Netas"
+                  "Property": "Vlr_Ventas_Netas ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_Netas",
@@ -1397,7 +1397,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2c8d87cc375dc9fed25e",
+        "name": "5f0f4c5aef79706bb608",
         "field": {
           "Measure": {
             "Expression": {

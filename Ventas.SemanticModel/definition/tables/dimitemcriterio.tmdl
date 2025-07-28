@@ -14,7 +14,7 @@ table dimitemcriterio
 		dataType: int64
 		formatString: 0
 		lineageTag: d8eef0b7-52e2-4188-9023-f69676fa7863
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: RowIdItem
 
 		annotation SummarizationSetBy = Automatic

@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Pedido_M3_Per_Ant"
+                  "Property": "Cant_Pedido_M3_Per_Ant ok"
                 }
               },
               "queryRef": "Medidas.Cant_Pedido_M3_Per_Ant ok",
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Cant_Pedido_M3_Per_Ant"
+                "Property": "Cant_Pedido_M3_Per_Ant ok"
               }
             },
             "direction": "Descending"

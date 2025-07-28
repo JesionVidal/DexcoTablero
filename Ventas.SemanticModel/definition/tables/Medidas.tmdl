@@ -1,11 +1,11 @@
 table Medidas
 	lineageTag: 949c6260-b1ae-4ab9-bb35-bc5bb8207eb4
 
-	measure Vlr_Ventas_Netas =
+	measure 'Vlr_Ventas_Netas ok' =
 			
 			VAR NetSubtotal =
 			    CALCULATE(
-			        [Vlr_SubTotal_Ventas],           -- asume que Vlr_SubTotal_Ventas ya fue actualizado
+			        [Vlr_SubTotal_Ventas ok],           -- asume que Vlr_SubTotal_Ventas ya fue actualizado
 			        OR(
 			            dimcliente[TipoCliente]= "EXT",
 			            dimcliente[TipoCliente] = "NAL"
@@ -14,7 +14,7 @@ table Medidas
 			        factventas[Naturaleza] = 1
 			    )
 			RETURN
-			    NetSubtotal - [Vlr_Nota_Credito]     -- asume que Vlr_Nota_Credito también está actualizado
+			    NetSubtotal - [Vlr_Nota_Credito ok]     -- asume que Vlr_Nota_Credito también está actualizado
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Used Measures
 		lineageTag: a03273bb-58ae-4d18-a2d3-3645636c5c53
@@ -23,15 +23,11 @@ table Medidas
 
 		annotation TableDependencies = Clientes, Itens, Ventas
 
-	measure Vlr_Nota_Credito = ```
+	measure 'Vlr_Nota_Credito ok' = ```
 			
 			VAR CreditTotal =
 			  CALCULATE(
 			        SUM( factventas[ValorSubtotal] ),
-			        OR(
-			            dimcliente[TipoCliente] = "NAL",
-			            dimcliente[TipoCliente] = "EXT"
-			        ),
 			        dimitemcriterio[ING] = "CTA 41 INGRESOS CUENTA CONTABLE",
 			        FactVentas[NATURALEZA] = 0
 			    )
@@ -47,7 +43,7 @@ table Medidas
 
 		annotation TableDependencies = Clientes, Itens, Ventas
 
-	measure Vlr_Poa =
+	measure 'Vlr_Poa ok' =
 			
 			VAR TotalPoa = SUM( factpoa[PoaCop] )
 			RETURN
@@ -64,7 +60,7 @@ table Medidas
 
 		annotation TableDependencies = POA
 
-	measure Vlr_Operativo = ```
+	measure 'Vlr_Operativo ok' = ```
 			
 			VAR TotalOper = SUM( factpptooperativo[OperativoCop] )
 			RETURN
@@ -79,19 +75,19 @@ table Medidas
 
 		annotation TableDependencies = Operativo
 
-	measure %Ejecucion_Ventas = IF([Vlr_Poa]>1000, DIVIDE([Vlr_Ventas_Netas],[Vlr_Poa],0),BLANK())
+	measure %Ejecucion_Ventas = IF([Vlr_Poa ok]>1000, DIVIDE([Vlr_Ventas_Netas ok],[Vlr_Poa ok],0),BLANK())
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: 586e15f2-f65c-4e61-b8e5-aab7c3405a36
 
 		annotation TableDependencies
 
-	measure %Ejecucion_Ventas_Operativo = DIVIDE([Vlr_Ventas_Netas],[Vlr_Operativo],0)
+	measure %Ejecucion_Ventas_Operativo = DIVIDE([Vlr_Ventas_Netas ok],[Vlr_Operativo ok],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: 86f7f665-6fcc-432e-96a6-508cf828e4d7
 
-	measure Vlr_SubTotal_Ventas =
+	measure 'Vlr_SubTotal_Ventas ok' =
 			
 			VAR TotalSubtotal = SUM( factventas[ValorSubtotal] )
 			RETURN
@@ -102,11 +98,11 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Ventas_Netas_Per_Ant = ```
+	measure 'Vlr_Ventas_Netas_Per_Ant ok' = ```
 			
 			VAR VentasPrevio =
 			    CALCULATE(
-			        [Vlr_SubTotal_Ventas],
+			        [Vlr_SubTotal_Ventas ok],
 			        dimcliente[TipoCliente] IN { "EXT", "NAL" },
 			        dimitemcriterio[ING] = "CTA 41 INGRESOS CUENTA CONTABLE",
 			        factventas[NATURALEZA] = 1,
@@ -114,7 +110,7 @@ table Medidas
 			    )
 			RETURN
 			VentasPrevio
-			    - [Vlr_Nota_Credito_Per_Ant]
+			    - [Vlr_Nota_Credito_Per_Ant ok]
 			
 			```
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
@@ -125,7 +121,7 @@ table Medidas
 
 		annotation TableDependencies = CALENDARIO, Clientes, Itens, Ventas
 
-	measure Vlr_Nota_Credito_Per_Ant = ```
+	measure 'Vlr_Nota_Credito_Per_Ant ok' = ```
 			
 			CALCULATE(
 			    SUM( factventas[ValorSubtotal] ) / 1000000,
@@ -142,11 +138,11 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Ventas_Netas_Año = ```
+	measure 'Vlr_Ventas_Netas_Año ok' = ```
 			
 			(
 			    CALCULATE(
-			        [Vlr_SubTotal_Ventas],
+			        [Vlr_SubTotal_Ventas ok],
 			        OR(
 			            dimcliente[TipoCliente] = "EXT",
 			            dimcliente[TipoCliente] = "NAL"
@@ -166,7 +162,7 @@ table Medidas
 			            )
 			        )
 			    ) 
-			    - [Vlr_Nota_Credito_Año]
+			    - [Vlr_Nota_Credito_Año ok]
 			)
 			
 			
@@ -179,11 +175,11 @@ table Medidas
 
 		annotation TableDependencies = CALENDARIO, Clientes, Itens, Ventas
 
-	measure Vlr_Ventas_Netas_Año_Ant = ```
+	measure 'Vlr_Ventas_Netas_Año_Ant ok' = ```
 			
 			(
 			    CALCULATE(
-			        [Vlr_SubTotal_Ventas],
+			        [Vlr_SubTotal_Ventas ok],
 			        OR(
 			            dimcliente[TipoCliente] = "EXT",
 			            dimcliente[TipoCliente] = "NAL"
@@ -203,7 +199,7 @@ table Medidas
 			            )
 			        )
 			    ) 
-			    - [Vlr_Nota_Credito_Año_Ant]
+			    - [Vlr_Nota_Credito_Año_Ant ok]
 			)
 			
 			```
@@ -213,11 +209,11 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Nota_Credito_Año = ```
+	measure 'Vlr_Nota_Credito_Año ok' = ```
 			
 			(
 			    CALCULATE(
-			        [Vlr_SubTotal_Ventas],
+			        [Vlr_SubTotal_Ventas ok],
 			        OR(
 			            dimcliente[TipoCliente] = "EXT",
 			            dimcliente[TipoCliente] = "NAL"
@@ -248,10 +244,10 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Nota_Credito_Año_Ant = ```
+	measure 'Vlr_Nota_Credito_Año_Ant ok' = ```
 			
 			CALCULATE(
-			    [Vlr_SubTotal_Ventas],
+			    [Vlr_SubTotal_Ventas OK],
 			    OR(
 			        dimcliente[TipoCliente] = "EXT",
 			        dimcliente[TipoCliente]  = "NAL"
@@ -283,10 +279,10 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Poa_Año = ```
+	measure 'Vlr_Poa_Año ok' = ```
 			
 			CALCULATE(
-			    [Vlr_Poa],
+			    [Vlr_Poa ok],
 			    DATESBETWEEN(
 			        CALENDARIO[Date],
 			        DATE(
@@ -315,12 +311,12 @@ table Medidas
 
 		annotation TableDependencies = CALENDARIO
 
-	measure %Crescimiento_Ventas_Mes_Ano_Ant = DIVIDE([Vlr_Ventas_Netas],[Vlr_Ventas_Netas_Per_Ant])-1
+	measure '%Crescimiento_Ventas_Mes_Ano_Ant ok' = DIVIDE([Vlr_Ventas_Netas ok],[Vlr_Ventas_Netas_Per_Ant ok])-1
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Used Measures
 		lineageTag: 2409cdc2-8fdb-4a7b-b892-6ef71bdcb761
 
-	measure %Crescimiento_Ventas_Ano = DIVIDE([Vlr_Ventas_Netas_Año],[Vlr_Ventas_Netas_Año_Ant])-1
+	measure '%Crescimiento_Ventas_Ano ok' = DIVIDE([Vlr_Ventas_Netas_Año ok],[Vlr_Ventas_Netas_Año_Ant ok])-1
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: 8607a111-0322-4dc6-be68-c597afe0f9d0
@@ -334,15 +330,15 @@ table Medidas
 			        HASONEVALUE ( dimindicadores[Descripcion] ),
 			        SWITCH (
 			            SelectedMeasure,
-			            1, [%Crescimiento_Ventas_Mes_Ano_Ant] ,
-			            2, [%Crescimiento_Ventas_Ano]                         
+			            1, [%Crescimiento_Ventas_Mes_Ano_Ant ok] ,
+			            2, [%Crescimiento_Ventas_Ano ok]                         
 			        ))
 			```
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: c716e777-0f82-401b-b37a-24c2116890e7
 
-	measure %Ejecucion_Ventas_Año = DIVIDE([Vlr_Ventas_Netas_Año],[Vlr_Poa_Año],0)
+	measure %Ejecucion_Ventas_Año = DIVIDE([Vlr_Ventas_Netas_Año ok],[Vlr_Poa_Año ok],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: 71cf1c74-7e6c-4437-ab64-2809f61cd952
@@ -351,7 +347,7 @@ table Medidas
 		displayFolder: Used Measures
 		lineageTag: 5d238e9a-bc5e-4103-9104-56b50dd76b27
 
-	measure Cant_Ventas_M3 = ```
+	measure 'Cant_Ventas_M3 ok' = ```
 			
 			CALCULATE(
 			    SUM(factventas[CANT_FACT_M3]),
@@ -361,18 +357,16 @@ table Medidas
 			    ),
 			    dimitemcriterio[ING] = "CTA 41 INGRESOS CUENTA CONTABLE",
 			    factventas[NATURALEZA] = 1
-			) - [Cant_Notas_Credito_M3]
+			) - [Cant_Notas_Credito_M3 ok]
 			
 			```
-		formatString: \$#,0;(\$#,0);\$#,0
+		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: 063dd7cf-fbba-490a-8043-f721e1914f4b
 
 		annotation TableDependencies = Clientes, Itens, Ventas
 
-		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
-
-	measure Cant_Notas_Credito_M3 = ```
+	measure 'Cant_Notas_Credito_M3 ok' = ```
 			
 			CALCULATE(
 			    SUM(factventas[CANT_FACT_M3]),
@@ -391,7 +385,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Vlr_Precio_Medio = DIVIDE((([Vlr_Ventas_Netas])*1000),[Cant_Ventas_M3])
+	measure Vlr_Precio_Medio = DIVIDE((([Vlr_Ventas_Netas ok])*1000),[Cant_Ventas_M3 ok])
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Used Measures
 		lineageTag: 917e3cdc-b0eb-4576-84b6-bf772074b239
@@ -400,14 +394,14 @@ table Medidas
 
 		annotation TableDependencies
 
-	measure %Crescimiento_Ventas_Per = if(isblank(DIVIDE([Vlr_Ventas_Netas],[Vlr_Ventas_Netas_Per_Ant],BLANK())),BLANK(),DIVIDE([Vlr_Ventas_Netas],[Vlr_Ventas_Netas_Per_Ant])-1)
+	measure %Crescimiento_Ventas_Per = if(isblank(DIVIDE([Vlr_Ventas_Netas ok],[Vlr_Ventas_Netas_Per_Ant ok],BLANK())),BLANK(),DIVIDE([Vlr_Ventas_Netas ok],[Vlr_Ventas_Netas_Per_Ant ok])-1)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: f594fda0-36ed-4e38-a80a-d75a45dbc83a
 
 		annotation TableDependencies
 
-	measure Cant_Notas_Credito_M3_Per_Ant = ```
+	measure 'Cant_Notas_Credito_M3_Per_Ant ok' = ```
 			
 			CALCULATE(
 			    SUM(factventas[CANT_FACT_M3]),
@@ -424,7 +418,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Cant_Ventas_M3_Per_Ant = ```
+	measure 'Cant_Ventas_M3_Per_Ant ok' = ```
 			
 			CALCULATE(
 			    SUM(factventas[CANT_FACT_M3]),
@@ -433,7 +427,7 @@ table Medidas
 			    factventas[NATURALEZA] = 1,
 			    SAMEPERIODLASTYEAR(CALENDARIO[Date])
 			) 
-			- [Cant_Notas_Credito_M3_Per_Ant]
+			- [Cant_Notas_Credito_M3_Per_Ant ok]
 			
 			```
 		formatString: #,0
@@ -442,14 +436,12 @@ table Medidas
 
 		annotation TableDependencies = CALENDARIO, Clientes, Itens, Ventas
 
-		annotation PBI_FormatHint = {"isDecimal":true}
-
-	measure %Crescimiento_Ventas_M3_Per = if(isblank(DIVIDE([Cant_Ventas_M3],[Cant_Ventas_M3_Per_Ant],BLANK())),BLANK(),DIVIDE([Cant_Ventas_M3],[Cant_Ventas_M3_Per_Ant])-1)
+	measure %Crescimiento_Ventas_M3_Per = if(isblank(DIVIDE([Cant_Ventas_M3 ok],[Cant_Ventas_M3_Per_Ant ok],BLANK())),BLANK(),DIVIDE([Cant_Ventas_M3 ok],[Cant_Ventas_M3_Per_Ant ok])-1)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: e1e37df9-a561-4a01-af41-39a5c4fb3622
 
-	measure Cant_Poa_M3 = ```
+	measure 'Cant_Poa_M3 ok' = ```
 			
 			IF(
 			    SUM(factpoa[PoaM3]) = 0,
@@ -466,30 +458,29 @@ table Medidas
 
 		annotation TableDependencies = POA
 
-	measure Cant_Operativo_M3 = ```
+	measure 'Cant_Operativo_M3 ok' = ```
 			SUM(factpptooperativo[OperativoM3])
 			
 			```
+		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: 48dc885f-4432-4603-8c2e-94f2c0a20d72
 
 		annotation TableDependencies = Operativo
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Vlr_Operativo_Año = CALCULATE([Vlr_Operativo],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
+	measure 'Vlr_Operativo_Año ok' = CALCULATE([Vlr_Operativo ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Used Measures
 		lineageTag: 15cc97a0-65c3-4ede-aff0-bbc8fa12c33e
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure %Ejecucion_Ventas_Operativo_Año = DIVIDE([Vlr_Ventas_Netas_Año],[Vlr_Operativo_Año],0)
+	measure %Ejecucion_Ventas_Operativo_Año = DIVIDE([Vlr_Ventas_Netas_Año ok],[Vlr_Operativo_Año ok],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: bf055b43-13c2-4ec3-87e6-d2cfbe53df3d
 
-	measure Cant_Pedido_M3_Per_Ant = ```
+	measure 'Cant_Pedido_M3_Per_Ant ok' = ```
 			
 			CALCULATE(
 			    SUM(factpedidos[CantPedidaM3]),
@@ -508,24 +499,24 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure DiasCorrentes = COUNTX(FILTER(CALENDARIO,CALENDARIO[Festivo] = "No" && CALENDARIO[Date] <= (TODAY()-1) ),CALENDARIO[Date])
+	measure 'DiasCorrentes ok' = COUNTX(FILTER(CALENDARIO,CALENDARIO[Festivo] = "No" && CALENDARIO[Date] <= (TODAY()-1) ),CALENDARIO[Date])
 		formatString: 0
 		displayFolder: Used Measures
 		lineageTag: 4adc0e0b-f111-43f6-a5d3-6b3ad1424a77
 
-	measure DiasHabiles = COUNTX(FILTER(CALENDARIO,CALENDARIO[Festivo] = "No") ,CALENDARIO[Date])
+	measure 'DiasHabiles ok' = COUNTX(FILTER(CALENDARIO,CALENDARIO[Festivo] = "No") ,CALENDARIO[Date])
 		formatString: 0
 		displayFolder: Used Measures
 		lineageTag: ab0126db-58d7-477b-93d3-1bf050d9d6d9
 
-	measure %Dias_Actual = [DiasCorrentes]/[DiasHabiles]
+	measure %Dias_Actual = [DiasCorrentes ok]/[DiasHabiles ok]
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: 54493c8f-a744-48bf-ae86-8cf8270a2d9b
 
 		annotation TableDependencies
 
-	measure Vlr_POA_Precio_Medio = IF(ISBLANK([Cant_Poa_M3]),BLANK(),DIVIDE(([Vlr_Poa]*1000),[Cant_Poa_M3]))
+	measure Vlr_POA_Precio_Medio = IF(ISBLANK([Cant_Poa_M3 ok]),BLANK(),DIVIDE(([Vlr_Poa ok]*1000),[Cant_Poa_M3 ok]))
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Used Measures
 		lineageTag: 4f8b9ffb-5a7a-410f-a3b0-5eb106fc5b5d
@@ -534,16 +525,16 @@ table Medidas
 
 		annotation TableDependencies
 
-	measure Cant_Ventas_M3_Acumulado =
+	measure 'Cant_Ventas_M3_Acumulado ok' =
 			VAR SelectedMeasure =
 			    DISTINCT(CALENDARIO[Date]) VAR Habil = DISTINCT(CALENDARIO[Habil])
 			RETURN
-			IF (HASONEVALUE(CALENDARIO[Date]) && (SelectedMeasure < TODAY() ||  IF(SELECTEDVALUE(DiaCerrado[DiaCerrado])="Si",FALSE(), SelectedMeasure <= max(factventas[FechaFactura]))), CALCULATE([Cant_Ventas_M3],FILTER(ALLEXCEPT(CALENDARIO,CALENDARIO[YearMonthnumber]),CALENDARIO[Date] >= DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01") && CALENDARIO[Date]<=SelectedMeasure)),BLANK())
+			IF (HASONEVALUE(CALENDARIO[Date]) && (SelectedMeasure < TODAY() ||  IF(SELECTEDVALUE(DiaCerrado[DiaCerrado])="Si",FALSE(), SelectedMeasure <= max(factventas[FechaFactura]))), CALCULATE([Cant_Ventas_M3 ok],FILTER(ALLEXCEPT(CALENDARIO,CALENDARIO[YearMonthnumber]),CALENDARIO[Date] >= DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01") && CALENDARIO[Date]<=SelectedMeasure)),BLANK())
 		formatString: 0
 		displayFolder: Used Measures
 		lineageTag: d00a14d8-76d4-4597-876a-6d913f843ae8
 
-	measure Cant_Operativo_M3_Acumulado = ```
+	measure 'Cant_Operativo_M3_Acumulado ok' = ```
 			
 			VAR SelectedMeasure = DISTINCT(CALENDARIO[Date])
 			VAR Habil = DISTINCT(CALENDARIO[Habil])
@@ -589,7 +580,7 @@ table Medidas
 		displayFolder: Used Measures
 		lineageTag: 2d31f542-11e0-48b4-a0ea-7c32998307cd
 
-	measure Cant_POA_M3_Acumulado = ```
+	measure 'Cant_POA_M3_Acumulado ok' = ```
 			
 			VAR SelectedMeasure = DISTINCT(CALENDARIO[Date])
 			VAR Habil = DISTINCT(CALENDARIO[Habil])
@@ -632,7 +623,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Cant_Ventas_M3_Mes_Ant = ```
+	measure 'Cant_Ventas_M3_Mes_Ant ok' = ```
 			
 			CALCULATE(
 			    SUM(factventas[CANT_FACT_M3]),
@@ -656,7 +647,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Ventas_Netas_Mes_Ant = ```
+	measure 'Vlr_Ventas_Netas_Mes_Ant ok' = ```
 			
 			CALCULATE(
 			    SUM(factventas[ValorSubtotal]) / 1000000,
@@ -680,14 +671,14 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Precio_Medio_Mes_Ant = DIVIDE((([Vlr_Ventas_Netas_Mes_Ant])*1000),[Cant_Ventas_M3_Mes_Ant])
+	measure Vlr_Precio_Medio_Mes_Ant = DIVIDE((([Vlr_Ventas_Netas_Mes_Ant ok])*1000),[Cant_Ventas_M3_Mes_Ant ok])
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Used Measures
 		lineageTag: 894daae0-a2ec-4f7c-89ac-829b78a3b9bf
 
 		annotation TableDependencies
 
-	measure Vlr_POA_Captura_Clien = ```
+	measure 'Vlr_POA_Captura_Clien ok-' = ```
 			SUM(factpptocliente[PresupuestoM3])
 			
 			
@@ -699,40 +690,40 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Cant_Ventas_M3_Miles = [Cant_Ventas_M3]/1000
+	measure Cant_Ventas_M3_Miles = [Cant_Ventas_M3 ok]/1000
 		formatString: 0
 		displayFolder: Used Measures
 		lineageTag: ac330eaf-8470-4e87-82aa-62d778facb2d
 
 		annotation TableDependencies
 
-	measure Cant_Ventas_M3_Acum_miles = [Cant_Ventas_M3_Acumulado]/1000
+	measure Cant_Ventas_M3_Acum_miles = [Cant_Ventas_M3_Acumulado ok]/1000
 		formatString: 0
 		displayFolder: Used Measures
 		lineageTag: 035e4708-2309-4ced-baad-384997066d3b
 
 		annotation TableDependencies
 
-	measure %Projec_Ejecuc_Vent_Ped_Pend_M3_SOP = DIVIDE(([Cant_Pedi_Pend_Acum_m3_Real_vent]),[Cant_Operativo_M3],0)
+	measure %Projec_Ejecuc_Vent_Ped_Pend_M3_SOP = DIVIDE(([Cant_Pedi_Pend_Acum_m3_Real_vent ok]),[Cant_Operativo_M3 ok],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: a54cb9c3-6e24-47c4-9ec6-7adfde8ce439
 
-	measure Cant_Operativo_M3_Acumulado_miles = [Cant_Operativo_M3_Acumulado]/1000
+	measure Cant_Operativo_M3_Acumulado_miles = [Cant_Operativo_M3_Acumulado ok]/1000
 		formatString: 0
 		displayFolder: Used Measures
 		lineageTag: ced82c6f-0d81-4d71-ad4d-5c5bd32f1c38
 
 		annotation TableDependencies
 
-	measure %Projec_Ejecuc_Vent_Ped_M3_lib_SOP = DIVIDE(([Cant_Pedido_Acum_M3_Pend_liberado+Vent]),[Cant_Operativo_M3],0)
+	measure %Projec_Ejecuc_Vent_Ped_M3_lib_SOP = DIVIDE(([Cant_Pedido_Acum_M3_Pend_liberado+Vent]),[Cant_Operativo_M3 ok],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: fc325300-2d76-42d6-bac0-3ddc34001531
 
 		annotation TableDependencies
 
-	measure Cant_Pedi_Pend_Acum_m3_Real_vent = ```
+	measure 'Cant_Pedi_Pend_Acum_m3_Real_vent ok' = ```
 			
 			CALCULATE(
 			    SUM(factpedidos[CantPedidaM3Pend]),
@@ -741,17 +732,16 @@ table Medidas
 			    factpedidos[DescripcionEstado] <> "Cumplido",
 			    factpedidos[TipoDocumentoPedido] = "PMO"
 			) 
-			+ [Cant_Ventas_M3]
+			+ [Cant_Ventas_M3 ok]
 			
 			```
+		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: 23afb072-d7ae-4cad-98d1-cba30e978d59
 
 		annotation TableDependencies = Clientes, Itens, PedidosPendientes
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Cant_Pedi_pend_Acum_M3__Retenido = ```
+	measure 'Cant_Pedi_pend_Acum_M3__Retenido ok' = ```
 			
 			CALCULATE(
 			    SUM(factpedidos[CantPedidaM3Pend]),
@@ -767,26 +757,26 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Cant_Pedido_Acum_M3_Pend_liberado+Vent = ([Cant_Pedi_Pend_Acum_m3_Real_vent]-[Cant_Pedi_pend_Acum_M3__Retenido])
+	measure Cant_Pedido_Acum_M3_Pend_liberado+Vent = ([Cant_Pedi_Pend_Acum_m3_Real_vent ok]-[Cant_Pedi_pend_Acum_M3__Retenido ok])
 		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: a222f9b7-79ae-4544-bba3-0931b66cb0f7
 
-	measure %Ejecucion_Ventas_M3_SOP = DIVIDE([Cant_Ventas_M3],[Cant_Operativo_M3],0)
+	measure %Ejecucion_Ventas_M3_SOP = DIVIDE([Cant_Ventas_M3 ok],[Cant_Operativo_M3 ok],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: 3a76016c-c543-4a50-a803-dc20ef1041ba
 
 		annotation TableDependencies
 
-	measure Cant_X_Fact_lib = [Cant_Pedido_Acum_M3_Pend_liberado+Vent]-[Cant_Ventas_M3]
+	measure Cant_X_Fact_lib = [Cant_Pedido_Acum_M3_Pend_liberado+Vent]-[Cant_Ventas_M3 ok]
 		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: a9cfabe8-832e-45cc-bdca-0d9edbbed60c
 
 		annotation TableDependencies
 
-	measure Cant_Pend_Cumpl_Meta_Capt = CALCULATE([Cant_Pedido_Acum_M3_Pend_liberado+Vent]-[Vlr_POA_Captura_Clien])
+	measure Cant_Pend_Cumpl_Meta_Capt = CALCULATE([Cant_Pedido_Acum_M3_Pend_liberado+Vent]-[Vlr_POA_Captura_Clien ok-])
 		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: e420eccd-e5b3-4d86-af8a-ec3fcb384c02
@@ -795,21 +785,21 @@ table Medidas
 
 		annotation TableDependencies
 
-	measure %_Cumpl_Meta_Capt_Ped = IF([Vlr_Poa]>1000, DIVIDE([Cant_Pedido_Acum_M3_Pend_liberado+Vent],[Vlr_POA_Captura_Clien],0),BLANK())
+	measure %_Cumpl_Meta_Capt_Ped = IF([Vlr_Poa ok]>1000, DIVIDE([Cant_Pedido_Acum_M3_Pend_liberado+Vent],[Vlr_POA_Captura_Clien ok-],0),BLANK())
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: Used Measures
 		lineageTag: 91fbcaa5-443f-48f6-8a3d-1be94a307457
 
 		annotation TableDependencies
 
-	measure %Ejecucion_Ventas_M3_Clien = IF([Vlr_Poa]>1000, DIVIDE([Cant_Ventas_M3],[Vlr_POA_Captura_Clien],0),BLANK())
+	measure %Ejecucion_Ventas_M3_Clien = IF([Vlr_Poa ok]>1000, DIVIDE([Cant_Ventas_M3 ok],[Vlr_POA_Captura_Clien ok-],0),BLANK())
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: Used Measures
 		lineageTag: 72b6120f-45f0-40e7-bac1-9ccb46c9c09a
 
 		annotation TableDependencies
 
-	measure Cant_POA_M3_Acumulado_miles = [Cant_POA_M3_Acumulado]/1000
+	measure Cant_POA_M3_Acumulado_miles = [Cant_POA_M3_Acumulado ok]/1000
 		formatString: 0
 		displayFolder: Used Measures
 		lineageTag: eb5ac421-5fc1-4090-949f-4094b99ba7e0
@@ -823,20 +813,20 @@ table Medidas
 
 		annotation TableDependencies
 
-	measure Vlr_Ventas_No_Entregue_Ant_Per_Ant = CALCULATE([Vlr_Ventas_No_Entrege],PARALLELPERIOD(CALENDARIO[Date],-13,MONTH))
+	measure Vlr_Ventas_No_Entregue_Ant_Per_Ant = CALCULATE([Vlr_Ventas_No_Entrege ok],PARALLELPERIOD(CALENDARIO[Date],-13,MONTH))
 		displayFolder: Used Measures
 		lineageTag: 3af48d58-82b9-4d61-bde2-ac7f394b4411
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Ventas_No_Entregue_Ant = CALCULATE([Vlr_Ventas_No_Entrege],PREVIOUSMONTH(CALENDARIO[Date]))
+	measure 'Vlr_Ventas_No_Entregue_Ant ok' = CALCULATE([Vlr_Ventas_No_Entrege ok],PREVIOUSMONTH(CALENDARIO[Date]))
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Used Measures
 		lineageTag: 472f0e58-548c-4b19-b5ef-6e254d45a7e3
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Ventas_No_Entrege_Per_Ant = ```
+	measure 'Vlr_Ventas_No_Entrege_Per_Ant ok' = ```
 			
 			    CALCULATE(
 			        SUM(factventasnorealizadas[ValorSubtotal]) / 1000000,
@@ -860,15 +850,15 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Ventas_Netas_IFRS_Per_Ant = ```
+	measure 'Vlr_Ventas_Netas_IFRS_Per_Ant ok' = ```
 			
 			    CALCULATE(
-			        [Vlr_SubTotal_Ventas],
+			        [Vlr_SubTotal_Ventas ok],
 			        OR(dimcliente[TipoCliente] = "EXT", dimcliente[TipoCliente] = "NAL"),
 			        factventas[NATURALEZA] = 1,
 			        SAMEPERIODLASTYEAR(CALENDARIO[Date])
 			    ) 
-			    - [Vlr_Nota_Credito_IFRS_Per_Ant]
+			    - [Vlr_Nota_Credito_IFRS_Per_Ant ok]
 			
 			```
 		displayFolder: Used Measures
@@ -876,13 +866,13 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Ventas_Netas_IFRS = ```
+	measure 'Vlr_Ventas_Netas_IFRS ok' = ```
 			
 			CALCULATE(
-			    [Vlr_SubTotal_Ventas],
+			    [Vlr_SubTotal_Ventas ok],
 			    OR(dimcliente[TipoCliente] = "EXT", dimcliente[TipoCliente] = "NAL"),
 			    factventas[NATURALEZA] = 1
-			) - [Vlr_Nota_Credito_IFRS]
+			) - [Vlr_Nota_Credito_IFRS ok]
 			
 			```
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
@@ -898,7 +888,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
 
-	measure Vlr_Nota_Credito_IFRS_Per_Ant = ```
+	measure 'Vlr_Nota_Credito_IFRS_Per_Ant ok' = ```
 			
 			    IFERROR(
 			        CALCULATE(
@@ -916,7 +906,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Nota_Credito_IFRS = ```
+	measure 'Vlr_Nota_Credito_IFRS ok' = ```
 			
 			IFERROR(
 			    CALCULATE(
@@ -934,14 +924,14 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
 
-	measure Vlr_Neto_IFRS_Per_Ant = ([Vlr_Ventas_Netas_IFRS_Per_Ant] - [Vlr_Ventas_No_Entrege_Per_Ant] - [Vlr_Descuento_Condicionados_Per_Ant] - [Vlr_Descuento_Pronto_Pago_Per_Ant]) + [Vlr_Ventas_No_Entregue_Ant_Per_Ant]
+	measure Vlr_Neto_IFRS_Per_Ant = ([Vlr_Ventas_Netas_IFRS_Per_Ant ok] - [Vlr_Ventas_No_Entrege_Per_Ant ok] - [Vlr_Descuento_Condicionados_Per_Ant ok] - [Vlr_Descuento_Pronto_Pago_Per_Ant]) + [Vlr_Ventas_No_Entregue_Ant_Per_Ant]
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Used Measures
 		lineageTag: 6d03da34-b2d5-472b-886b-be96ba3c0ff4
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
 
-	measure Vlr_Neto_IFRS = ([Vlr_Ventas_Netas_IFRS] - [Vlr_Ventas_No_Entrege]  - [Vlr_Descuento_Condicionados] - [Vlr_Descuento_Pronto_Pago]) + [Vlr_Ventas_No_Entregue_Ant]
+	measure Vlr_Neto_IFRS = ([Vlr_Ventas_Netas_IFRS ok] - [Vlr_Ventas_No_Entrege ok]  - [Vlr_Descuento_Condicionados ok] - [Vlr_Descuento_Pronto_Pago ok]) + [Vlr_Ventas_No_Entregue_Ant ok]
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Used Measures
 		lineageTag: cde4e037-6f37-4dbf-8028-3b6e05a4074a
@@ -956,7 +946,7 @@ table Medidas
 			    ) / 1000000,
 			    factdocumentoscontables[IDHijo] = "418011",
 			    SAMEPERIODLASTYEAR(CALENDARIO[Date])
-			) * [%Ventas_Netas_Linea_Per_Ant]
+			) * [%Ventas_Netas_Linea_Per_Ant ok]
 			
 			```
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
@@ -965,12 +955,12 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
 
-	measure Vlr_Descuento_Pronto_Pago = ```
+	measure 'Vlr_Descuento_Pronto_Pago ok' = ```
 			
 			CALCULATE(
 			    ((SUM(factdocumentoscontables[valor]) * -1) / 1000000),
 			    factdocumentoscontables[IdHijo] = "418011"
-			) * [%Ventas_Netas_Linea]
+			) * [%Ventas_Netas_Linea ok]
 			
 			```
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
@@ -979,7 +969,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Descuento_Condicionados_Per_Ant = ```
+	measure 'Vlr_Descuento_Condicionados_Per_Ant ok' = ```
 			
 			CALCULATE(
 			    (
@@ -988,7 +978,7 @@ table Medidas
 			    factdocumentoscontables[IdHijo] = "418001",
 			    SAMEPERIODLASTYEAR(CALENDARIO[Date])
 			) 
-			* [%Ventas_Netas_Linea_Per_Ant]
+			* [%Ventas_Netas_Linea_Per_Ant ok]
 			
 			```
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
@@ -997,12 +987,12 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
 
-	measure Vlr_Descuento_Condicionados = ```
+	measure 'Vlr_Descuento_Condicionados ok' = ```
 			
 			CALCULATE(
 			    (SUM(factdocumentoscontables[Valor]) * -1) / 1000000,
 			    factdocumentoscontables[IdHijo] = "418001"
-			) * [%Ventas_Netas_Linea]
+			) * [%Ventas_Netas_Linea ok]
 			
 			        
 			
@@ -1019,26 +1009,26 @@ table Medidas
 
 		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
 
-	measure Cant_Ventas_M3_No_Entrege_Per_Ant = CALCULATE([Cant_Ventas_M3_No_Entrege],SAMEPERIODLASTYEAR(CALENDARIO[Date]))
+	measure 'Cant_Ventas_M3_No_Entrege_Per_Ant ok' = CALCULATE([Cant_Ventas_M3_No_Entrege ok],SAMEPERIODLASTYEAR(CALENDARIO[Date]))
 		displayFolder: Used Measures
 		lineageTag: f245cbdb-d634-46bb-b781-25108f5f6574
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Cant_Ventas_M3_No_Entrege_Ant_Per_Ant = CALCULATE([Cant_Ventas_M3_No_Entrege],PARALLELPERIOD(CALENDARIO[Date],-13,MONTH))
+	measure 'Cant_Ventas_M3_No_Entrege_Ant_Per_Ant ok' = CALCULATE([Cant_Ventas_M3_No_Entrege ok],PARALLELPERIOD(CALENDARIO[Date],-13,MONTH))
 		displayFolder: Used Measures
 		lineageTag: e60f8427-35f8-4a34-a784-a5d37fbbde55
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Cant_Ventas_M3_No_Entrege_Ant = CALCULATE([Cant_Ventas_M3_No_Entrege],PREVIOUSMONTH(CALENDARIO[Date]))
+	measure 'Cant_Ventas_M3_No_Entrege_Ant ok' = CALCULATE([Cant_Ventas_M3_No_Entrege ok],PREVIOUSMONTH(CALENDARIO[Date]))
 		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: 2a30718b-f47e-4b6d-8e8e-019af74677cf
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Cant_Ventas_M3_No_Entrege = ```
+	measure 'Cant_Ventas_M3_No_Entrege ok' = ```
 			
 			CALCULATE(
 			    SUM(factventasnorealizadas[CantFactM3]),
@@ -1061,14 +1051,14 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Cant_Ventas_M3_IFRS_Per_Ant = ([Cant_Ventas_M3_Per_Ant] - [Cant_Ventas_M3_No_Entrege_Per_Ant])+[Cant_Ventas_M3_No_Entrege_Ant_Per_Ant]
+	measure Cant_Ventas_M3_IFRS_Per_Ant = ([Cant_Ventas_M3_Per_Ant ok] - [Cant_Ventas_M3_No_Entrege_Per_Ant ok])+[Cant_Ventas_M3_No_Entrege_Ant_Per_Ant ok]
 		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: 74fe75a9-035b-4b32-98f0-ee09480ae9ea
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Cant_Ventas_M3_IFRS = ([Cant_Ventas_M3] - [Cant_Ventas_M3_No_Entrege])+[Cant_Ventas_M3_No_Entrege_Ant]
+	measure 'Cant_Ventas_M3_IFRS ok' = ([Cant_Ventas_M3 ok] - [Cant_Ventas_M3_No_Entrege ok])+[Cant_Ventas_M3_No_Entrege_Ant ok]
 		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: 9d145ff8-4f08-4776-b184-34da1a96df6c
@@ -1082,21 +1072,21 @@ table Medidas
 		displayFolder: Used Measures
 		lineageTag: ab909a3a-3c2a-4bf5-a9e5-d97e2b5a483f
 
-	measure %Ventas_Netas_Linea_Per_Ant = ```
+	measure '%Ventas_Netas_Linea_Per_Ant ok' = ```
 			
 			VAR SelectedMeasure = DISTINCT(dimitemcriterio[LIN])
 			RETURN
 			    IF (
 			        HASONEVALUE(dimitemcriterio[LIN]),
-			        [Cant_Ventas_M3_Per_Ant] /
+			        [Cant_Ventas_M3_Per_Ant ok] /
 			            ROUND(
 			                CALCULATE(
-			                    [Cant_Ventas_M3_Per_Ant],
+			                    [Cant_Ventas_M3_Per_Ant ok],
 			                    FILTER(ALL(dimitemcriterio), dimitemcriterio[LIN] = SelectedMeasure)
 			                ),
 			                0
 			            ),
-			        IF([Cant_Ventas_M3_Per_Ant] > 0, 1, BLANK())
+			        IF([Cant_Ventas_M3_Per_Ant ok] > 0, 1, BLANK())
 			    )
 			
 			```
@@ -1105,18 +1095,18 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure %Ventas_Netas_Linea = ```
+	measure '%Ventas_Netas_Linea ok' = ```
 			
 			VAR SelectedMeasure = DISTINCT(dimitem[EQL])
 			RETURN
 			    IF(
 			        HASONEVALUE(dimitem[EQL]),
-			        [Cant_Ventas_M3] /
+			        [Cant_Ventas_M3 ok] /
 			        ROUND(
-			            CALCULATE([Cant_Ventas_M3], FILTER(ALL(dimitem), dimitem[EQL] = SelectedMeasure)),
+			            CALCULATE([Cant_Ventas_M3 ok], FILTER(ALL(dimitem), dimitem[EQL] = SelectedMeasure)),
 			            0
 			        ),
-			        IF([Cant_Ventas_M3] > 0, 1, BLANK())
+			        IF([Cant_Ventas_M3 ok] > 0, 1, BLANK())
 			    )
 			
 			```
@@ -1129,7 +1119,7 @@ table Medidas
 		displayFolder: Used Measures
 		lineageTag: f5d5e589-9e58-429e-9438-ac092f925cc0
 
-	measure %Variacion_M3_IFRS_Per_Ant = IFERROR(IF(ISBLANK([Cant_Ventas_M3_IFRS]),BLANK(),([Cant_Ventas_M3_IFRS]/[Cant_Ventas_M3_IFRS_Per_Ant])-1),0)
+	measure %Variacion_M3_IFRS_Per_Ant = IFERROR(IF(ISBLANK([Cant_Ventas_M3_IFRS ok]),BLANK(),([Cant_Ventas_M3_IFRS ok]/[Cant_Ventas_M3_IFRS_Per_Ant])-1),0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: 9f1d3f11-4196-496d-9615-8a23627265fe
@@ -1139,13 +1129,13 @@ table Medidas
 		displayFolder: Used Measures
 		lineageTag: 3b8b5258-f5c6-4c2b-992b-d490ea03c693
 
-	measure %Ejecucion_M3_POA_IFRS = IFERROR([Cant_Ventas_M3_IFRS]/[Cant_Poa_M3_IFRS],0)
+	measure %Ejecucion_M3_POA_IFRS = IFERROR([Cant_Ventas_M3_IFRS ok]/[Cant_Poa_M3_IFRS],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Used Measures
 		lineageTag: 0d11a733-ee70-48af-bdc5-e1e743ff04ed
 
 	measure Vlr_Ventas_Netas_IFRS_Año_Ant = ```
-			(CALCULATE([Vlr_Ventas_Netas_IFRS],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)) )) 
+			(CALCULATE([Vlr_Ventas_Netas_IFRS ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)) )) 
 			```
 		displayFolder: Used Measures
 		lineageTag: 37935d00-2653-496f-bb57-2024ed742919
@@ -1153,7 +1143,7 @@ table Medidas
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure Vlr_Ventas_Netas_IFRS_Año = ```
-			(CALCULATE([Vlr_Ventas_Netas_IFRS],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)) )) 
+			(CALCULATE([Vlr_Ventas_Netas_IFRS ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)) )) 
 			```
 		displayFolder: Used Measures
 		lineageTag: 9026b555-3af2-45b9-be78-0d89fd45218b
@@ -1167,64 +1157,64 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
 
-	measure Vlr_Neto_IFRS_Año_Ant = ([Vlr_Ventas_Netas_IFRS_Año_Ant] - [Vlr_Descuento_Condicionados_Año_Ant] - [Vlr_Descuento_Pronto_Pago_Año_Ant]) - [Vlr_Ventas_No_Entrege_Per_Ant]
+	measure Vlr_Neto_IFRS_Año_Ant = ([Vlr_Ventas_Netas_IFRS_Año_Ant] - [Vlr_Descuento_Condicionados_Año_Ant] - [Vlr_Descuento_Pronto_Pago_Año_Ant]) - [Vlr_Ventas_No_Entrege_Per_Ant ok]
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Used Measures
 		lineageTag: 895596a9-7870-4e71-b1c8-69011d267199
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
 
-	measure Vlr_Neto_IFRS_Año = ([Vlr_Ventas_Netas_IFRS_Año] - [Vlr_Descuento_Condicionados_Año] - [Vlr_Descuento_Pronto_Pago_Año] - [Vlr_Ventas_No_Entrege])
+	measure Vlr_Neto_IFRS_Año = ([Vlr_Ventas_Netas_IFRS_Año] - [Vlr_Descuento_Condicionados_Año] - [Vlr_Descuento_Pronto_Pago_Año] - [Vlr_Ventas_No_Entrege ok])
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Used Measures
 		lineageTag: df88e359-b35e-4ad9-a823-00a4e82ca32d
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
 
-	measure Vlr_Descuento_Pronto_Pago_Año_Ant = CALCULATE([Vlr_Descuento_Pronto_Pago],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)))
+	measure Vlr_Descuento_Pronto_Pago_Año_Ant = CALCULATE([Vlr_Descuento_Pronto_Pago ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)))
 		displayFolder: Used Measures
 		lineageTag: 5b2d9420-396b-476f-9dad-16e9ab63ad88
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Descuento_Pronto_Pago_Año = CALCULATE([Vlr_Descuento_Pronto_Pago],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
+	measure Vlr_Descuento_Pronto_Pago_Año = CALCULATE([Vlr_Descuento_Pronto_Pago ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
 		displayFolder: Used Measures
 		lineageTag: cd5e817a-5003-478b-9b48-b7fc71598065
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Descuento_Condicionados_Año_Ant = CALCULATE([Vlr_Descuento_Condicionados],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)))
+	measure Vlr_Descuento_Condicionados_Año_Ant = CALCULATE([Vlr_Descuento_Condicionados ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)))
 		displayFolder: Used Measures
 		lineageTag: c6560996-318e-469b-9c9a-28ec61fd98ce
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Descuento_Condicionados_Año = CALCULATE([Vlr_Descuento_Condicionados],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
+	measure Vlr_Descuento_Condicionados_Año = CALCULATE([Vlr_Descuento_Condicionados ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
 		displayFolder: Used Measures
 		lineageTag: 18616d85-2e9b-4401-8315-955b7d4f2c5e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Cant_Ventas_M3_IFRS_Año_Ant = ([Cant_Ventas_M3_Año_Ant] - [Cant_Ventas_M3_No_Entrege_Per_Ant])
+	measure Cant_Ventas_M3_IFRS_Año_Ant = ([Cant_Ventas_M3_Año_Ant] - [Cant_Ventas_M3_No_Entrege_Per_Ant ok])
 		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: 70b66dea-454b-40a8-9b3e-799f30d9f00d
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Cant_Ventas_M3_IFRS_Año = ([Cant_Ventas_M3_Año] - [Cant_Ventas_M3_No_Entrege])
+	measure Cant_Ventas_M3_IFRS_Año = ([Cant_Ventas_M3_Año] - [Cant_Ventas_M3_No_Entrege ok])
 		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: 64a23976-05bd-4a20-8e17-51c37c477b6e
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Cant_Ventas_M3_Año_Ant = CALCULATE([Cant_Ventas_M3],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)) )
+	measure Cant_Ventas_M3_Año_Ant = CALCULATE([Cant_Ventas_M3 ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)) )
 		formatString: #,0
 		displayFolder: Used Measures
 		lineageTag: ffa23dee-5825-44af-9c85-affa41d10695
 
-	measure Cant_Ventas_M3_Año = CALCULATE([Cant_Ventas_M3],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
+	measure Cant_Ventas_M3_Año = CALCULATE([Cant_Ventas_M3 ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
 		displayFolder: Used Measures
 		lineageTag: 50fc5f48-ffec-48d3-8dcf-65aefbe0cb45
 
@@ -1257,20 +1247,20 @@ table Medidas
 		displayFolder: Used Measures
 		lineageTag: 2f101e29-1215-442b-a65f-651a125863f9
 
-	measure Vlr_Ventas_Pedidos = ([Vlr_Ventas_Netas]+[Vlr_Pedido_Neto_Tot])
+	measure Vlr_Ventas_Pedidos = ([Vlr_Ventas_Netas ok]+[Vlr_Pedido_Neto_Tot])
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Unused Measures
 		lineageTag: 787b41f8-651b-4346-a3f6-22ca9a5aff00
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Ventas_No_Entrege_Año_Ant = CALCULATE([Vlr_Ventas_No_Entrege],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)) )
+	measure Vlr_Ventas_No_Entrege_Año_Ant = CALCULATE([Vlr_Ventas_No_Entrege ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,"01","01"),EOMONTH(DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))-1,MONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),DAY(SELECTEDVALUE(CALENDARIO[YearMonthnumber]))),0)) )
 		displayFolder: Unused Measures
 		lineageTag: bc22033e-8de2-40e8-a1ed-048114f13b8d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Ventas_No_Entrege_Año = CALCULATE([Vlr_Ventas_No_Entrege],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
+	measure Vlr_Ventas_No_Entrege_Año = CALCULATE([Vlr_Ventas_No_Entrege ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
 		displayFolder: Unused Measures
 		lineageTag: 99530864-86ad-4540-94b1-04236542f008
 
@@ -1283,7 +1273,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Ventas_Netas_Dia_Cer = IF(SELECTEDVALUE(DiaCerrado[DiaCerrado])="Si", IF(DISTINCT(CALENDARIO[Date])<TODAY(), [Vlr_Ventas_Netas],BLANK()),[Vlr_Ventas_Netas])
+	measure Vlr_Ventas_Netas_Dia_Cer = IF(SELECTEDVALUE(DiaCerrado[DiaCerrado])="Si", IF(DISTINCT(CALENDARIO[Date])<TODAY(), [Vlr_Ventas_Netas ok],BLANK()),[Vlr_Ventas_Netas ok])
 		displayFolder: Unused Measures
 		lineageTag: 3bba87bf-81a3-494e-a515-1b2220a61b02
 
@@ -1291,8 +1281,8 @@ table Medidas
 
 	measure Vlr_Ventas_Netas_Dia_Ant =
 			IF(ISBLANK(SELECTEDVALUE(CALENDARIO[Date])),
-			                     CALCULATE([Vlr_Ventas_Netas],CALENDARIO[Date]=TODAY()-1),
-			                    [Vlr_Ventas_Netas]
+			                     CALCULATE([Vlr_Ventas_Netas ok],CALENDARIO[Date]=TODAY()-1),
+			                    [Vlr_Ventas_Netas ok]
 			)
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Unused Measures
@@ -1300,15 +1290,15 @@ table Medidas
 
 	measure Vlr_Ventas_Netas_Dia =
 			IF(ISBLANK(SELECTEDVALUE(CALENDARIO[Date])),
-			                     CALCULATE([Vlr_Ventas_Netas],CALENDARIO[Date]=TODAY()),
-			                    [Vlr_Ventas_Netas]
+			                     CALCULATE([Vlr_Ventas_Netas ok],CALENDARIO[Date]=TODAY()),
+			                    [Vlr_Ventas_Netas ok]
 			)
 		displayFolder: Unused Measures
 		lineageTag: cb85060f-93bd-4ee5-b8da-ab2982806603
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Ventas_Netas_COP = ```
+	measure 'Vlr_Ventas_Netas_COP ok' = ```
 			
 			CALCULATE(
 			    SUM(factventas[ValorSubtotal]),
@@ -1316,7 +1306,7 @@ table Medidas
 			    dimitemcriterio[ING] = "CTA 41 INGRESOS CUENTA CONTABLE",
 			    factventas[NATURALEZA] = 1
 			) 
-			- [Vlr_Nota_Credito_COP]
+			- [Vlr_Nota_Credito_COP ok]
 			
 			```
 		formatString: \$#,0;(\$#,0);\$#,0
@@ -1376,7 +1366,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
 
-	measure Vlr_Precio_Medio_IFRS = IFERROR((ROUND([Vlr_Neto_IFRS],0) * 1000000) / ROUND([Cant_Ventas_M3_IFRS],0),BLANK())
+	measure Vlr_Precio_Medio_IFRS = IFERROR((ROUND([Vlr_Neto_IFRS],0) * 1000000) / ROUND([Cant_Ventas_M3_IFRS ok],0),BLANK())
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Unused Measures
 		lineageTag: e3551acf-20e3-42e4-925e-72a9c05d5f9b
@@ -1394,7 +1384,7 @@ table Medidas
 		displayFolder: Unused Measures
 		lineageTag: af5a6009-0da8-4039-8dab-2706469fd091
 
-	measure Vlr_Precio_Medio_COP = DIVIDE((([Vlr_Ventas_Netas_COP])),[Cant_Ventas_M3],BLANK())
+	measure 'Vlr_Precio_Medio_COP ok' = DIVIDE((([Vlr_Ventas_Netas_COP ok])),[Cant_Ventas_M3 ok],BLANK())
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Unused Measures
 		lineageTag: 69bfb7e4-4659-46a1-af04-bac550f13fa2
@@ -1415,6 +1405,13 @@ table Medidas
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Unused Measures
 		lineageTag: 4f149484-02ed-4b0f-90e6-6c67d3e87ee8
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
+
+	measure Vlr_Poa_Vendedor = sum(POA_VENDEDOR[Valor] ) / 1000000
+		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
+		displayFolder: Unused Measures
+		lineageTag: 032a00fc-ca79-485a-9681-3766c836ffaa
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
@@ -1506,15 +1503,7 @@ table Medidas
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
 	measure Vlr_Pedido_Neto_Retenido = ```
-			
-			CALCULATE(
-			    SUM(factpedidos[VlrSubTotalPendiente]) / 1000000,
-			    OR(dimcliente[TipoCliente] = "EXT", dimcliente[TipoCliente] = "NAL"),
-			    dimitemcriterio[ING] = "CTA 41 INGRESOS CUENTA CONTABLE",
-			    factpedidos[DescripcionEstado] = "Retenido",
-			    FILTER(ALL(CALENDARIO), 1 = 1)
-			)
-			
+			CALCULATE(SUM(Pedidos[Vlr_SubTotal_Pendiente])/1000000,or(Clientes[TIPO_CLIE]="EXT",Clientes[TIPO_CLIE]="NAL"),Itens[ING] = "CTA 41 INGRESOS CUENTA CONTABLE",Pedidos[DESC_ESTADO]="Retenido",FILTER(ALL(CALENDARIO),1=1))  
 			```
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
 		displayFolder: Unused Measures
@@ -1522,7 +1511,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Pedido_Neto_Pend = ```
+	measure 'Vlr_Pedido_Neto_Pend ok' = ```
 			
 			CALCULATE(
 			    SUM(factpedidos[VlrSubTotalPendiente]) / 1000000,
@@ -1531,11 +1520,9 @@ table Medidas
 			)
 			
 			```
-		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
+		formatString: #,0
 		displayFolder: Unused Measures
 		lineageTag: a702261a-ad9a-4a91-adc2-a88389ec9f9e
-
-		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
 	measure Vlr_Pedido_Neto_Liberado = CALCULATE(SUM(Pedidos[Vlr_SubTotal_Pendiente])/1000000,or(Clientes[TIPO_CLIE]="EXT",Clientes[TIPO_CLIE]="NAL"),Itens[ING] = "CTA 41 INGRESOS CUENTA CONTABLE",or(Pedidos[DESC_ESTADO]="Comprometido",Pedidos[DESC_ESTADO]="Aprobado"),FILTER(all(CALENDARIO),1=1)  )
 		formatString: \$\ #,0;(\$\ #,0);\$\ #,0
@@ -1544,7 +1531,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Pedido_Neto =
+	measure 'Vlr_Pedido_Neto ok' =
 			
 			CALCULATE(
 			    SUM(factpedidos[VlrSubTotalCOP]) / 1000000,
@@ -1607,13 +1594,13 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Nota_Credito_IFRS_Año = IFERROR(CALCULATE([Vlr_Nota_Credito_IFRS],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0))),0)
+	measure Vlr_Nota_Credito_IFRS_Año = IFERROR(CALCULATE([Vlr_Nota_Credito_IFRS ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0))),0)
 		displayFolder: Unused Measures
 		lineageTag: 8bcee6ce-3fa4-4fd9-aa40-807d586812b6
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Nota_Credito_COP = ```
+	measure 'Vlr_Nota_Credito_COP ok' = ```
 			
 			IFERROR(
 			    CALCULATE(
@@ -1655,12 +1642,12 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Margen_M3_Per_Ant = CALCULATE([Vlr_Margen_M3],SAMEPERIODLASTYEAR(CALENDARIO[Date]))
+	measure Vlr_Margen_M3_Per_Ant = CALCULATE([Vlr_Margen_M3 ok],SAMEPERIODLASTYEAR(CALENDARIO[Date]))
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Unused Measures
 		lineageTag: 30748b80-dc60-4d1d-9119-686ec611a483
 
-	measure Vlr_Margen_M3 = [Vlr_Precio_Medio_COP] - [Vlr_Costo_M3]
+	measure 'Vlr_Margen_M3 ok' = [Vlr_Precio_Medio_COP ok] - [Vlr_Costo_M3]
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		displayFolder: Unused Measures
 		lineageTag: 47d7fdda-cdbc-4442-b322-af51031b3d4b
@@ -1674,7 +1661,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure Vlr_Margen_Bruto = [Vlr_Ventas_Netas_COP] - [Vlr_Costo_Prod_Vendido]
+	measure Vlr_Margen_Bruto = [Vlr_Ventas_Netas_COP ok] - [Vlr_Costo_Prod_Vendido ok]
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Unused Measures
 		lineageTag: 7638ac9f-1cd3-4ee1-b78e-1293be1255b5
@@ -1683,12 +1670,12 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure Vlr_Magen_Neto_Flete_M3 = [Vlr_Magen_Neto_Flete]/ [Cant_Ventas_M3]
+	measure Vlr_Magen_Neto_Flete_M3 = [Vlr_Magen_Neto_Flete]/ [Cant_Ventas_M3 ok]
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Unused Measures
 		lineageTag: eb0fb61b-60f5-4de9-b3ac-265643b6416d
 
-	measure Vlr_Magen_Neto_Flete = ([Vlr_Margen_Bruto] - [Vlr_Flete_Item]) * [Cant_Ventas_M3]
+	measure Vlr_Magen_Neto_Flete = ([Vlr_Margen_Bruto] - [Vlr_Flete_Item]) * [Cant_Ventas_M3 ok]
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Unused Measures
 		lineageTag: 598773cc-78e8-4b87-a26e-e71a6c11f6d0
@@ -1717,7 +1704,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
 
-	measure Vlr_Costo_Prod_Vendido_MM = [Vlr_Costo_Prod_Vendido] / 1000000
+	measure Vlr_Costo_Prod_Vendido_MM = [Vlr_Costo_Prod_Vendido ok] / 1000000
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Unused Measures
 		lineageTag: f83b5bd8-75ab-4497-929b-369c889fc8ed
@@ -1726,7 +1713,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure Vlr_Costo_Prod_Vendido = ```
+	measure 'Vlr_Costo_Prod_Vendido ok' = ```
 			
 			IFERROR(
 			    CALCULATE(
@@ -1737,14 +1724,14 @@ table Medidas
 			    ),
 			    0
 			)
-			+ [Vlr_Costo_Nota_Credito}]
+			+ [Vlr_Costo_Nota_Credito ok]
 			
 			```
 		formatString: #,0
 		displayFolder: Unused Measures
 		lineageTag: daa0ada6-aec7-4464-aabe-a7cd86c65575
 
-	measure Vlr_Costo_Nota_Credito} = ```
+	measure 'Vlr_Costo_Nota_Credito ok' = ```
 			
 			IFERROR(
 			    CALCULATE(
@@ -1774,7 +1761,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Costo_M3 = DIVIDE([Vlr_Costo_Prod_Vendido],[Cant_Ventas_M3],BLANK())
+	measure Vlr_Costo_M3 = DIVIDE([Vlr_Costo_Prod_Vendido ok],[Cant_Ventas_M3 ok],BLANK())
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Unused Measures
 		lineageTag: ac5b2638-c390-4961-8754-6535dad74251
@@ -1896,13 +1883,13 @@ table Medidas
 		displayFolder: Unused Measures
 		lineageTag: 9d84b362-80f1-45d4-8f32-99933d20ad64
 
-	measure Cant_Ventas_M3_No_Entrege_Año = CALCULATE([Cant_Ventas_M3_No_Entrege],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
+	measure Cant_Ventas_M3_No_Entrege_Año = CALCULATE([Cant_Ventas_M3_No_Entrege ok],DATESBETWEEN(CALENDARIO[Date],DATE(YEAR(SELECTEDVALUE(CALENDARIO[YearMonthnumber])),"01","01"),EOMONTH(SELECTEDVALUE(CALENDARIO[YearMonthnumber]),0)))
 		displayFolder: Unused Measures
 		lineageTag: 2642e8a3-ae62-487b-90ef-cda7664bc54f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Cant_Ventas_M3_Dia_Cer = IF(SELECTEDVALUE(DiaCerrado[DiaCerrado])="Si", IF(DISTINCT(CALENDARIO[Date])<TODAY(), [Cant_Ventas_M3],BLANK()),[Cant_Ventas_M3])
+	measure Cant_Ventas_M3_Dia_Cer = IF(SELECTEDVALUE(DiaCerrado[DiaCerrado])="Si", IF(DISTINCT(CALENDARIO[Date])<TODAY(), [Cant_Ventas_M3 ok],BLANK()),[Cant_Ventas_M3 ok])
 		formatString: #,0
 		displayFolder: Unused Measures
 		lineageTag: ed455c02-d65e-4d9b-a57d-a804bd50f9cf
@@ -1911,8 +1898,8 @@ table Medidas
 
 	measure Cant_Ventas_M3_Dia_Ant =
 			IF(ISBLANK(SELECTEDVALUE(CALENDARIO[Date])),
-			                     CALCULATE([Cant_Ventas_M3],CALENDARIO[Date]=TODAY()-1),
-			                    [Cant_Ventas_M3]
+			                     CALCULATE([Cant_Ventas_M3 ok],CALENDARIO[Date]=TODAY()-1),
+			                    [Cant_Ventas_M3 ok]
 			)
 		formatString: #,0
 		displayFolder: Unused Measures
@@ -1922,8 +1909,8 @@ table Medidas
 
 	measure Cant_Ventas_M3_Dia =
 			IF(ISBLANK(SELECTEDVALUE(CALENDARIO[Date])),
-			                     CALCULATE([Cant_Ventas_M3],CALENDARIO[Date]=TODAY()),
-			                    [Cant_Ventas_M3]
+			                     CALCULATE([Cant_Ventas_M3 ok],CALENDARIO[Date]=TODAY()),
+			                    [Cant_Ventas_M3 ok]
 			)
 		displayFolder: Unused Measures
 		lineageTag: 08ec77df-8d71-4fa2-8088-24ea631fee37
@@ -1970,7 +1957,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Cant_Pedido_M3_Pend = ```
+	measure 'Cant_Pedido_M3_Pend ok' = ```
 			
 			CALCULATE(
 			    SUM(factpedidos[CantPedidaM3Pend]),
@@ -1985,7 +1972,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Cant_Pedido_M3_Cumplido = CALCULATE([Cant_Pedido_M3]-[Cant_Pedido_M3_Pend_liberado]-[Cant_Pedido_M3_Pend_Retenido]-[Cant_Pedido_M3_Cancelados])
+	measure Cant_Pedido_M3_Cumplido = CALCULATE([Cant_Pedido_M3 ok]-[Cant_Pedido_M3_Pend_liberado]-[Cant_Pedido_M3_Pend_Retenido]-[Cant_Pedido_M3_Cancelados])
 		displayFolder: Unused Measures
 		lineageTag: f5dc6447-7200-4190-a9ba-b532b7c06bd7
 
@@ -1997,7 +1984,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Cant_Pedido_M3 = ```
+	measure 'Cant_Pedido_M3 ok' = ```
 			
 			CALCULATE(
 			    SUM(factpedidos[CantPedidaM3]),
@@ -2006,7 +1993,7 @@ table Medidas
 			)
 			
 			```
-		formatString: #,0.00
+		formatString: #,0
 		displayFolder: Unused Measures
 		lineageTag: 80dafa18-cbb1-4a2e-a899-432e90ba91dd
 
@@ -2028,7 +2015,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Cant_Operativo_M3_dia = [Cant_Operativo_M3]/ [DiasHabiles]
+	measure Cant_Operativo_M3_dia = [Cant_Operativo_M3 ok]/ [DiasHabiles ok]
 		displayFolder: Unused Measures
 		lineageTag: d48159d0-6f25-4c40-aa5f-8349b4261a4a
 
@@ -2073,27 +2060,27 @@ table Medidas
 		displayFolder: Unused Measures
 		lineageTag: 1c3c4bce-6a00-48e7-b9da-8dfdbd9d92d2
 
-	measure %Projecion_Ejecucion_Ventas_Mes = IFERROR(([Vlr_Ventas_Netas]+[Vlr_Pedido_Neto_Tot])/[Vlr_Ventas_Netas_Pro_3M],0)
+	measure %Projecion_Ejecucion_Ventas_Mes = IFERROR(([Vlr_Ventas_Netas ok]+[Vlr_Pedido_Neto_Tot])/[Vlr_Ventas_Netas_Pro_3M],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: 0ecdb45c-49d5-41cc-b4e2-4ea3f7927d27
 
-	measure %Projecion_Ejecucion_Ventas = IF([Vlr_Poa]>1000, DIVIDE(([Vlr_Ventas_Pedidos]),[Vlr_Poa],0),BLANK())
+	measure %Projecion_Ejecucion_Ventas = IF([Vlr_Poa ok]>1000, DIVIDE(([Vlr_Ventas_Pedidos]),[Vlr_Poa ok],0),BLANK())
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: d6453e4b-2679-47d5-a7b9-cf009102be4b
 
-	measure %Margen_Neto_Flete = DIVIDE([Vlr_Magen_Neto_Flete] ,[Vlr_Ventas_Netas_COP],BLANK())
+	measure %Margen_Neto_Flete = DIVIDE([Vlr_Magen_Neto_Flete] ,[Vlr_Ventas_Netas_COP ok],BLANK())
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Unused Measures
 		lineageTag: 46d2d1cf-4c97-4938-8c57-5732f43bf52e
 
-	measure %Margen_Bruto_M3 = IF(ISBLANK(DIVIDE([Vlr_Margen_M3],[Vlr_Precio_Medio_COP],BLANK())),BLANK(),DIVIDE([Vlr_Margen_M3],[Vlr_Precio_Medio_COP],BLANK()))
+	measure %Margen_Bruto_M3 = IF(ISBLANK(DIVIDE([Vlr_Margen_M3 ok],[Vlr_Precio_Medio_COP ok],BLANK())),BLANK(),DIVIDE([Vlr_Margen_M3 ok],[Vlr_Precio_Medio_COP ok],BLANK()))
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Unused Measures
 		lineageTag: 4aeb8ae7-8b74-47b1-9aca-ab87c7ceb953
 
-	measure %Margen_Bruta = IF(ISBLANK(DIVIDE([Vlr_Costo_Prod_Vendido],[Vlr_Ventas_Netas_COP],BLANK())),BLANK(),1-DIVIDE([Vlr_Costo_Prod_Vendido],[Vlr_Ventas_Netas_COP],BLANK()))
+	measure %Margen_Bruta = IF(ISBLANK(DIVIDE([Vlr_Costo_Prod_Vendido ok],[Vlr_Ventas_Netas_COP ok],BLANK())),BLANK(),1-DIVIDE([Vlr_Costo_Prod_Vendido ok],[Vlr_Ventas_Netas_COP ok],BLANK()))
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Unused Measures
 		lineageTag: 52145ff7-1f37-4a77-92d4-b86fcb375bef
@@ -2103,27 +2090,27 @@ table Medidas
 		displayFolder: Unused Measures
 		lineageTag: 54e2b57f-c5fb-4d2b-b4c1-585e34139be7
 
-	measure %Ejecucion_Ventas_POA_Vendedor = IFERROR(([Vlr_Ventas_Netas])/[Vlr_Poa_Vendedor],0)
+	measure %Ejecucion_Ventas_POA_Vendedor = IFERROR(([Vlr_Ventas_Netas ok])/[Vlr_Poa_Vendedor],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: 3632676f-e1a1-461b-b735-5c635674104b
 
-	measure %Ejecucion_Ventas_POA_Dia = DIVIDE([Vlr_Ventas_Netas],[Vlr_POA_Dia_Corrente],0)
+	measure %Ejecucion_Ventas_POA_Dia = DIVIDE([Vlr_Ventas_Netas ok],[Vlr_POA_Dia_Corrente],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: dccdb888-12e0-4c50-ad3c-90e73987da60
 
-	measure %Ejecucion_Ventas_POA_Año_Vendedor = IFERROR(([Vlr_Ventas_Netas_Año])/[Vlr_Poa_Año_Vendedor],0)
+	measure %Ejecucion_Ventas_POA_Año_Vendedor = IFERROR(([Vlr_Ventas_Netas_Año ok])/[Vlr_Poa_Año_Vendedor],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: 24884ddf-c09c-4ced-a981-0aa9316f1b8b
 
-	measure %Ejecucion_Ventas_Operativo_Dia = DIVIDE([Vlr_Ventas_Netas],[Vlr_Operativo_Dia_Corrente],0)
+	measure %Ejecucion_Ventas_Operativo_Dia = DIVIDE([Vlr_Ventas_Netas ok],[Vlr_Operativo_Dia_Corrente],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: 657acce8-b2a0-4212-8e0f-9e13376c8176
 
-	measure %Ejecucion_Ventas_M3 = IF([Vlr_Poa]>1000, DIVIDE([Cant_Ventas_M3],[Vlr_POA_Captura],0),BLANK())
+	measure %Ejecucion_Ventas_M3 = IF([Vlr_Poa ok]>1000, DIVIDE([Cant_Ventas_M3 ok],[Vlr_POA_Captura],0),BLANK())
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: 8fa8e789-9fd1-4fe6-bdfc-88a0914e42c3
@@ -2138,43 +2125,43 @@ table Medidas
 		displayFolder: Unused Measures
 		lineageTag: 23ac37cf-d43e-4b61-a659-2bd8cda4f424
 
-	measure %Ejecucion_Captura_Ventas_POA_Dia = DIVIDE([Vlr_Pedido_Neto],[Vlr_POA_Dia_Corrente],0)
+	measure %Ejecucion_Captura_Ventas_POA_Dia = DIVIDE([Vlr_Pedido_Neto ok],[Vlr_POA_Dia_Corrente],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: be5dded9-1399-452f-bb01-385978f0b34b
 
-	measure %Ejecucion_Captura_Ventas_Operativo_Dia = DIVIDE([Vlr_Pedido_Neto],[Vlr_Operativo_Dia_Corrente],0)
+	measure %Ejecucion_Captura_Ventas_Operativo_Dia = DIVIDE([Vlr_Pedido_Neto ok],[Vlr_Operativo_Dia_Corrente],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: 1395bae2-14e8-4675-9ce7-59e073dea260
 
-	measure %Ejecucion_Captura_M3_POA_Dia = DIVIDE([Cant_Pedido_M3],[Cant_POA_M3_Dia_Corrente],0)
+	measure %Ejecucion_Captura_M3_POA_Dia = DIVIDE([Cant_Pedido_M3 ok],[Cant_POA_M3_Dia_Corrente],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: 5db9d755-d872-4cf9-a5fd-13f1273385a2
 
-	measure %Ejecucion_Captura_M3_Operativo_Dia = DIVIDE([Cant_Pedido_M3],[Cant_Operativo_M3_Dia_Corrente],0)
+	measure %Ejecucion_Captura_M3_Operativo_Dia = DIVIDE([Cant_Pedido_M3 ok],[Cant_Operativo_M3_Dia_Corrente],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: 1f9832df-b214-4d9f-8287-ed99e69382ff
 
-	measure %Ejecucion_Cant_M3_POA_Dia = DIVIDE([Cant_Ventas_M3],[Cant_POA_M3_Dia_Corrente],0)
+	measure %Ejecucion_Cant_M3_POA_Dia = DIVIDE([Cant_Ventas_M3 ok],[Cant_POA_M3_Dia_Corrente],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: e62ee187-a198-4d4c-a363-30e4029c3f13
 
-	measure %Ejecucion_Cant_M3_Operativo_Dia = DIVIDE([Cant_Ventas_M3],[Cant_Operativo_M3_Dia_Corrente],0)
+	measure %Ejecucion_Cant_M3_Operativo_Dia = DIVIDE([Cant_Ventas_M3 ok],[Cant_Operativo_M3_Dia_Corrente],0)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		displayFolder: Unused Measures
 		lineageTag: 28edf2e8-4826-4eed-be85-5b37f08fa707
 
-	measure %Cumplimiento_Rebate = IF([Vlr_Poa_Rebate] > 1, DIVIDE([Vlr_Ventas_Netas], [Vlr_Poa_Rebate],0),blank())
+	measure %Cumplimiento_Rebate = IF([Vlr_Poa_Rebate] > 1, DIVIDE([Vlr_Ventas_Netas ok], [Vlr_Poa_Rebate],0),blank())
 		displayFolder: Unused Measures
 		lineageTag: 551ad48b-c9a3-4468-ab92-d1174ea22d8e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Vlr_Ventas_No_Entrege = ```
+	measure 'Vlr_Ventas_No_Entrege ok' = ```
 			
 			CALCULATE(
 			    SUM(factventasnorealizadas[ValorSubtotal]),
@@ -2198,18 +2185,6 @@ table Medidas
 
 	measure pruebafact = SUM(factventas[CANT_FACT_M3])
 		lineageTag: 2a0b8376-b84c-47c1-b3e5-4a04ef7fb0e1
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Vlr_Poa_Vendedor = ```
-			
-			CALCULATE(
-			    SUM(factpoaifrs[Valor]) / 1000000
-			)
-			
-			```
-		displayFolder: Unused Measures
-		lineageTag: 7742aa9d-13f4-403b-9eea-aae19e4741d8
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

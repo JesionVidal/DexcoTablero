@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_POA_Captura_Clien"
+                  "Property": "Vlr_POA_Captura_Clien ok-"
                 }
               },
               "queryRef": "Medidas.Vlr_POA_Captura_Clien",
@@ -83,7 +83,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3"
+                  "Property": "Cant_Ventas_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -603,7 +603,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2216e58bc32cede2eda5",
+        "name": "dd33d4c6280438773156",
         "field": {
           "Column": {
             "Expression": {

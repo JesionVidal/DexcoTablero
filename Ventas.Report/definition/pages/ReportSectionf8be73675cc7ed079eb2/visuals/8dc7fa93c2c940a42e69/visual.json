@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Operativo"
+                  "Property": "Vlr_Operativo ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Operativo",
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Vlr_Operativo"
+                "Property": "Vlr_Operativo ok"
               }
             },
             "direction": "Descending"

@@ -1,10 +1,10 @@
 table dimclientesvendedor
-	lineageTag: fb1038b3-635c-4c4b-a30e-37de8c108513
+	lineageTag: c409efc5-e506-458f-889f-1c3c9c17d579
 
 	column IdPuntoEnvio
 		dataType: int64
 		formatString: 0
-		lineageTag: a389a41e-c980-4968-84dc-ce3669860c14
+		lineageTag: d02ef992-720e-4e82-bebc-28a385ebadcc
 		summarizeBy: none
 		sourceColumn: IdPuntoEnvio
 
@@ -13,7 +13,7 @@ table dimclientesvendedor
 	column IdVendedor
 		dataType: int64
 		formatString: 0
-		lineageTag: 5eb1dbfb-946a-4468-ab49-05cadd29f21e
+		lineageTag: c4220bfd-1e98-4088-86c3-a2dd396cd397
 		summarizeBy: none
 		sourceColumn: IdVendedor
 
@@ -22,7 +22,7 @@ table dimclientesvendedor
 	column Principal
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: 0b59550c-562b-4be6-8319-ed6e271209a7
+		lineageTag: 50ff2591-3ec5-4112-9c86-97a4da6134c8
 		summarizeBy: none
 		sourceColumn: Principal
 
@@ -31,28 +31,28 @@ table dimclientesvendedor
 	column DateInserted
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 9a3c3482-ded8-4c0e-bf61-3c45d480a5a0
+		lineageTag: b80d815e-fcc6-4576-92f6-d844a90c5cca
 		summarizeBy: none
 		sourceColumn: DateInserted
 
 		variation Variación
 			isDefault
-			relationship: fad598e3-d411-4e11-be7b-c6f59f0e74f1
-			defaultHierarchy: LocalDateTable_a425d681-dfeb-4d6e-8d79-564a8eb183f7.'Date Hierarchy'
+			relationship: 76719128-2de1-4232-a78a-ca9ea49a990a
+			defaultHierarchy: LocalDateTable_d95a0a1c-9db5-405f-83b5-44dfa0000ed7.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
 	column DateUpdate
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: e5c907ba-ffe7-445d-abe5-c74c82ef0263
+		lineageTag: 1eafc46f-8e9d-4bbb-8a3b-0cb351d61a05
 		summarizeBy: none
 		sourceColumn: DateUpdate
 
 		variation Variación
 			isDefault
-			relationship: 05a22f5f-4a20-4bac-a435-c06f753b580a
-			defaultHierarchy: LocalDateTable_8de1e0b7-cd40-4921-8d88-7525c7e1840b.'Date Hierarchy'
+			relationship: eb1e4b13-e6c7-4afd-9662-b740f49bb9b7
+			defaultHierarchy: LocalDateTable_fb14c35e-5d09-47a9-9aa9-9e859a60f857.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 

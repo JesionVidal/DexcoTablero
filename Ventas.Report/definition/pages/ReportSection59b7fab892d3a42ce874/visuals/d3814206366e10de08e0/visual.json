@@ -74,7 +74,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3"
+                  "Property": "Cant_Ventas_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -88,7 +88,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_Netas_COP"
+                  "Property": "Vlr_Ventas_Netas_COP ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_Netas_COP",
@@ -102,7 +102,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Costo_Prod_Vendido"
+                  "Property": "Vlr_Costo_Prod_Vendido ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Costo_Prod_Vendido",
@@ -144,7 +144,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Precio_Medio_COP"
+                  "Property": "Vlr_Precio_Medio_COP ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Precio_Medio_COP",
@@ -187,7 +187,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Margen_M3"
+                  "Property": "Vlr_Margen_M3 ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Margen_M3",

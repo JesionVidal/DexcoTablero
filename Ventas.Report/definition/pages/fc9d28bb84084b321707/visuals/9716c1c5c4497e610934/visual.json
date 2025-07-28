@@ -38,7 +38,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_POA_Captura_Clien"
+                  "Property": "Vlr_POA_Captura_Clien ok-"
                 }
               },
               "queryRef": "Medidas.Vlr_POA_Captura_Clien",
@@ -98,7 +98,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3"
+                  "Property": "Cant_Ventas_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -133,7 +133,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Cant_Ventas_M3"
+                "Property": "Cant_Ventas_M3 ok"
               }
             },
             "direction": "Descending"

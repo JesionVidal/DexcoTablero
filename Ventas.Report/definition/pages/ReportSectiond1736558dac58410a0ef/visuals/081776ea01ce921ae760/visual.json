@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "dimcliente.Ccl",
-              "nativeQueryRef": "Ccl",
-              "active": true
+              "nativeQueryRef": "Clase",
+              "active": true,
+              "displayName": "Clase"
             }
           ]
         }
@@ -171,5 +172,6 @@
       "fieldChanges": true
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "isHidden": true
 }

@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "390e599848434559cb33",
+  "name": "713c6caf59e2a5f52c9f",
   "position": {
-    "x": 161.66666666666669,
-    "y": 25.833333333333336,
+    "x": 29.0176322418136,
+    "y": 143.27455919395464,
     "z": 0,
-    "height": 492.5,
-    "width": 280
+    "height": 280.20151133501258,
+    "width": 280.20151133501258
   },
   "visual": {
     "visualType": "tableEx",
@@ -19,14 +19,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "factpedidos"
+                      "Entity": "factventas"
                     }
                   },
-                  "Property": "FechaPedido"
+                  "Property": "FechaFactura"
                 }
               },
-              "queryRef": "factpedidos.FechaPedido",
-              "nativeQueryRef": "FechaPedido"
+              "queryRef": "factventas.FechaFactura",
+              "nativeQueryRef": "FechaFactura"
             },
             {
               "field": {
@@ -35,17 +35,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "factpedidos"
+                          "Entity": "factventas"
                         }
                       },
-                      "Property": "VlrSubTotalCOP"
+                      "Property": "ValorSubtotal"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(factpedidos.VlrSubTotalCOP)",
-              "nativeQueryRef": "VlrSubTotalCOP"
+              "queryRef": "Sum(factventas.ValorSubtotal)",
+              "nativeQueryRef": "ValorSubtotal"
             }
           ]
         }
@@ -54,13 +54,18 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "factpedidos"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "factventas"
+                      }
+                    },
+                    "Property": "ValorSubtotal"
                   }
                 },
-                "Property": "FechaPedido"
+                "Function": 0
               }
             },
             "direction": "Descending"

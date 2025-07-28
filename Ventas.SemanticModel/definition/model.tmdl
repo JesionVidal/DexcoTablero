@@ -53,7 +53,6 @@ ref table Medidas_iconos_umbrales
 ref table factdocumentoscontables
 ref table LocalDateTable_e262519f-3757-4b0d-a48c-f7ef9ba3f7c4
 ref table LocalDateTable_c1ca5356-6185-4bb7-a1f5-50fd8454d6d1
-ref table LocalDateTable_d144cc7d-47b8-462f-ad92-e492e2aa656c
 ref table dimvendedor
 ref table LocalDateTable_89d2db0d-1032-4a07-bc8a-0d242cc5d4eb
 ref table LocalDateTable_660509e6-25b1-4d46-a718-f9822d9cb37d
@@ -85,8 +84,10 @@ ref table LocalDateTable_cfad7c0d-77d2-41f0-b6c0-29a7fc9efa25
 ref table LocalDateTable_9ee5b16b-fd72-4115-8d9c-a068a6df75e0
 ref table LocalDateTable_39dfe0f8-0ffe-472f-9e4b-5a5c19e909ef
 ref table dimclientesvendedor
-ref table LocalDateTable_a425d681-dfeb-4d6e-8d79-564a8eb183f7
-ref table LocalDateTable_8de1e0b7-cd40-4921-8d88-7525c7e1840b
+ref table LocalDateTable_d95a0a1c-9db5-405f-83b5-44dfa0000ed7
+ref table LocalDateTable_fb14c35e-5d09-47a9-9aa9-9e859a60f857
+ref table LocalDateTable_9f9b76a4-4d37-43cd-949c-d0240ea8425a
+ref table LocalDateTable_2d24bbb2-ae0a-485e-aa62-ff18facf105a
 
 ref role General
 ref role Exportaciones

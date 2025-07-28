@@ -75,7 +75,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Pedido_M3"
+                  "Property": "Cant_Pedido_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Pedido_M3",

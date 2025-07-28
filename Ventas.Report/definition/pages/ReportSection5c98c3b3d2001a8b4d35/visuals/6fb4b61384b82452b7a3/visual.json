@@ -75,7 +75,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3"
+                  "Property": "Cant_Ventas_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -89,7 +89,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_Netas_IFRS"
+                  "Property": "Vlr_Ventas_Netas_IFRS ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_Netas_IFRS",
@@ -117,7 +117,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "%Ventas_Netas_Linea"
+                  "Property": "%Ventas_Netas_Linea ok"
                 }
               },
               "queryRef": "Medidas.%Ventas_Netas_Linea",
@@ -131,7 +131,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Descuento_Pronto_Pago"
+                  "Property": "Vlr_Descuento_Pronto_Pago ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Descuento_Pronto_Pago",
@@ -145,7 +145,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Descuento_Condicionados"
+                  "Property": "Vlr_Descuento_Condicionados ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Descuento_Condicionados",
@@ -159,7 +159,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3_No_Entrege"
+                  "Property": "Cant_Ventas_M3_No_Entrege ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3_No_Entrege",
@@ -173,7 +173,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_No_Entrege"
+                  "Property": "Vlr_Ventas_No_Entrege ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_No_Entrege",
@@ -187,7 +187,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3_No_Entrege_Ant"
+                  "Property": "Cant_Ventas_M3_No_Entrege_Ant ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3_No_Entrege_Ant",
@@ -201,7 +201,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_No_Entregue_Ant"
+                  "Property": "Vlr_Ventas_No_Entregue_Ant ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_No_Entregue_Ant",
@@ -215,7 +215,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3_IFRS"
+                  "Property": "Cant_Ventas_M3_IFRS ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3_IFRS",

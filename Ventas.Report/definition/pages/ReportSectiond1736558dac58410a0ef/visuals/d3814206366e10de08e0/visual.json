@@ -42,7 +42,7 @@
                 }
               },
               "queryRef": "CALENDARIO.Monthnumber",
-              "active": true,
+              "active": false,
               "displayName": "Mes"
             },
             {
@@ -73,7 +73,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3"
+                  "Property": "Cant_Ventas_M3 ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -87,7 +87,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3_Per_Ant"
+                  "Property": "Cant_Ventas_M3_Per_Ant ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3_Per_Ant",
@@ -159,8 +159,7 @@
             "queryRefs": [
               "dimbodegas.IdCentroOperacion"
             ],
-            "isCollapsed": true,
-            "isPinned": true
+            "isCollapsed": true
           }
         ],
         "root": {
@@ -206,16 +205,6 @@
                   "isToggled": true
                 }
               ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "2025L"
-                  }
-                }
-              ],
-              "isToggled": true
             }
           ]
         }

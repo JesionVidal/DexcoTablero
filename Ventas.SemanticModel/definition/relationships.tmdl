@@ -118,11 +118,6 @@ relationship 0a987507-1c30-4f65-b349-a4cfc43f0f21
 	fromColumn: factdocumentoscontables.DateUpdate
 	toColumn: LocalDateTable_c1ca5356-6185-4bb7-a1f5-50fd8454d6d1.Date
 
-relationship cd89ea80-287b-4dd6-902a-2c989ba5a008
-	joinOnDateBehavior: datePartOnly
-	fromColumn: factpedidos.FechaVencimiento
-	toColumn: LocalDateTable_d144cc7d-47b8-462f-ad92-e492e2aa656c.Date
-
 relationship f24d1a1e-c470-4168-8b5d-a1768ccf8504
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dimvendedor.DateInserted
@@ -152,10 +147,6 @@ relationship 9443a9a7-c2c6-4db9-bce7-b915fe337020
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dimedadvencido.DateUpdate
 	toColumn: LocalDateTable_7b9e447e-7faf-44be-b8eb-bca1edb38605.Date
-
-relationship AutoDetected_10953aeb-1be1-45d2-a3f3-97bad2292a6a
-	fromColumn: factpedidos.CodEdadVencido
-	toColumn: dimedadvencido.CodEdadVencido
 
 relationship 8c78b955-2755-4bfc-b32e-368426e4f523
 	joinOnDateBehavior: datePartOnly
@@ -327,38 +318,63 @@ relationship 278d0822-4926-85b2-d0bf-93b0a06528ee
 	fromColumn: factventas.LlaveFacturaItem
 	toColumn: dimdetallefactura.LlaveFacturaItem
 
-relationship fad598e3-d411-4e11-be7b-c6f59f0e74f1
+relationship AutoDetected_a8040936-c373-47da-a0e7-a7acc107e5dc
+	fromColumn: factventas.RiItemExt
+	toColumn: dimitem.RiItemExt
+
+relationship AutoDetected_9877bfa5-de2a-4d63-82cc-53fea9bf0ca3
+	fromColumn: factpedidos.RIItemExt
+	toColumn: dimitem.RiItemExt
+
+relationship AutoDetected_1eaa6ee8-aacc-4ee1-829a-9e5d48ce555d
+	fromColumn: factcostos.RIItemExt
+	toColumn: dimitem.RiItemExt
+
+relationship AutoDetected_d396330a-49c7-496e-84ce-b6f36d69c386
+	fromColumn: factventasnorealizadas.RiItemExt
+	toColumn: dimitem.RiItemExt
+
+relationship 76719128-2de1-4232-a78a-ca9ea49a990a
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dimclientesvendedor.DateInserted
-	toColumn: LocalDateTable_a425d681-dfeb-4d6e-8d79-564a8eb183f7.Date
+	toColumn: LocalDateTable_d95a0a1c-9db5-405f-83b5-44dfa0000ed7.Date
 
-relationship 05a22f5f-4a20-4bac-a435-c06f753b580a
+relationship eb1e4b13-e6c7-4afd-9662-b740f49bb9b7
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dimclientesvendedor.DateUpdate
-	toColumn: LocalDateTable_8de1e0b7-cd40-4921-8d88-7525c7e1840b.Date
+	toColumn: LocalDateTable_fb14c35e-5d09-47a9-9aa9-9e859a60f857.Date
 
-relationship AutoDetected_36dcc4e2-3a23-4e5c-8b4d-ca13d57b81c7
-	fromColumn: dimclientesvendedor.IdVendedor
-	toColumn: dimvendedor.IdVendedor
-
-relationship AutoDetected_8f4ad894-b036-4e51-bccf-37cbd6ea68a5
-	fromColumn: factventas.RiItemExt
-	toColumn: dimitem.RI_ITEM_EXT
-
-relationship AutoDetected_bb6b8d50-cb01-4dc6-821d-2ccad5c6248f
-	fromColumn: factpedidos.RIItemExt
-	toColumn: dimitem.RI_ITEM_EXT
-
-relationship AutoDetected_642448a8-e861-489a-bde4-6c2b4d438807
-	fromColumn: factcostos.RIItemExt
-	toColumn: dimitem.RI_ITEM_EXT
-
-relationship AutoDetected_6b29a7a0-4dd6-4518-939c-140288ab4476
-	fromColumn: factventasnorealizadas.RiItemExt
-	toColumn: dimitem.RI_ITEM_EXT
-
-relationship 50da4a0b-5480-aac6-85db-90bd9e9635ca
+relationship AutoDetected_3d7063d5-6bec-4de7-9ae9-f12987ee1102
 	crossFilteringBehavior: bothDirections
 	fromColumn: dimclientesvendedor.IdPuntoEnvio
 	toColumn: dimcliente.IdPuntoEnvio
+
+relationship AutoDetected_4e3cebe9-48e1-4c81-9455-79d6faffb8f6
+	fromColumn: dimclientesvendedor.IdVendedor
+	toColumn: dimvendedor.IdVendedor
+
+relationship 6cd1af7f-6321-4564-8aae-f57c1d9c9f43
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpedidos.FechaEntregaItem
+	toColumn: LocalDateTable_9f9b76a4-4d37-43cd-949c-d0240ea8425a.Date
+
+relationship 401d7f8e-e7be-4c2b-8110-798a4fe1fc80
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factpedidos.FechaVencimiento
+	toColumn: LocalDateTable_2d24bbb2-ae0a-485e-aa62-ff18facf105a.Date
+
+relationship AutoDetected_8b652651-fe9a-4ef4-8d1c-5051529ed823
+	fromColumn: factpedidos.CodEdadVencido
+	toColumn: dimedadvencido.CodEdadVencido
+
+relationship d9f286d2-d73a-8280-263f-96203bf67dde
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dimitemcriterio.RowIdItem
+	toColumn: dimitem.RiItem
+
+relationship 08a80cfd-93ce-c26c-800a-20d30497ae1b
+	crossFilteringBehavior: bothDirections
+	fromColumn: dimitem.LlaveLinSub
+	toColumn: dimlinsub.LlaveLinSub
 

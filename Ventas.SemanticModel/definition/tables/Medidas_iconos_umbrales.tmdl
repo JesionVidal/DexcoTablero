@@ -4,31 +4,31 @@ table Medidas_iconos_umbrales
 	measure ColorFlechas_ventas_netas_anho =
 			
 			
-			VAR diferencia=ROUND([%Crescimiento_Ventas_Ano]*100,1)
-			RETURN IF([%Crescimiento_Ventas_Ano]<0, "Red","Green")
+			VAR diferencia=ROUND([%Crescimiento_Ventas_Ano ok]*100,1)
+			RETURN IF([%Crescimiento_Ventas_Ano ok]<0, "Red","Green")
 		lineageTag: 247413f2-eece-49a3-9389-4e42b5bc9d17
 
 	measure ColorFlechas_ventas_netas_mes =
 			
 			
-			VAR diferencia=ROUND([%Crescimiento_Ventas_Mes_Ano_Ant]*100,1)
-			RETURN IF([%Crescimiento_Ventas_Mes_Ano_Ant]<0, "Red","Green")
+			VAR diferencia=ROUND([%Crescimiento_Ventas_Mes_Ano_Ant ok]*100,1)
+			RETURN IF([%Crescimiento_Ventas_Mes_Ano_Ant ok]<0, "Red","Green")
 		lineageTag: ed202d4d-ec51-4d11-a6da-c5d87652fc84
 
 	measure Flechas_ventas_netas_anho =
 			
 			VAR __up_arrow= UNICHAR(129137)
 			VAR __down_arrow=UNICHAR(129139)
-			VAR diferencia=ROUND([%Crescimiento_Ventas_Ano]*100,1)
-			RETURN IF([%Crescimiento_Ventas_Ano]<0," " & diferencia & "% " & __down_arrow,diferencia & "%" & __up_arrow)
+			VAR diferencia=ROUND([%Crescimiento_Ventas_Ano ok]*100,1)
+			RETURN IF([%Crescimiento_Ventas_Ano ok]<0," " & diferencia & "% " & __down_arrow,diferencia & "%" & __up_arrow)
 		lineageTag: 6244ae94-2ddb-4254-b1be-2792b6588928
 
 	measure Flechas_ventas_netas_mes =
 			
 			VAR __up_arrow= UNICHAR(129137)
 			VAR __down_arrow=UNICHAR(129139)
-			VAR diferencia=ROUND([%Crescimiento_Ventas_Mes_Ano_Ant]*100,1)
-			RETURN IF([%Crescimiento_Ventas_Mes_Ano_Ant]<0," " & diferencia & "% " & __down_arrow,diferencia & "%" & __up_arrow)
+			VAR diferencia=ROUND([%Crescimiento_Ventas_Mes_Ano_Ant ok]*100,1)
+			RETURN IF([%Crescimiento_Ventas_Mes_Ano_Ant ok]<0," " & diferencia & "% " & __down_arrow,diferencia & "%" & __up_arrow)
 		lineageTag: f9056fa5-4019-40f1-a9e8-d28148032575
 
 	column Column

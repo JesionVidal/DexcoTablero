@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Pedido_Neto"
+                  "Property": "Vlr_Pedido_Neto ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Pedido_Neto ok",
@@ -43,7 +43,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Vlr_Pedido_Neto"
+                "Property": "Vlr_Pedido_Neto ok"
               }
             },
             "direction": "Descending"

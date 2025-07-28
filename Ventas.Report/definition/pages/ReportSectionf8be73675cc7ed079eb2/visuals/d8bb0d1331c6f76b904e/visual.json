@@ -42,7 +42,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_Netas"
+                  "Property": "Vlr_Ventas_Netas ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_Netas",
@@ -56,7 +56,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Poa"
+                  "Property": "Vlr_Poa ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Poa",

@@ -41,7 +41,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3_Acumulado"
+                  "Property": "Cant_Ventas_M3_Acumulado ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3_Acumulado",
@@ -55,7 +55,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Operativo_M3_Acumulado"
+                  "Property": "Cant_Operativo_M3_Acumulado ok"
                 }
               },
               "queryRef": "Medidas.Cant_Operativo_M3_Acumulado",
@@ -69,7 +69,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_POA_M3_Acumulado"
+                  "Property": "Cant_POA_M3_Acumulado ok"
                 }
               },
               "queryRef": "Medidas.Cant_POA_M3_Acumulado",

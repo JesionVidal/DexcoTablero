@@ -55,7 +55,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Margen_M3"
+                  "Property": "Vlr_Margen_M3 ok"
                 }
               },
               "queryRef": "Medidas.Vlr_Margen_M3",

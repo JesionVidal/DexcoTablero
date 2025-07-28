@@ -45,7 +45,7 @@ table factpedidos
 
 	column FechaPedido
 		dataType: dateTime
-		formatString: Short Date
+		formatString: General Date
 		lineageTag: 61b8349e-a2d7-4742-8f7e-eae49265217d
 		summarizeBy: none
 		sourceColumn: FechaPedido
@@ -220,38 +220,6 @@ table factpedidos
 
 		annotation SummarizationSetBy = Automatic
 
-	column FechaVencimiento
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: b1bd7f4e-28b7-4668-9686-51c68b9d1384
-		summarizeBy: none
-		sourceColumn: FechaVencimiento
-
-		variation Variación
-			isDefault
-			relationship: cd89ea80-287b-4dd6-902a-2c989ba5a008
-			defaultHierarchy: LocalDateTable_d144cc7d-47b8-462f-ad92-e492e2aa656c.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
-	column DiasVencido
-		dataType: int64
-		formatString: 0
-		lineageTag: 4320e00a-7ed6-4138-a652-cd7f6a0db823
-		summarizeBy: sum
-		sourceColumn: DiasVencido
-
-		annotation SummarizationSetBy = Automatic
-
-	column CodEdadVencido
-		dataType: int64
-		formatString: 0
-		lineageTag: 7898ef02-4b2f-4bfb-b4a1-c7caea06adb8
-		summarizeBy: none
-		sourceColumn: CodEdadVencido
-
-		annotation SummarizationSetBy = Automatic
-
 	column CantPedidaM3
 		dataType: double
 		lineageTag: e78552f5-ae88-40e3-87d0-7a14162f1b8b
@@ -284,22 +252,86 @@ table factpedidos
 
 	column VlrSubTotalPendiente
 		dataType: double
-		formatString: #,0
 		lineageTag: 09c0a52f-c220-4991-8afa-c4518f25b02e
 		summarizeBy: sum
 		sourceColumn: VlrSubTotalPendiente
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column TasaMoneda
 		dataType: double
-		lineageTag: 6feb23c5-2d01-4f31-ad82-3dbd79d05a0d
+		lineageTag: f3a6f614-7a32-4df2-8c9d-6c305fc71d22
 		summarizeBy: sum
 		sourceColumn: TasaMoneda
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IdMovimiento
+		dataType: int64
+		formatString: 0
+		lineageTag: 23275676-8f79-447a-8164-273f3d8a451e
+		summarizeBy: sum
+		sourceColumn: IdMovimiento
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaEntregaItem
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7471bb17-d85a-4a7e-986f-8bf7c0d59c5d
+		summarizeBy: none
+		sourceColumn: FechaEntregaItem
+
+		variation Variación
+			isDefault
+			relationship: 6cd1af7f-6321-4564-8aae-f57c1d9c9f43
+			defaultHierarchy: LocalDateTable_9f9b76a4-4d37-43cd-949c-d0240ea8425a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoCliente
+		dataType: string
+		lineageTag: 5d851158-93b7-4950-a3a4-2755378513eb
+		summarizeBy: none
+		sourceColumn: TipoCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaVencimiento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a51a01df-a149-4293-9e7b-5e4f365a97c7
+		summarizeBy: none
+		sourceColumn: FechaVencimiento
+
+		variation Variación
+			isDefault
+			relationship: 401d7f8e-e7be-4c2b-8110-798a4fe1fc80
+			defaultHierarchy: LocalDateTable_2d24bbb2-ae0a-485e-aa62-ff18facf105a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasVencido
+		dataType: int64
+		formatString: 0
+		lineageTag: ddd9597f-acd9-458d-a7b0-f10d05c67482
+		summarizeBy: sum
+		sourceColumn: DiasVencido
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEdadVencido
+		dataType: int64
+		formatString: 0
+		lineageTag: d64c1b4a-964c-4ce6-b9cb-59a2b3b8baf7
+		summarizeBy: none
+		sourceColumn: CodEdadVencido
+
+		annotation SummarizationSetBy = Automatic
 
 	partition factpedidos = m
 		mode: import

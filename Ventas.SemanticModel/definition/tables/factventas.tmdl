@@ -21,7 +21,7 @@ table factventas
 
 	column FechaFactura
 		dataType: dateTime
-		formatString: General Date
+		formatString: Short Date
 		lineageTag: d763cb31-dbb0-4990-874a-53947a89f244
 		summarizeBy: none
 		sourceColumn: FechaFactura
@@ -114,13 +114,12 @@ table factventas
 
 	column ValorSubtotal
 		dataType: double
+		formatString: #,0
 		lineageTag: 3bb95f57-51f7-4229-9127-a24d99a1708d
 		summarizeBy: sum
 		sourceColumn: ValorSubtotal
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ValorImpuesto
 		dataType: double

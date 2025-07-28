@@ -75,7 +75,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3_IFRS"
+                  "Property": "Cant_Ventas_M3_IFRS ok"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3_IFRS",

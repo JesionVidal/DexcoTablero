@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "DiasHabiles"
+                  "Property": "DiasHabiles ok"
                 }
               },
               "queryRef": "Medidas.DiasHabiles"
