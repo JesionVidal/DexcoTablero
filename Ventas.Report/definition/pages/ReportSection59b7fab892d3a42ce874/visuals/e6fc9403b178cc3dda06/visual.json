@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Poa ok"
+                  "Property": "Vlr_Poa"
                 }
               },
               "queryRef": "Medidas.Vlr_Poa",
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Vlr_Poa ok"
+                "Property": "Vlr_Poa"
               }
             },
             "direction": "Descending"

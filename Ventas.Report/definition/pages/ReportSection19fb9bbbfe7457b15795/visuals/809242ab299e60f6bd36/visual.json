@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Nota_Credito ok"
+                  "Property": "Vlr_Nota_Credito"
                 }
               },
               "queryRef": "Medidas.Vlr_Nota_Credito"

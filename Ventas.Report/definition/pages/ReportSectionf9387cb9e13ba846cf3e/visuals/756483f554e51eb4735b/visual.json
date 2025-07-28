@@ -36,7 +36,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_POA_Captura_Clien ok-"
+                  "Property": "Vlr_POA_Captura_Clien"
                 }
               },
               "queryRef": "Medidas.Vlr_POA_Captura_Clien",
@@ -101,7 +101,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "Vlr_POA_Captura_Clien ok-"
+            "Property": "Vlr_POA_Captura_Clien"
           }
         },
         "type": "Advanced",
@@ -126,7 +126,7 @@
                           "Source": "m"
                         }
                       },
-                      "Property": "Vlr_POA_Captura_Clien ok-"
+                      "Property": "Vlr_POA_Captura_Clien"
                     }
                   },
                   "Right": {

@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "DiasCorrentes ok"
+                  "Property": "DiasCorrentes"
                 }
               },
               "queryRef": "Medidas.DiasHabiles"

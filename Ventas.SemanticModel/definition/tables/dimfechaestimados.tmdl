@@ -1,0 +1,99 @@
+table dimfechaestimados
+	lineageTag: 9a1f6aaf-eece-4979-a8b9-da39387d7f58
+
+	column FechaInicial
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e273adbf-d12d-40e5-b165-845a02853b2e
+		summarizeBy: none
+		sourceColumn: FechaInicial
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaEntrega
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c3b962a8-4e9f-4ee1-bdd4-bc34e6e4af49
+		summarizeBy: none
+		sourceColumn: FechaEntrega
+
+		variation Variación
+			isDefault
+			relationship: 8004ad66-0f06-4157-97fb-fc1017ecdc13
+			defaultHierarchy: LocalDateTable_0e7385c2-c06b-4842-8f17-9ab1745f202a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaEntregaAnterior
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2b9248fd-493e-4739-a77c-1d6f8083cac0
+		summarizeBy: none
+		sourceColumn: FechaEntregaAnterior
+
+		variation Variación
+			isDefault
+			relationship: 664cef11-1b6c-4567-94aa-975f1a117f05
+			defaultHierarchy: LocalDateTable_46fe7619-67e4-4406-aa15-4bd55a3a0568.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaEntregaDosAnterior
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 42067598-69a2-49a7-8a8b-bb95c28b15ed
+		summarizeBy: none
+		sourceColumn: FechaEntregaDosAnterior
+
+		variation Variación
+			isDefault
+			relationship: c412f61d-2f74-40cd-9183-c8c85eeb522c
+			defaultHierarchy: LocalDateTable_0d16ddb0-01b4-454f-a8a2-b7fa9800e327.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DateInserted
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5add1d3c-5743-4a4e-9c16-4929a65bbb01
+		summarizeBy: none
+		sourceColumn: DateInserted
+
+		variation Variación
+			isDefault
+			relationship: 7b81bb52-cc8e-4640-a7b2-a2e4c2b55398
+			defaultHierarchy: LocalDateTable_fe1461a3-9c62-45ae-9650-a94aeeb152c0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateUpdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4f78da4c-8f66-4c8f-8a2b-a5612cf4af08
+		summarizeBy: none
+		sourceColumn: DateUpdate
+
+		variation Variación
+			isDefault
+			relationship: d3e08a68-a45f-489e-87d9-a7c50b256012
+			defaultHierarchy: LocalDateTable_535daa22-4047-40ca-adc4-9f602706803a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimfechaestimados = m
+		mode: import
+		source =
+				let
+				    Origen = Databricks.Catalogs("adb-3964092620723660.0.azuredatabricks.net", "/sql/1.0/warehouses/68fada4e2c0d3dba", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    bi_gold_Database = Origen{[Name="bi_gold",Kind="Database"]}[Data],
+				    siesa_Schema = bi_gold_Database{[Name="siesa",Kind="Schema"]}[Data],
+				    dimfechaestimados_Table = siesa_Schema{[Name="dimfechaestimados",Kind="Table"]}[Data]
+				in
+				    dimfechaestimados_Table
+

@@ -378,3 +378,34 @@ relationship 08a80cfd-93ce-c26c-800a-20d30497ae1b
 	fromColumn: dimitem.LlaveLinSub
 	toColumn: dimlinsub.LlaveLinSub
 
+relationship 8004ad66-0f06-4157-97fb-fc1017ecdc13
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimfechaestimados.FechaEntrega
+	toColumn: LocalDateTable_0e7385c2-c06b-4842-8f17-9ab1745f202a.Date
+
+relationship 664cef11-1b6c-4567-94aa-975f1a117f05
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimfechaestimados.FechaEntregaAnterior
+	toColumn: LocalDateTable_46fe7619-67e4-4406-aa15-4bd55a3a0568.Date
+
+relationship c412f61d-2f74-40cd-9183-c8c85eeb522c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimfechaestimados.FechaEntregaDosAnterior
+	toColumn: LocalDateTable_0d16ddb0-01b4-454f-a8a2-b7fa9800e327.Date
+
+relationship 7b81bb52-cc8e-4640-a7b2-a2e4c2b55398
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimfechaestimados.DateInserted
+	toColumn: LocalDateTable_fe1461a3-9c62-45ae-9650-a94aeeb152c0.Date
+
+relationship d3e08a68-a45f-489e-87d9-a7c50b256012
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimfechaestimados.DateUpdate
+	toColumn: LocalDateTable_535daa22-4047-40ca-adc4-9f602706803a.Date
+
+relationship fad24a75-4a57-9f16-af81-41bb369c9580
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dimfechaestimados.FechaInicial
+	toColumn: CALENDARIO.Date
+

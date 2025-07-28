@@ -43,7 +43,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Ventas_Netas ok"
+                  "Property": "Vlr_Ventas_Netas"
                 }
               },
               "queryRef": "Medidas.Vlr_Ventas_Netas",
@@ -57,7 +57,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3 ok"
+                  "Property": "Cant_Ventas_M3"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -87,7 +87,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas ok"
+                      "Property": "Vlr_Ventas_Netas"
                     }
                   },
                   "Right": {
@@ -99,7 +99,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Vlr_Ventas_Netas ok"
+                          "Property": "Vlr_Ventas_Netas"
                         }
                       },
                       "Scope": []
@@ -124,7 +124,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Vlr_Ventas_Netas ok"
+                "Property": "Vlr_Ventas_Netas"
               }
             },
             "direction": "Descending"

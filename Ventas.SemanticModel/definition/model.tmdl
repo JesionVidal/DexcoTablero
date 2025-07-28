@@ -11,7 +11,7 @@ annotation PBIDesktopVersion = 2.145.1262.0 (25.07)+10bdeda5ab0db954b2cf824e7a11
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["DiaCerrado","dimcliente","dimitem","dimgeografia","factventas","factpptooperativo","factpedidos","factpoa","factpptocliente","factpoavendedor","dimcompania","CALENDARIO","factdocumentoscontables","dimvendedor","dimbodegas","dimindicadores","factcostos","dimedadvencido","factventasnorealizadas","dimitemcriterio","ACTUALIZACIÓN","factpoaifrs","dimlinsub","dimmercado","dimdetallefactura","dimclientesvendedor"]
+annotation PBI_QueryOrder = ["DiaCerrado","dimcliente","dimitem","dimgeografia","factventas","factpptooperativo","factpedidos","factpoa","factpptocliente","factpoavendedor","dimcompania","CALENDARIO","factdocumentoscontables","dimvendedor","dimbodegas","dimindicadores","factcostos","dimedadvencido","factventasnorealizadas","dimitemcriterio","ACTUALIZACIÓN","factpoaifrs","dimlinsub","dimmercado","dimdetallefactura","dimclientesvendedor","dimfechaestimados"]
 
 annotation __TEdtr = 1
 
@@ -88,6 +88,12 @@ ref table LocalDateTable_d95a0a1c-9db5-405f-83b5-44dfa0000ed7
 ref table LocalDateTable_fb14c35e-5d09-47a9-9aa9-9e859a60f857
 ref table LocalDateTable_9f9b76a4-4d37-43cd-949c-d0240ea8425a
 ref table LocalDateTable_2d24bbb2-ae0a-485e-aa62-ff18facf105a
+ref table dimfechaestimados
+ref table LocalDateTable_0e7385c2-c06b-4842-8f17-9ab1745f202a
+ref table LocalDateTable_46fe7619-67e4-4406-aa15-4bd55a3a0568
+ref table LocalDateTable_0d16ddb0-01b4-454f-a8a2-b7fa9800e327
+ref table LocalDateTable_fe1461a3-9c62-45ae-9650-a94aeeb152c0
+ref table LocalDateTable_535daa22-4047-40ca-adc4-9f602706803a
 
 ref role General
 ref role Exportaciones

@@ -51,7 +51,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cant_Ventas_M3 ok"
+                  "Property": "Cant_Ventas_M3"
                 }
               },
               "queryRef": "Medidas.Cant_Ventas_M3",
@@ -88,7 +88,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "Vlr_POA_Captura_Clien ok-"
+            "Property": "Vlr_POA_Captura_Clien"
           }
         },
         "type": "Advanced",
@@ -113,7 +113,7 @@
                           "Source": "m"
                         }
                       },
-                      "Property": "Vlr_POA_Captura_Clien ok-"
+                      "Property": "Vlr_POA_Captura_Clien"
                     }
                   },
                   "Right": {

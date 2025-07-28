@@ -152,7 +152,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Pedido_Neto ok"
+                      "Property": "Vlr_Pedido_Neto"
                     }
                   },
                   "howCreated": 0
@@ -548,7 +548,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Vlr_Ventas_Netas ok"
+                      "Property": "Vlr_Ventas_Netas"
                     }
                   },
                   "howCreated": 0
@@ -698,7 +698,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Pedido_M3 ok"
+                      "Property": "Cant_Pedido_M3"
                     }
                   },
                   "howCreated": 0
@@ -1094,7 +1094,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "DiasCorrentes ok"
+                      "Property": "DiasCorrentes"
                     }
                   },
                   "howCreated": 0
@@ -1139,7 +1139,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "DiasHabiles ok"
+                      "Property": "DiasHabiles"
                     }
                   },
                   "howCreated": 0

@@ -443,7 +443,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3 ok"
+                      "Property": "Cant_Ventas_M3"
                     }
                   },
                   "howCreated": 0
@@ -458,7 +458,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3_Per_Ant ok"
+                      "Property": "Cant_Ventas_M3_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -669,7 +669,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3 ok"
+                      "Property": "Cant_Ventas_M3"
                     }
                   },
                   "howCreated": 0
@@ -684,7 +684,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3_Per_Ant ok"
+                      "Property": "Cant_Ventas_M3_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -882,7 +882,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3 ok"
+                      "Property": "Cant_Ventas_M3"
                     }
                   },
                   "howCreated": 0
@@ -897,7 +897,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3_Per_Ant ok"
+                      "Property": "Cant_Ventas_M3_Per_Ant"
                     }
                   },
                   "howCreated": 0
@@ -917,7 +917,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cant_Ventas_M3_Per_Ant ok"
+                      "Property": "Cant_Ventas_M3_Per_Ant"
                     }
                   }
                 }

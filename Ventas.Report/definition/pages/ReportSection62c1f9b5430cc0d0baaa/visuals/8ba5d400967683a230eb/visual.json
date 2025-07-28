@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Vlr_Nota_Credito ok"
+                  "Property": "Vlr_Nota_Credito"
                 }
               },
               "queryRef": "Medidas.Vlr_Nota_Credito",
-              "nativeQueryRef": "Vlr_Nota_Credito ok"
+              "nativeQueryRef": "Vlr_Nota_Credito"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Vlr_Nota_Credito ok"
+                "Property": "Vlr_Nota_Credito"
               }
             },
             "direction": "Descending"
